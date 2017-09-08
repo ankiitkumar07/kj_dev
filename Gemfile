@@ -45,7 +45,7 @@ gem 'coffee-script-source', '~> 1.12', '>= 1.12.2'
 gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
 gem 'acts-as-taggable-on', '~> 4.0'
 gem 'jquery-masonry-rails'
-
+gem 'paperclip'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
