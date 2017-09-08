@@ -1,0 +1,113 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.posts-index
+{
+  width: 60%;
+  margin: auto;
+}
+
+.posts-index p
+{
+  padding: 0px;
+  margin: 0px;
+  text-align: justify;
+  text-justify : inter-word;
+}
+
+.content
+{
+  height: 130px;
+}
+
+/*styles for whole post container*/
+
+.cover-container
+{
+	width: 90%;
+	height: 500px;
+	display: block;
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+	margin:50px 2px 8px 2px;
+}
+
+.title-container{
+	margin: 8px 0px 20px 3px;
+}
+.content-container
+{
+	margin: 20px 0px 40px 0px;
+}
+
+a.h1
+{
+  font-size:32px;
+}
+a.h1:hover
+{
+  font-size:34px;
+  text-decoration:none;
+  color:#00897B;
+  transition:0.3s;
+}
+
+.photo-container
+{
+	
+	display: block;
+	margin: 40px 0px 25px 20px;
+}
+
+.figure-img {
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.figure-caption {
+  font-size: 90%;
+  color: #868e96;
+}
+
+.rounded {
+  border-radius: 0.25rem !important;
+}
+
+.display-1 {
+  font-size: 6rem;
+  font-weight: 100;
+  line-height: 1.1;
+}
+
+.post-container
+{
+  margin: 20px 0px 20px 0px;
+  padding: 50px 10px 50px 10px;
+  
+}
+
+.post-cover
+{
+  width: 100%;
+  position: relative;
+  margin:auto;
+  height: 300px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+a.btn
+{
+  border-radius:0px;
+  margin:10px;
+  font-size:18px;
+}

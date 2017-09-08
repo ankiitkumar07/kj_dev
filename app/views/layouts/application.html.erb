@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= @page_title%> | Kumar's Journal</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag Ckeditor.cdn_url%>
+
+  </head>
+
+  <body>
+
+
+<!-- naviagtion bar -->
+
+	<%= render :partial => "layouts/navbar" %>
+
+<!-- navigation bar ends here -->
+
+     
+    <%= yield %>
+
+
+ <!-- footer section starts here  -->
+
+<%= render :partial => "layouts/footer" %>
+
+<!-- footer section ends here  -->
+  </body>
+</html>

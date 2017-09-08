@@ -1,0 +1,67 @@
+@font-face{
+	font-family: 'ARBlanca';
+	src: local('AR BLANCA'), url('ARBLANCA.woff') format('woff');
+}
+
+
+.blockquote
+{
+	font-family: 'Shrikhand', sans-serif;
+	font-weight: 500;
+	font-size: 53px;
+	line-height: 1.1em;
+	/*text-shadow:1px 2px #cdcdcd;*/
+}
+
+cite
+{
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 1em;
+	font-style: normal;
+	font-family: Arial;
+	text-shadow:none;
+}
+
+.fa-plane,.fa-heart
+{
+	color: #ffffff;
+	padding-top: 80px;
+	font-size: 400px;
+	-webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+}
+.fa-plane:hover,.fa-heart:hover
+{
+	-webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+}
+
+#quote2
+{
+	text-align: left;
+}
+
+.intro-box p
+{
+	/*display: inline-block;*/
+	font-size: 1.6em;
+	/*transform: scale(.8, 1.5);*/
+	font-family: 'ARBlanca';
+	line-height: 1.1em;
+	/*font-weight: 1000;*/
+	text-align: justify;
+	font-weight: 100;
+	letter-spacing: 0.2em;
+
+}
+
+.photos h1{
+	color:#2E2E2E;
+	font-weight: 900;
+}
+
+.intro-head
+{
+	font-weight: 900;
+}

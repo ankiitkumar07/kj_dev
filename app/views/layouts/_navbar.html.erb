@@ -1,0 +1,70 @@
+		
+<% if params[:controller] == 'home' && params[:action] == 'index' %>
+		<div class="container-fluid myHeader">
+			<div class="site-brand">
+				<div class="brand-container">
+					<h1>KUMAR<span style="font-size:0.7em; font-weight:300">'s</span> JOURNAL</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit odio in tristique venenatis. Praesent eget aliquam augue. Nunc sit amet nunc eu leo faucibus accumsan. Nulla aliquet nunc sit amet ligula cursus, eget fringilla elit molestie. Vivamus luctus justo sit amet sem pulvinar egestas. Sed mollis massa libero, sit amet lacinia tortor bibendum eget. </p>
+				</div>
+			</div>
+
+			<div class="mynavbar">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="btn-group btn-group-lg" style="float:center">
+							<%= link_to 'Home', root_path, class: 'btn btn-default' %>
+							<%= link_to 'Blog', "#blog", class: 'btn btn-default' %>
+							<%= link_to 'Photo', "#photos", class: 'btn btn-default' %>
+							<%= link_to 'Know Me', "#intro", class: 'btn btn-default' %>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav id="hidnav" class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+					 </button>
+					 <a class="navbar-brand" href="#">Kumar's Journal</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav navbar-right">
+			        <li class="active item"><%= link_to 'Home', root_path %></li>
+			        <li class="item"><a href="#">Blog</a></li>
+			        <li class="item"><a href="#">Photo</a></li>
+			        <li class="item"><a href="#">Intro</a></li>
+			      </ul>
+			    </div>
+			</div>
+		</nav>
+<%else%>
+
+
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+					 </button>
+					 <a class="navbar-brand" href="#">Kumar's Journal</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav navbar-right">
+			        <li class="active item"><%= link_to 'Home', root_path %></li>
+			        <li class="item"><a href="#">Blog</a></li>
+			        <li class="item"><a href="#">Photo</a></li>
+			        <li class="item"><a href="#">Intro</a></li>
+			      </ul>
+			    </div>
+			</div>
+		</nav>
+
+<%end%>

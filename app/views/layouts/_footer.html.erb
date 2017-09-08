@@ -1,0 +1,43 @@
+    <footer id="myFooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 myCols">
+                    <h5>Blog Links</h5>
+                    <ul>
+                        <li><%= link_to 'Home', root_path %></li>
+                        <li><%= link_to 'Blog', posts_path %></li>
+                        <li><%= link_to 'Login', new_user_session_path %></li>
+                        <li><%= link_to 'New Post', new_post_path %></li>
+                        <li><%= link_to 'Join Me!', new_user_registration_path %></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 myCols">
+                    <h5>Tags</h5>
+                    <ul>
+                        <% @posts.each_slice(1) do |post| %>
+                            <% post.each do |post| %>
+                                <li><%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join('<br/> ') %></li>
+                            <%end%>
+                        <%end%>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-6">
+                    <h5>Drop your Vuable Feedback</h5>
+                    <div class="myColsForm">
+                        <input type="text" placeholder="Name">
+                        <textarea placeholder="Type Your Message Here!"></textarea>
+                        <button type="submit" class="btn btn-primary">Send <i class="fa fa-caret-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="social-networks">
+            <a target="_blank" href="https://www.twitter.com/meankitkumar" class="twitter"><i class="fa fa-twitter"></i></a>
+            <a target="_blank" href="https://www.facebook.com/ankiitkumar07" class="facebook"><i class="fa fa-facebook-official"></i></a>
+            <a target="_blank" href="https://plus.google.com/102488716494488744951" class="google"><i class="fa fa-google-plus"></i></a>
+            <a target="_blank" href="https://www.instagram.com/ankiitkumar" class="instagram"><i class="fa fa-instagram"></i></a>
+        </div>
+        <div class="footer-copyright">
+            <p> <i class="fa fa-copyright"></i> 2017 - Kumar's Journal </p>
+        </div>
+    </footer>

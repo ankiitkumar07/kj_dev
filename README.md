@@ -1,2 +1,2 @@
 # kj_dev
-Blog 
+This repo contains my blog built on RoR

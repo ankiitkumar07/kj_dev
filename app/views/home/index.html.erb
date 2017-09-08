@@ -1,0 +1,151 @@
+
+
+<!-- randon quote section 1 -->
+		<div class="container-fluid quote">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-sm-8" id="q1_left">
+						<div class="col-md-12 left">
+							<blockquote class="blockquote">
+								
+									We travel not to escape life, but life not to escape us.
+									<br>
+									 <cite>-Anonymous</cite>
+								
+							</blockquote>	
+						</div>
+					</div>				
+					<div class="col-md-4 col-sm-4" id="q1_right">
+						<div class="col-md-12 right">
+							<i class="fa fa-plane fa-5x" aria-hidden="true" style="font-size:150px"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+<!-- randomquote section 1 -->
+
+
+<!-- blog section -->
+		<section id="blog">
+			<div class="back">
+				<div class="blurred">
+				</div>
+				<div class="front">
+					<div class="container">
+						<div class="row">
+							<% @posts.each_slice(1) do |post| %>
+								<% post.each do |post| %>
+									<div class="col-md-4 col-sm-4">
+										<div class="post-card">
+											<div class="thumbnail" style="background-image:url(<%= post.cover %>)"></div>
+											<hr></hr>
+												<div class="post-title">
+													<h2><%= post.title %></h2>
+												</div>
+											<hr></hr>
+											<div class="row">
+												<div class="col-md-6">
+													<p class="h4 text-center" style="font-weight:lighter"><%= post.user.name %></p>
+												</div>
+												<div class="col-md-6">
+													<p class="h4 text-center" style="font-weight:lighter"><%= post.created_at.strftime("%d/%m/%y") %></p>
+												</div>
+											</div>
+										</div>
+									</div>							
+								<% end %>
+							<% end %>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12 text-center">
+								<%= link_to 'See All My Posts', posts_path, class: 'btn btn-primary btn-lg' %>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+<!-- blog section -->
+
+
+<!-- randon quote section 2 -->
+		<div class="container-fluid quote">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-sm-4" id="q2_left">
+						<div class="col-md-12 right">
+							<span class="pull-right"><i class="fa fa-heart fa-5x" aria-hidden="true" style="font-size:150px;"></i></span>
+						</div>
+					</div>
+					<div class="col-md-8 col-sm-8 " id="q2_right">
+						<div class="col-md-12 left">
+							<blockquote class="blockquote" id="quote2">
+								
+									This heart of mine was made to travel this world.
+									<br>
+									 <cite>-Anonymous</cite>
+								
+							</blockquote>	
+						</div>
+					</div>				
+				</div>
+			</div>
+		</div>
+<!-- randomquote section 2 -->
+
+
+<!-- photo section start here -->
+
+		<section id="photos">
+			<div class="container-fluid photos">
+				<div class="row">
+					<div class="col-md-12 col-sm-12">
+						<h1 class="text-center" style="padding:36px;">Photo Gallery</h1>
+
+						<hr class="soften">
+					</div>
+				</div>
+				<div class="masonry" data-masonry='{ "itemSelector": ".block", "columnWidth": ".block" }'>
+					<div class="block-l" style="background-image:url(https://dl.dropboxusercontent.com/s/28a978tyndarl4d/DSC07713.JPG?dl=0);"></div>
+					<div class="block-s" style="background-image:url(https://dl.dropboxusercontent.com/s/28a978tyndarl4d/DSC07713.JPG?dl=0);"></div>
+					<div class="block-m" style="background-image:url(https://dl.dropboxusercontent.com/s/28a978tyndarl4d/DSC07713.JPG?dl=0);"></div>
+					<div class="block-s" style="background-image:url(https://dl.dropboxusercontent.com/s/28a978tyndarl4d/DSC07713.JPG?dl=0);"></div>
+					<div class="block-l" style="background-image:url(https://dl.dropboxusercontent.com/s/28a978tyndarl4d/DSC07713.JPG?dl=0);"></div>
+					<div class="block-m" style="background-image:url(https://dl.dropboxusercontent.com/s/28a978tyndarl4d/DSC07713.JPG?dl=0);"></div>
+					<div class="block-s" style="background-image:url(https://dl.dropboxusercontent.com/s/28a978tyndarl4d/DSC07713.JPG?dl=0);"></div>
+				</div>
+			</div>
+		</section>
+
+<!-- photo section end here -->
+
+
+
+<!-- mini intro section -->
+		<section id="intro">
+			<div class="intro-box">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4 col-sm-4">
+							<div class="col-md-12">
+								<img src="http://www.motsandco.com/wp-content/uploads/avatar-1-300x300.png" class="img-circle" height="200px" width="200px"> 
+							</div>
+						</div>	
+						<div class="col-md-8 col-sm-8">
+							<div class="col-md-12">
+								<h1 class="text-center intro-head">Hii Guys! </h1>
+								<hr class="soften"></hr>
+								<p>My Name is Ankit Kumar. I am an engineer.<i class="em em-wink"></i> </p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et augue vitae odio ornare placerat. Suspendisse eu enim eget nibh.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae libero tempor, euismod magna id, mattis.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+<!-- mini intro section -->

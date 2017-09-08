@@ -1,0 +1,65 @@
+#hidnav
+{
+	visibility: hidden;
+	top: -50px;
+	-webkit-transition: top 0.3s, visibility 0s; /* Safari */
+    transition: top 0.3s, visibility 0s;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+}
+
+.myHeader
+{
+	height: 640px;
+	width: 100%;
+	background-image: url("https://dl.dropboxusercontent.com/s/8t51tjnnhsc9qvl/img-2.JPG?dl=0");
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center top;
+	background-repeat: no-repeat;
+	//position: relative;
+}
+
+
+.site-brand
+{
+	position: relative;
+	top: 280px;
+	width: 70%;
+	margin: auto;
+}
+@media screen and (min-width: 760px)
+{
+	.site-brand{
+		width: 100%;
+	}
+}
+.brand-container
+{
+	text-align: center;
+}
+.brand-container h1
+{
+	font-weight: 900;
+	font-size: 5em;
+	color: #fff;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	letter-spacing: 0.1em;
+}
+.brand-container p{
+	color: #fff;
+	font-size: 1.2em;
+}
+
+
+
+.mynavbar{
+	position: absolute;
+	bottom: 10px;
+	display: block;
+	width: 80%;
+	margin:auto;
+	background-color: transparent;
+	/*position: fixed;*/	
+	
+}

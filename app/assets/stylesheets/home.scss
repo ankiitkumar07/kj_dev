@@ -1,0 +1,196 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+ .header
+{
+	height: 560px;
+	background: url(https://dl.dropboxusercontent.com/s/8t51tjnnhsc9qvl/img-2.JPG?dl=0);
+	margin-top:10px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header h1
+{
+	font-size:80px;
+	font-weight:800;
+	color:#fff;
+	text-shadow:2px;
+}
+
+.quote
+{
+	height: 350px;
+	background-color: #004D47;
+	width:100%;
+	border-top: 1px solid rgba(50, 50, 50, 0.75);
+/*box top shadow*/
+	-webkit-box-shadow: 0px -4px 35px 5px rgba(0,0,0,0.85);
+	-moz-box-shadow: 0px -4px 35px 5px rgba(0,0,0,0.85);
+	box-shadow: 0px -4px 35px 5px rgba(0,0,0,0.85);
+	z-index:99;
+}
+
+.blockquote {
+    display: block;
+    border-left: 0px;
+	margin-top: 20px;
+    padding-top: 60px;
+	text-align: right;
+}
+
+.back{
+	position: relative;
+	width: 100%;
+	height: 630px;
+	background-image: url(https://dl.dropboxusercontent.com/s/5tfz7qlojgsnpzk/DSC07699.JPG?dl=0);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.blurred
+{
+	width: 100%;
+	height: 100%;
+	display: block;
+	background-image: url(https://dl.dropboxusercontent.com/s/5tfz7qlojgsnpzk/DSC07699.JPG?dl=0);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	-webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    position: relative;
+    overflow: hidden;
+}
+
+.front{
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	display: block;
+
+}
+
+.post-card{
+	margin: 35px 0px 40px 0px;
+	height: 490px;
+	background-color:#ff764d;
+
+	padding: 17px;
+	border: 1px solid #222;
+	border-radius: 0;
+	-webkit-box-shadow: 14px 13px 6px -6px rgba(0, 0, 0, 0.85);
+    -moz-box-shadow: 14px 13px 6px -6px rgba(0, 0, 0, 0.85);
+    box-shadow: 14px 13px 6px -6px rgba(0, 0, 0, 0.85);
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(0.9); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(0.9); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(0.9);
+    transition: all 200ms ease-in;
+    transform: scale(0.9);
+
+}
+.post-card:hover
+{
+	cursor:pointer;
+	box-shadow: 0px 0px 150px #000000;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1);	
+}
+
+.thumbnail
+{
+	margin: 10px;
+	width: auto;
+	height: 250px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.post-title
+{
+	height:90px;
+}
+
+.post-title h2,h3
+{
+	color: #fff;
+	font-size: auto;
+	font-weight: 900;
+}
+
+@media screen and (max-width: 1200px){
+	.post-title h2,h3
+	{
+		font-size: 13px;;
+	}
+}
+
+@media screen and (max-width: 990px){
+	.blockquote{
+		padding-top: 0px;
+	}
+}
+
+.intro-box
+{
+	display: block;
+	height: 430px;
+	background: rgba(255,118,77,1);
+	padding: 70px 10px 0px 10px;
+}
+.intro-box img{
+	margin-top: 70px;
+}
+
+
+.masonry
+{
+	width:90%;
+	height:75%;
+	margin:auto;
+	padding:30px;
+	
+
+}
+.block-s
+{
+	height:150px;
+	width:200px;
+}
+.block-m
+{
+	height:170px;
+	width:170px;
+}.block-l
+{
+	height:200px;
+	width:300px;
+}
+.block-s, .block-l, .block-m
+{
+	background-position:center;
+	background-size:cover;
+	display:inline-block;
+}

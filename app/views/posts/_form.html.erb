@@ -1,0 +1,48 @@
+
+<div class="container">
+    <%= form_for(post, html: {class: "form-horizontal"}) do |f| %>
+      <% if post.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+          <ul>
+          <% post.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="row">
+        <div class="col-md-12">
+            <%= f.text_field :title, :placeholder => 'Tite' %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+            <%= f.text_field :cover, :placeholder => 'Path for Cover' %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+            <%= f.text_field :tag_list, value: f.object.tag_list.to_s, :placeholder => 'Tags Seperated by Commas' %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+            <%= f.label :body, class: "sr-only" %>
+            <%= f.cktext_area :body %>
+        </div>
+      </div>
+
+
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+    <% end %>    
+</div>
+
+
+

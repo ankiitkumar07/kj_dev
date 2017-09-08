@@ -1,0 +1,47 @@
+
+<div class="container-fluid">
+	<% @posts.each_slice(1) do |post| %>
+		<div class="post-container">
+			<div class="container">
+				<div class="row">
+					<% post.each do |post| %>
+						<div class="col-md-6 col-sm-6">
+							<div class="col-md-12">
+								<div class="post-cover" style="background-image:url(<%= post.cover %>)" ></div>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6">
+							<div class="post-desc">
+								<div class="col-md-12">
+									<%=  link_to post.title, post, class: 'h1' %>
+									<hr>
+									<div class="row">
+										<div class="col-md-6 col-sm-6">
+											<p class="h-4 text-center"><%= post.user.name %></p>
+										</div>
+										<div class="col-md-6 col-sm-6">
+											<p class="h-4 text-center"><%= post.created_at.strftime("%d/%m/%y") %></p>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12 col-sm-12 text-right">
+											<%= link_to 'Show <i class="fa fa-chevron-right" aria-hidden="true"></i>'.html_safe, post, class:'btn btn-primary' %>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	<%end%>
+</div>
+  
+    <div class="container">
+    	<div class="row">
+		    <div class="col-md-10 col-sm-10 text-right">
+		    	<%= will_paginate @posts,:previous_label => 'Newer Posts', :next_label => 'Older Posts', :container => false, renderer: BootstrapPagination::Rails %>
+		    </div>
+		 </div>
+    </div>

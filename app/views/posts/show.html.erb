@@ -1,0 +1,67 @@
+<p id="notice"><%= notice %></p>
+
+<!-- post conatiner -->
+
+<div class="container-fluid post-container">
+	<div class="post-header">
+		<div class="container">
+			<div class="row">
+				<p>Tags: <%= raw @post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
+				<div class="cover-container" style="background-image: url(<%= @post.cover %>);"></div> <!-- cover-conatiner -->
+			</div> <!-- row -->
+			<div class="row">
+				<div class="title-container">
+					<h1 class="display-1"><%= @post.title %></h1>
+				</div> <!-- title-container -->
+			</div> <!-- row -->
+		</div> <!-- container -->
+	</div> <!-- post header ends -->
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-sm-10">
+				<div class="col-md-12">
+					<div class="content-container">
+						<%= simple_format(@post.body) %>
+					</div> <!-- content-container -->
+				</div>
+			</div> <!-- col-md-8 -->
+			<div class="col-md-2 col-sm-2">
+				<div class="col-md-12">
+					<p class="h-3">this sidebar displays rest 5 posts</p>
+				</div>
+			</div>
+		</div> <!-- row --> 
+	</div> <!-- container -->
+
+</div> <!-- post-container -->
+
+<!-- post container -->
+
+<div class="container">
+	<div class="row">
+		<% if user_signed_in? && @post.user == current_user %>
+			<div class="col-md-4 col-sm-4 text-center">
+				<%= link_to 'Edit', edit_post_path(@post), class:"btn btn-primary" %> 
+			</div>
+			<div class="col-md-4 col-sm-4 text-center">
+				<%= link_to 'Back', posts_path , class:"btn btn-default" %>
+			</div>
+			<div class="col-md-4 col-sm-4 text-center">
+				<%= link_to 'Logout', destroy_user_session_path, method: :delete, class:"btn btn-warning" %>
+			</div>
+		<% elsif user_signed_in? && @post.user != current_user %>
+			<div class="col-md-6 col-sm-4 text-center">
+				<%= link_to 'Back', posts_path , class:"btn btn-default" %>
+			</div>
+			<div class="col-md-6 col-sm-4 text-center">
+				<%= link_to 'Logout', destroy_user_session_path, method: :delete, class:"btn btn-warning" %>
+			</div>
+		<%else%>
+			<div class="col-md-12 col-sm-12 text-center">
+				<%= link_to 'Back', posts_path , class:"btn btn-default" %>
+			</div>
+		<% end %>
+	</div>
+</div>
+

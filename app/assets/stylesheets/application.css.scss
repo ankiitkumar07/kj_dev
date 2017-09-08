@@ -1,0 +1,178 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *=require color.css
+ *=require font.css
+ *=require animate.css
+ *= require_tree .
+ *= require_self
+ */
+
+/*// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"*/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+@import url('https://fonts.googleapis.com/css?family=Poiret+One|Shrikhand');
+
+html,body{
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    marign:0;
+    padding:0;
+    font-family: 'Poiret One', cursive;
+}
+
+
+.form-bg
+{
+  
+  width:100%;
+  height:100%;
+  background-color:#004D47 ;
+}
+
+.ptitle
+{
+    margin:20px;
+}
+
+
+.form-wrapper
+{
+    position: relative;
+    width: 700px;
+    height: 380px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 60px;
+    top:0;bottom: 0;left: 0; right: 0;
+    border: 1px solid #BF360C;
+    background-color:#fff;
+
+    -webkit-box-shadow: 14px 13px 6px -6px rgba(0, 0, 0, 0.85);
+    -moz-box-shadow: 14px 13px 6px -6px rgba(0, 0, 0, 0.85);
+    box-shadow: 14px 13px 6px -6px rgba(0, 0, 0, 0.85);
+}
+
+[type="email"], [type="password"], [type="submit"], [type="text"]
+{
+    margin: 10px 12px 10px 12px;
+    width: 270px;
+    border-radius: 0;
+    height: 43px;
+}
+.form-control:focus
+{
+    border: 1px solid #BF360C;
+}
+#l1, label
+{
+    display: block;
+}
+input.btn
+{
+    background-color: #BF360C;
+    border: 1px solid #D84315;
+}
+
+input.btn:hover {
+    background-color: #FF3D00;
+    border: 1px solid #FF3D00;
+    transition:1s;
+}
+input.btn:active, .btn:focus{
+    background-color: #FF3D00;
+    border: 1px solid #FF3D00;
+}
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 1.95em;
+  cursor: pointer;
+  float:right;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 1.25em; height: 1.25em;
+  border: 2px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '✔';
+  position: absolute;
+  top: .1em; left: .3em;
+  font-size: 1.3em;
+  line-height: 0.8;
+  color: #09ad7e;
+  transition: all .2s;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+[type="checkbox"]:disabled:checked + label:after {
+  color: #999;
+}
+[type="checkbox"]:disabled + label {
+  color: #aaa;
+}
+
+
+/* hover style just for information */
+label:hover:before {
+  border: 2px solid #4778d9!important;
+}
+
+.btn-facebook
+{
+  background-color:#01579b ;
+  width:260px;
+  height:43px;
+  border-radius:2px;
+  color:#fff;
+  font-size:18px;
+  position:relative;
+  top:40px;
+  margin:24px;
+}
+
+.btn-facebook:hover
+{
+  background-color:#0277bd;
+  color:#fff;
+  transition: .6s;  
+}
