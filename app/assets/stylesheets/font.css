@@ -3,14 +3,6 @@
 	src: local('AR BLANCA'), url('ARBLANCA.woff') format('woff');
 }
 
-@font-face{
-	font-family: 'Shrikhand';
-	src:local('Shrikhand-Regular'), url('Shrikhand-Regular.ttf') format('ttf');
-}
-@font-face{
-	font-family: 'Poiret One';
-	src:url('PoiretOne-Regular.ttf') format('ttf');
-}
 
 .blockquote
 {
