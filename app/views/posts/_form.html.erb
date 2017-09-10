@@ -15,7 +15,7 @@
 
       <div class="row">
         <div class="col-md-12">
-            <%= f.text_field :title, :placeholder => 'Tite' %>
+            <%= f.text_field :title, :placeholder => 'Title' %>
         </div>
       </div>
 
@@ -33,7 +33,7 @@
       <div class="row">
         <div class="col-md-12">
             <%= f.label :body, class: "sr-only" %>
-            <%= f.cktext_area :body %>
+            <%= f.text_area :body, :placeholder => "Enter HTML Code for body and images" %>
         </div>
       </div>
 

@@ -38,14 +38,13 @@ gem 'sprockets-rails', '~> 3.2'
 gem 'devise', '~> 4.3'
 gem 'friendly_id', '~> 5.1.0'
 gem 'will_paginate', '~> 3.1.0'
-gem 'ckeditor', github: 'galetahub/ckeditor'
+# gem 'ckeditor', github: 'galetahub/ckeditor'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'coffee-script-source', '~> 1.12', '>= 1.12.2'
 gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
 gem 'acts-as-taggable-on', '~> 4.0'
-gem 'jquery-masonry-rails'
-gem 'paperclip'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -90,7 +90,11 @@ a.h1:hover
 {
   margin: 20px 0px 20px 0px;
   padding: 50px 10px 50px 10px;
-  
+}
+
+.post-container p
+{
+  font-size:20px;
 }
 
 .post-cover
@@ -110,4 +114,14 @@ a.btn
   border-radius:0px;
   margin:10px;
   font-size:18px;
+}
+
+#post_body
+{
+  resize:none;
+  margin:10px 0px 10px 11px;
+  height:500px;
+  width:85%;
+  padding:15px;
+  font-size:20px;
 }
