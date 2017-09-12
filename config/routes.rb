@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'about_me/index'
+
   devise_for :users, :controllers => {:registrations => "user/registrations", :sessions => 'user/sessions'}
   resources :posts
   # get 'home/index'

@@ -32,6 +32,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    @posts = Post.all
   end
 
   # POST /posts

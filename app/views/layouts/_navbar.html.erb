@@ -1,35 +1,39 @@
 		
  <% if params[:controller] == 'home' && params[:action] == 'index'  %>
 		<div class="container-fluid myHeader">
+			<nav class="navbar navbar-inverse navbar-fixed-top">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					        <span class="sr-only">Toggle navigation</span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+						 </button>
+						 <%= link_to "Kumar's Journal", "http://www.kumarsjournal.com", class: "navbar-brand" %>
+					</div>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				      <ul class="nav navbar-nav navbar-right">
+				        <li class="active item"><%= link_to 'Home', root_path, class: "scrollers" %></li>
+				        <li class="item"><a href="#blog" class="scrollers">Blog</a></li>
+				        <li class="item"><a href="#photos" class="scrollers">Photo</a></li>
+				        <li class="item"><a href="#intro" class="scrollers">Intro</a></li>
+				      </ul>
+				    </div>
+				</div>
+			</nav>
 			<div class="site-brand">
 				<div class="brand-container">
 					<h1>KUMAR<span style="font-size:0.7em; font-weight:300">'s</span> JOURNAL</h1>
 					<p>Travel. Explore. Adventure.</p>
 				</div>
 			</div>
+			<div class="scroller">
+				<a href="#quote" class="scrollers"><i class="fa fa-angle-down fa-5x" aria-hidden="true"></i></a>
+			</div>
 		</div>
 
-		<nav class="navbar navbar-inverse navbar-fixed-top">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-				        <span class="sr-only">Toggle navigation</span>
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-					 </button>
-					 <%= link_to "Kumar's Journal", "https://www.kumarsjournal.com", class: "navbar-brand" %>
-				</div>
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			      <ul class="nav navbar-nav navbar-right">
-			        <li class="active item"><%= link_to 'Home', root_path %></li>
-			        <li class="item"><a href="#blog">Blog</a></li>
-			        <li class="item"><a href="#photos">Photo</a></li>
-			        <li class="item"><a href="#intro">Intro</a></li>
-			      </ul>
-			    </div>
-			</div>
-		</nav>
+
 <% else %>
 
 
@@ -42,14 +46,14 @@
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
 					 </button>
-					 <%= link_to "Kumar's Journal", "https://www.kumarsjournal.com", class: "navbar-brand" %>
+					 <%= link_to "Kumar's Journal", root_path, class: "navbar-brand" %>
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			      <ul class="nav navbar-nav navbar-right">
 		        	<li class="item"><%= link_to 'Home', root_path %></li>
-			        <li class="item"><%= link_to 'Blog', "http://www.kumarsjournal.com#blog" %></li>
-			        <li class="item"><%= link_to 'Photos', "http://www.kumarsjournal.com#photos" %></li>
-			        <li class="item"><%= link_to 'Intro', "http://www.kumarsjournal.com#intro" %></li>
+			        <li class="item"><%= link_to 'Blog', root_path(anchor: 'blog') %></li>
+			        <li class="item"><%= link_to 'Photos', root_path(anchor: 'photos') %></li>
+			        <li class="item"><%= link_to 'Intro', root_path(anchor: 'intro') %></li>
 			      </ul>
 			    </div>
 			</div>

@@ -6,9 +6,12 @@
                     <ul>
                         <li><%= link_to 'Home', root_path %></li>
                         <li><%= link_to 'Blog', posts_path %></li>
-                        <li><%= link_to 'Login', new_user_session_path %></li>
-                        <li><%= link_to 'New Post', new_post_path %></li>
-                        <li><%= link_to 'Join Me!', new_user_registration_path %></li>
+                        <li><%= link_to 'Who I Am', about_me_index_path %></li>
+                        <% if user_signed_in? %>
+                            <li><%= link_to 'New Post', new_post_path %></li>
+                        <%else%>
+                            <li><%= link_to 'Login', new_user_session_path %></li>
+                        <%end%>
                     </ul>
                 </div>
                 <div class="col-sm-3 myCols">

@@ -50,3 +50,23 @@
 	color: #fff;
 	font-size: 1.2em;
 }
+
+.scroller
+{
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+}
+.fa-angle-down
+{
+	color: #fff;
+	font-weight: lighter;
+	cursor: pointer;
+	transition:all ease-in-out 300ms;
+}
+
+
+.fa-angle-down:hover
+{
+	transform:scale(1.5);
+}
