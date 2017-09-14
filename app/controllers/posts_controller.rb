@@ -21,6 +21,7 @@ class PostsController < ApplicationController
     @posts = Post.all
     @post = Post.friendly.find(params[:id])
     @page_title = @post.title
+    @sidebar_posts = Post.where.not(id: @post.id).order("Random()").all
   end
 
   # GET /posts/new

@@ -29,33 +29,32 @@
 <!-- blog section -->
 		<section id="blog">
 			<div class="back">
-				<div class="blurred">
-				</div>
+				<div class="blurred"></div>
 				<div class="front">
 					<div class="container">
 						<div class="row">
-							<% @posts.each_slice(1) do |post| %>
-								<% post.each do |post| %>
-									<div class="col-md-4 col-sm-4">
-										<div class="post-card">
-											<div class="thumbnail" style="background-image:url(<%= post.cover %>)"></div>
-											<hr></hr>
-												<div class="post-title">
-													<h2><%= post.title %></h2>
-												</div>
-											<hr></hr>
-											<div class="row">
-												<div class="col-md-6">
-													<p class="h4 text-center" style="font-weight:lighter"><%= post.user.name %></p>
-												</div>
-												<div class="col-md-6">
-													<p class="h4 text-center" style="font-weight:lighter"><%= post.created_at.strftime("%d/%m/%y") %></p>
-												</div>
-											</div>
-										</div>
-									</div>							
-								<% end %>
-							<% end %>
+							<div class="post-cont">
+								<div  id="post-1" style="background-image:url(<%= Post.last.cover %>);">
+									<%= link_to Post.last do %>
+										<h1><%= Post.last.title %></h1>
+									<%end%> 
+								</div>
+								<div  id="post-2" style="background-image:url(<%= Post.third.cover %>);">
+									<%= link_to Post.third do %>
+										<h4><%= Post.third.title %></h4>
+									<%end%> 
+								</div>
+								<div  id="post-3" style="background-image:url(<%= Post.second.cover %>);">
+									<%= link_to Post.second do %>
+										<h4><%= Post.second.title %></h4>
+									<%end%> 
+								</div>
+								<div  id="post-4" style="background-image:url(<%= Post.first.cover %>);">
+									<%= link_to Post.first do %>
+										<h4><%= Post.first.title %></h4>
+									<%end%>  
+								</div>
+							</div>
 						</div>
 
 						<div class="row">
