@@ -22,7 +22,6 @@ class PostsController < ApplicationController
   def show
     @post = Post.friendly.find(params[:id])
     @page_title = @post.title
-<<<<<<< HEAD
     @sidebar_posts = Post.where.not(id: @post.id).order("Random()").limit(4)
     @tags = ActsAsTaggableOn::Tagging.includes(:tag).where(context: 'tags').map { |tagging| tagging.tag.name  }.uniq
   end

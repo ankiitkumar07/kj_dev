@@ -52,7 +52,7 @@
 			});
 			$(document).ready(function(){
 			    $(".twitter-show").hover(function(){
-			    	 var toggleHeight = $(".twitter-div").hasClass('expanded') ? "0" : "100px";
+			    	 var toggleHeight = $(".twitter-div").hasClass('expanded') ? "0" : "50px";
 			         $('.twitter-div').stop().animate({ height: toggleHeight }, function(){
 		                $(this).toggleClass('expanded');
 		            });
@@ -60,7 +60,7 @@
 			});
 			$(document).ready(function(){
 			    $(".gplus-show").hover(function(){
-			    	 var toggleHeight = $(".gplus-div").hasClass('expanded') ? "0" : "100px";
+			    	 var toggleHeight = $(".gplus-div").hasClass('expanded') ? "0" : "50px";
 			         $('.gplus-div').stop().animate({ height: toggleHeight }, function(){
 		                $(this).toggleClass('expanded');
 		            });
