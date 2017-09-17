@@ -8,7 +8,7 @@ class User::SessionsController < Devise::SessionsController
   def new
     super do |resource|
       @page_title = "Log In"
-      @posts = Post.all
+      @tags = ActsAsTaggableOn::Tagging.includes(:tag).where(context: 'tags').map { |tagging| tagging.tag.name  }.uniq
     end
   end
 

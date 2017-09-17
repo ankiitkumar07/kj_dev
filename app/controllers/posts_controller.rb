@@ -9,30 +9,33 @@ class PostsController < ApplicationController
     @page_title = "Posts"
       if params[:tag]
         @posts = Post.tagged_with(params[:tag]).paginate(:page => params[:page], :per_page => 2)
+        @tags = ActsAsTaggableOn::Tagging.includes(:tag).where(context: 'tags').map { |tagging| tagging.tag.name  }.uniq
       else
         @posts = Post.all
         @posts = Post.paginate(:page => params[:page], :per_page => 2)
+        @tags = ActsAsTaggableOn::Tagging.includes(:tag).where(context: 'tags').map { |tagging| tagging.tag.name  }.uniq
       end
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
-    @posts = Post.all
     @post = Post.friendly.find(params[:id])
     @page_title = @post.title
+    @sidebar_posts = Post.where.not(id: @post.id).order("Random()").limit(4)
+    @tags = ActsAsTaggableOn::Tagging.includes(:tag).where(context: 'tags').map { |tagging| tagging.tag.name  }.uniq
   end
 
   # GET /posts/new
   def new
-    @posts = Post.all
+    @tags = ActsAsTaggableOn::Tagging.includes(:tag).where(context: 'tags').map { |tagging| tagging.tag.name  }.uniq
     @post = current_user.posts.build
     @page_title = "Create A New Post"
   end
 
   # GET /posts/1/edit
   def edit
-    @posts = Post.all
+    @tags = ActsAsTaggableOn::Tagging.includes(:tag).where(context: 'tags').map { |tagging| tagging.tag.name  }.uniq
   end
 
   # POST /posts

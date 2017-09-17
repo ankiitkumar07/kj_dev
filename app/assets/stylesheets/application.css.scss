@@ -178,3 +178,51 @@ label:hover:before {
   color:#fff;
   transition: .6s;  
 }
+
+/*social sharing section*/
+
+.social-integration
+{
+  position: relative;
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+}
+
+.fb-show,.twitter-show,.gplus-show
+{
+  height: 40px;
+    width: 40px;
+    margin: 10px auto; 
+    border-radius: 100%;
+    background-color: #22507e;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 2.3em;
+    cursor: pointer;
+  transition:all ease-in-out 400ms;
+}
+.twitter-show
+{
+  background-color: #1b95e0;
+}
+.gplus-show
+{
+  background-color: #db4437;
+}
+
+.extender
+{
+  height: 0;
+    width: 200px;
+    margin: auto;
+    background-color: transparent;
+    position: relative;
+    overflow-y:auto;
+
+}
+.fb-show:hover,.twitter-show:hover,.gplus-show:hover
+{
+  transform: rotate(360deg);
+}

@@ -1,0 +1,35 @@
+<div class="social-integration">
+	<div class="fb-show" title="Like On Facebook"><i class="fa fa-facebook"></i></div>
+	<div class="extender fb-div">
+		<div class="fb-like" data-href="http://www.kumarsjournal.com<%= request.fullpath %>" data-width="150" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+	</div>
+	<div class="twitter-show" title="Tweet">
+		<i class="fa fa-twitter"></i>
+	</div>
+	<div class="extender twitter-div">
+		<a href="http://twitter.com/share" class="twitter-share-button" data-size="large" data-url="<%= post_url(@post) %>" data-text=" <%= @post.title %> " data-count="horizontal" data-via="Kumar's Journal">Tweet</a>
+	</div>
+
+	<div class="gplus-show" title="Share On Google+">
+		<i class="fa fa-google-plus"></i>
+	</div>
+	<div class="extender gplus-div">
+		<div id="gplus">
+			<div class="g-plus" data-action="share" data-annotation="bubble" data-height="24" ></div>
+		</div>
+	</div>
+</div>
+
+
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+		  
+
+
+		  
+
+		
+
+
+

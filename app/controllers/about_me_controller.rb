@@ -1,5 +1,5 @@
 class AboutMeController < ApplicationController
   def index
-  	@posts = Post.all
+  	@tags = ActsAsTaggableOn::Tagging.includes(:tag).where(context: 'tags').map { |tagging| tagging.tag.name  }.uniq
   end
 end

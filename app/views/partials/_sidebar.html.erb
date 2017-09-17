@@ -1,0 +1,10 @@
+
+	<% @sidebar_posts.each_slice(1) do |post|  %>
+		<% post.each do |post| %>
+			<div style="background-image:url(<%= post.cover %>);">
+				<%= link_to post do %>
+					<h4><%= post.title %></h4>
+				<%end%> 
+			</div>
+		<%end%>
+	<%end%>

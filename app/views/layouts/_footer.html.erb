@@ -17,9 +17,9 @@
                 <div class="col-sm-3 myCols">
                     <h5>Tags</h5>
                     <ul>
-                        <% @posts.each_slice(1) do |post| %>
-                            <% post.each do |post| %>
-                                <li><%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join('<br/> ') %></li>
+                        <% @tags.each_slice(1) do |tag| %>
+                            <% tag.each do |tag| %>
+                                <li><%= link_to tag, tag_path(tag)  %></li>
                             <%end%>
                         <%end%>
                     </ul>

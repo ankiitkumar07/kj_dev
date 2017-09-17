@@ -1,8 +1,7 @@
 class HomeController < ApplicationController
   def index
   	@page_title = 'Welcome Aboard'
-  	@posts = Post.all
+  	@tags = ActsAsTaggableOn::Tagging.includes(:tag).where(context: 'tags').map { |tagging| tagging.tag.name  }.uniq
   	@posts = Post.order("created_at DESC").limit(3)
-  	@tags = ActsAsTaggableOn::Tag.all
   end
 end
