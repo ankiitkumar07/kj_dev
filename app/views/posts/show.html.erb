@@ -39,9 +39,21 @@
 <!-- post container -->
 
 <div class="container">
-		<h3>Also Read : </h3>
-	<div class="partial-banner">
-		<%= render :partial => 'partials/sidebar' %>
+	<div class="row">
+		<div class="col-md-12 col-sm-12">
+			<h3>Also Read : </h3>
+			<div class="partial-banner">
+				<%= render :partial => 'partials/sidebar' %>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 col-sm-12">	
+			<%= render :partial => 'partials/comments' %>
+		</div>
 	</div>
 </div>
 
@@ -74,9 +86,5 @@
 	</div>
 </div>
 
-<div class="container">
-	<div class="row">
-		<%= render :partial => 'partials/comments' %>
-	</div>
-</div>
+
 

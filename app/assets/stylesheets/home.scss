@@ -156,12 +156,6 @@
     
 }
 
-@media screen and (max-width: 990px){
-	.blockquote{
-		padding-top: 0px;
-	}
-}
-
 .intro-box
 {
 	color:#fff;
@@ -179,13 +173,12 @@
 .intro-box img:hover{
 	transform:scale(1.04);
 }
-@media screen and (max-width: 990px)
+.intro-box a.btn
 {
-	.intro-box{
-		height: 700px;
-	}
+	margin:0;
+	font-size:100%;
+	color:#fff;
 }
-
 
 .masonry
 {

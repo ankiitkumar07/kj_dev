@@ -10,39 +10,38 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
 //= require bootstrap-sprockets
-//= require jquery_ujs
 //= require bootstrap
+//= require jquery
+//= require jquery_ujs
 //= require turbolinks
 //= require_tree .
 
 
 //Facebook Like and share Integration
+    $(document).on('turbolinks:load',function(){
+      window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '355001904913193',
+            xfbml      : true,
+            version    : 'v2.10'
+          });
+          FB.AppEvents.logPageView();
+       };
+    });
 
-		$(document).on('turbolinks:load',function(){
-			window.fbAsyncInit = function() {
-			    FB.init({
-			      appId      : '355001904913193',
-			      xfbml      : true,
-			      version    : 'v2.10'
-			    });
-			    FB.AppEvents.logPageView();
-			 };
-		});
-
-	 	$(document).on('turbolinks:load',function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) return;
-		  js = d.createElement(s); js.id = id;
-		  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=355001904913193";
-		  fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
+    $(document).on('turbolinks:load',function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=355001904913193";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
 
 //Facebook Like and share Integration
 
 
-			$(document).ready(function(){
+			$(document).on('turbolinks:load',function(){
 			    $(".fb-show").hover(function(){
 			    	 var toggleHeight = $(".fb-div").hasClass('expanded') ? "0" : "50px";
 			         $('.fb-div').stop().animate({ height: toggleHeight }, function(){
@@ -50,7 +49,7 @@
 		            });
 			    });
 			});
-			$(document).ready(function(){
+			$(document).on('turbolinks:load',function(){
 			    $(".twitter-show").hover(function(){
 			    	 var toggleHeight = $(".twitter-div").hasClass('expanded') ? "0" : "50px";
 			         $('.twitter-div').stop().animate({ height: toggleHeight }, function(){
@@ -58,7 +57,7 @@
 		            });
 			    });
 			});
-			$(document).ready(function(){
+			$(document).on('turbolinks:load',function(){
 			    $(".gplus-show").hover(function(){
 			    	 var toggleHeight = $(".gplus-div").hasClass('expanded') ? "0" : "50px";
 			         $('.gplus-div').stop().animate({ height: toggleHeight }, function(){
@@ -145,30 +144,6 @@ $(function() {
 		}, 2000);
 	});
 });
-
-
-
-
-			$(document).ready(function() {
-				$(window).on('scroll', function() {
-					var scroll = $(window).scrollTop();
-					$('.fixedpara').text('Sroll Value : ' + scroll);
-				});
-			});
-
-
-			$(document).ready(function() {
-				$(window).on('scroll', function() {
-					var sc = $(window).scrollTop();
-					if(sc <= 651)
-					{
-						$('#hidnav').css({"visibility":"hidden", "top":"-50px"});
-					}
-					else{
-						$('#hidnav').css({"visibility":"visible", "top":"0px"});
-					}
-				});
-			});
 
 
 			$(document).ready(function() {

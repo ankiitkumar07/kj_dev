@@ -84,12 +84,6 @@
 	
 }
 
-@media screen and (max-width: 767px){
-	#myFooter {
-		text-align: center;
-	}
-}
-
 #myFooter{
 	flex: 0 0 auto;
     -webkit-flex: 0 0 auto;
@@ -99,21 +93,22 @@
 {
 	display:inline;
 }
-#myFooter .myColsForm
+#myFooter input[type=text]
 {
-	text-align:right;
+	width:80%;
+	color:#373a48;
+
 }
 
 #myFooter textarea{
 	width: 80%;
-	color:#ccc;
+	color:#373a48;;
     height: 130px;
     padding: 12px 20px;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 0px;
     resize: none;
-    margin-right: 12px;
 }
 #myFooter [type="submit"]
 {

@@ -1,0 +1,119 @@
+@media only screen and (max-width:768px)
+{
+	.brand-container h1
+	{
+		font-weight: 900;
+		font-size: 350%;
+	}
+	.blockquote
+	{
+		padding-top: 0px;
+	}
+	#myFooter {
+		text-align: center;
+	}
+	.cover-container{
+		margin:20px auto;
+	}
+}
+
+@media only screen and (max-width:425px)
+{
+	.blockquote
+	{
+		font-size:300%;
+	}
+	#q1_right,#q2_left {
+		display:none;
+	}
+	.back{
+		height:490px;
+	}
+	.post-cont
+	{
+		grid-auto-rows:minmax(100px,auto);
+	}
+	.post-cont h4{
+		font-size:90%;
+		margin-left:8px;
+	}
+	.post-cont h1{
+		font-size:200%;
+		margin-left:8px;
+	}
+	.intro-box{
+		padding:0;
+		height:700px;
+	}
+	.intro-box img{
+		width:50%;
+		margin:20px 20%;
+	}
+	.intro-box p{
+		font-size:100%;
+	}
+	#myFooter [type="submit"]
+	{
+		width:80%;
+	}
+	.cover-container{
+		margin:20px auto;
+		height:270px;
+	}
+	.display-1 {
+	  font-size: 260%;
+	  text-align:center;
+	}
+	.post-container p{
+		font-size:100%;
+	}
+	.photo-container
+	{
+		margin:0;
+		padding:0;
+	}
+	.container
+	{
+		width:100%;
+	}
+	div.fb-comments{
+		padding:0;
+	}
+	.partial-banner div
+	{
+		grid-column:1/5;
+	}
+	a.h1
+	{
+		font-size:150%;
+	}
+	a.h1:hover{
+		font-size:151%;
+	}
+	.post-cover
+	{
+		height:200px;
+	}
+	.masonry{
+		grid-auto-rows:minmax(120px, auto);
+	}
+	.photos{
+		height:500px;
+	}
+}
+
+@media only screen and (max-width:320px)
+{
+	.blockquote
+	{
+		font-size:260%;
+	}
+	#q1_right {
+		display:none;
+	}
+	.intro-box img{
+		width:80%;
+		margin:20px 10%;
+		
+	}
+}

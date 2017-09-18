@@ -53,7 +53,7 @@ html,body{
 .form-wrapper
 {
     position: relative;
-    width: 700px;
+    width: 350px;
     height: 380px;
     margin: auto;
     margin-top: 100px;
@@ -67,6 +67,7 @@ html,body{
     box-shadow: 14px 13px 6px -6px rgba(0, 0, 0, 0.85);
 }
 
+
 [type="email"], [type="password"], [type="submit"], [type="text"]
 {
     margin: 10px 12px 10px 12px;
@@ -76,6 +77,29 @@ html,body{
     padding:15px;
     font-size:20px;
 }
+@media only screen and(max-width:320px)
+{
+    .form-wrapper
+    {
+      width:90%;
+    }
+    [type="email"], [type="password"], [type="submit"], [type="text"]
+    {
+        margin: 10px 12px 10px 12px;
+        width: 90%;
+        border-radius: 0;
+        height: 43px;
+        padding:15px;
+        font-size:20px;
+    }
+
+}
+
+[type="submit"]
+{
+  padding:0;
+}
+
 .form-control:focus
 {
     border: 1px solid #BF360C;
