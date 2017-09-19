@@ -10,16 +10,15 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
 //= require bootstrap-sprockets
 //= require bootstrap
-//= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 
 
 //Facebook Like and share Integration
-    $(document).on('turbolinks:load',function(){
+    $(document).ready(function(){
       window.fbAsyncInit = function() {
           FB.init({
             appId      : '355001904913193',
@@ -30,7 +29,7 @@
        };
     });
 
-    $(document).on('turbolinks:load',function(d, s, id) {
+    $(document).ready(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
@@ -41,7 +40,7 @@
 //Facebook Like and share Integration
 
 
-			$(document).on('turbolinks:load',function(){
+			$(document).ready(function(){
 			    $(".fb-show").hover(function(){
 			    	 var toggleHeight = $(".fb-div").hasClass('expanded') ? "0" : "50px";
 			         $('.fb-div').stop().animate({ height: toggleHeight }, function(){
@@ -49,7 +48,7 @@
 		            });
 			    });
 			});
-			$(document).on('turbolinks:load',function(){
+			$(document).ready(function(){
 			    $(".twitter-show").hover(function(){
 			    	 var toggleHeight = $(".twitter-div").hasClass('expanded') ? "0" : "50px";
 			         $('.twitter-div').stop().animate({ height: toggleHeight }, function(){
@@ -57,7 +56,7 @@
 		            });
 			    });
 			});
-			$(document).on('turbolinks:load',function(){
+			$(document).ready(function(){
 			    $(".gplus-show").hover(function(){
 			    	 var toggleHeight = $(".gplus-div").hasClass('expanded') ? "0" : "50px";
 			         $('.gplus-div').stop().animate({ height: toggleHeight }, function(){
