@@ -42,7 +42,7 @@
 
 			$(document).ready(function(){
 			    $(".fb-show").hover(function(){
-			    	 var toggleHeight = $(".fb-div").hasClass('expanded') ? "0" : "50px";
+			    	 var toggleHeight = $(".fb-div").hasClass('expanded') ? "0" : "70px";
 			         $('.fb-div').stop().animate({ height: toggleHeight }, function(){
 		                $(this).toggleClass('expanded');
 		            });
@@ -60,6 +60,14 @@
 			    $(".gplus-show").hover(function(){
 			    	 var toggleHeight = $(".gplus-div").hasClass('expanded') ? "0" : "50px";
 			         $('.gplus-div').stop().animate({ height: toggleHeight }, function(){
+		                $(this).toggleClass('expanded');
+		            });
+			    });
+			});
+			$(document).ready(function(){
+			    $(".fb-share").hover(function(){
+			    	 var toggleHeight = $(".fb-share-div").hasClass('expanded') ? "0" : "70px";
+			         $('.fb-share-div').stop().animate({ height: toggleHeight }, function(){
 		                $(this).toggleClass('expanded');
 		            });
 			    });
