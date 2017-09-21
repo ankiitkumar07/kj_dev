@@ -8,11 +8,10 @@ class PostsController < ApplicationController
   def index
     @page_title = "Posts"
       if params[:tag]
-        @posts = Post.tagged_with(params[:tag]).paginate(:page => params[:page], :per_page => 2)
+        @posts = Post.order(created_at: :desc).tagged_with(params[:tag]).paginate(:page => params[:page], :per_page => 3)
         @tags = ActsAsTaggableOn::Tagging.includes(:tag).where(context: 'tags').map { |tagging| tagging.tag.name  }.uniq
       else
-        @posts = Post.all
-        @posts = Post.paginate(:page => params[:page], :per_page => 2)
+        @posts = Post.order(created_at: :desc).paginate(:page => params[:page], :per_page => 3)
         @tags = ActsAsTaggableOn::Tagging.includes(:tag).where(context: 'tags').map { |tagging| tagging.tag.name  }.uniq
       end
   end
@@ -36,6 +35,7 @@ class PostsController < ApplicationController
   # GET /posts/1/edit
   def edit
     @tags = ActsAsTaggableOn::Tagging.includes(:tag).where(context: 'tags').map { |tagging| tagging.tag.name  }.uniq
+    @page_title = "Edit Post"
   end
 
   # POST /posts
