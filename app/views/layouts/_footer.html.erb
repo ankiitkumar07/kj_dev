@@ -9,6 +9,7 @@
                         <li><%= link_to 'Who I Am', about_me_index_path %></li>
                         <% if user_signed_in? %>
                             <li><%= link_to 'New Post', new_post_path %></li>
+                            <li><%= link_to 'Profile', username_path(current_user) %></li>
                         <%else%>
                             <li><%= link_to 'Login', new_user_session_path %></li>
                         <%end%>
@@ -27,8 +28,8 @@
                 <div class="col-sm-6 col-md-5 myCols">
                     <h5>Drop your Valuable Feedback</h5>
                     <div class="myColsForm">
-                        <input type="text" placeholder="Name">
-                        <textarea placeholder="Type Your Message Here!"></textarea>
+                        <input type="text" placeholder="Name" id="name">
+                        <textarea placeholder="Type Your Message Here!" id="message"></textarea>
                         <button type="submit" class="btn btn-primary">Send <i class="fa fa-caret-right"></i></button>
                     </div>
                 </div>
@@ -42,5 +43,6 @@
         </div>
         <div class="footer-copyright">
             <p> <i class="fa fa-copyright"></i> 2017 - Kumar's Journal </p>
+            <p>Designed with <i class="fa fa-heart fa-1x"></i> and lots of <i class="fa fa-code fa-1x"></i> by Ankit Kumar</p>
         </div>
     </footer>

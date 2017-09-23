@@ -209,3 +209,24 @@ $(function() {
 				$('.masonry div').addClass('animated bounceIn');}
 				});
 			});
+
+
+
+			$(document).ready(function(){
+				$('.myColsForm button').on('click',function(){
+					var name = document.getElementById('name').value.toUpperCase();
+					if(name=="" || document.getElementById('message').value == "")
+					{
+						alert("Please Enter All values");
+					}
+					else
+					{
+						if(alert('Thanks ' + name + ' for your support'))
+						{}
+						else    
+							window.location.reload();
+					}
+					
+
+				})
+			})

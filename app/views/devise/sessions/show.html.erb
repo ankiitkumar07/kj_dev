@@ -1,0 +1,22 @@
+<div class="profile-container">
+	<h3>Welcome <%= @user.name %></h3>
+	<div class="user-info">
+		<div class="inner">
+			<div><h3>Email: </h3></div>
+			<div><h3><%= @user.email %></h3></div>
+			<div><h3>Username: </h3></div>
+			<div><h3><%= @user.username %></h3></div>
+			<div><h3>Password:</h3></div>
+			<div><h3><%= link_to 'Change Password', edit_user_password_path(current_user), class:"btn btn-primary disabled" %></h3></div>
+		</div>
+		<hr>
+		<div class="user-actions">
+			<h3>Actions: </h3>
+			<div class="actions">
+				<div><%= link_to 'Create Post', new_post_path, class:"btn btn-primary" %></div>
+				<div><%= link_to 'View Posts', posts_path, class:"btn btn-primary" %></div>
+				<div><%= link_to 'Logout', destroy_user_session_path,method: :delete, class:"btn btn-primary" %></div>
+			</div>
+		</div>
+	</div>
+</div>

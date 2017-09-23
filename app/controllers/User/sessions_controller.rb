@@ -12,6 +12,12 @@ class User::SessionsController < Devise::SessionsController
     end
   end
 
+  def show 
+    @user = current_user
+    @page_title = "Welcome " + @user.name
+    @tags = ActsAsTaggableOn::Tagging.includes(:tag).where(context: 'tags').map { |tagging| tagging.tag.name  }.uniq
+  end
+
   # POST /resource/sign_in
   # def create
   #   super

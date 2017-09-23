@@ -46,6 +46,10 @@ cite
 	background-color: #fafafa;
 	height: 700px;
 }
+p .fa-heart
+{
+	color: #ccc;
+}
 
 hr.soften {
   height: 0.1em;

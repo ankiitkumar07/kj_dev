@@ -14,6 +14,22 @@ class User::PasswordsController < Devise::PasswordsController
   #   super
   # end
 
+  # def new
+  #   super
+  #   @page_title = "Forgot Password"
+  #   @tags = ActsAsTaggableOn::Tagging.includes(:tag).where(context: 'tags').map { |tagging| tagging.tag.name  }.uniq
+  # end
+
+  # def edit
+  #   super
+  #   @page_title = "Edit Password"
+  #   @tags = ActsAsTaggableOn::Tagging.includes(:tag).where(context: 'tags').map { |tagging| tagging.tag.name  }.uniq
+  # end
+
+  # def create
+  #   @tags = ActsAsTaggableOn::Tagging.includes(:tag).where(context: 'tags').map { |tagging| tagging.tag.name  }.uniq
+  # end
+
   # PUT /resource/password
   # def update
   #   super

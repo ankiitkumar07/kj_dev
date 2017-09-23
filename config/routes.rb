@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   get 'about_me/index'
 
-  devise_for :users, :controllers => {:registrations => "user/registrations", :sessions => 'user/sessions'}
+  devise_for :users, :controllers => {:registrations => "user/registrations", :sessions => 'user/sessions', :passwords => 'user/passwords'}
+  as :user do
+  	get 'users/:username', to: 'user/sessions#show', as: :username
+  end 
   resources :posts
   # get 'home/index'
   root to: 'home#index'
