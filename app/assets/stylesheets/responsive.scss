@@ -12,14 +12,21 @@
 
 @media only screen and (max-width:768px)
 {
+	.myHeader{
+		height:550px;
+	}
+	.scroller{
+		top:13%;
+	}
 	.brand-container h1
 	{
 		font-weight: 900;
-		font-size: 350%;
+		font-size: 250%;
 	}
 	.blockquote
 	{
 		padding-top: 0px;
+		margin-top:15%;
 	}
 	#myFooter {
 		text-align: center;
@@ -40,14 +47,26 @@
 
 @media only screen and (max-width:425px)
 {
+	.site-brand{
+		width:100%;
+	}
+	.scroller{
+		top:12%;
+	}
+	.brand-container p
+	{
+		font-size: 1em;
+	}
+
 	.blockquote
 	{
 		font-size:300%;
+		margin-top:20%;
 	}
 	#q1_right,#q2_left {
 		display:none;
 	}
-	.back{
+	.blog{
 		height:490px;
 	}
 	.post-cont
@@ -136,6 +155,11 @@
 		width:80%;
 		margin:20px 10%;
 		
+	}
+	.brand-container h1
+	{
+		font-weight: 100;
+		font-size: 200%;
 	}
 }
 

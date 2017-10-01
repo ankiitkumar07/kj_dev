@@ -5,7 +5,7 @@
  .header
 {
 	height: 560px;
-	background: url(https://dl.dropboxusercontent.com/s/8t51tjnnhsc9qvl/img-2.JPG?dl=0);
+	background: url(https://dl.dropboxusercontent.com/s/ieyyzqotdrw0p77/DSC07627.JPG?dl=0);
 	margin-top:10px;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -21,45 +21,22 @@
 	color:#fff;
 	text-shadow:2px;
 }
-
-.quote
-{
-	height: 350px;
-	background-color: #004D47;
-	width:100%;
-	border-top: 1px solid rgba(50, 50, 50, 0.75);
-/*box top shadow*/
-	-webkit-box-shadow: 0px -4px 35px 5px rgba(0,0,0,0.85);
-	-moz-box-shadow: 0px -4px 35px 5px rgba(0,0,0,0.85);
-	box-shadow: 0px -4px 35px 5px rgba(0,0,0,0.85);
-	z-index:99;
-}
-
-.blockquote {
-    display: block;
-    border-left: 0px;
-	margin-top: 20px;
-    padding-top: 60px;
-	text-align: right;
-}
-
 .back{
-	position: relative;
-	width: 100%;
-	height: 630px;
-	background-image: url(https://dl.dropboxusercontent.com/s/5tfz7qlojgsnpzk/DSC07699.JPG?dl=0);
+	position:relative;
+	height:350px;
+	width:100%;
+	background-image:url(https://dl.dropboxusercontent.com/s/6ynqz8f32panht6/bg-img.jpg?dl=0);
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: cover;
 	background-attachment: fixed;
+	background-size: cover;
 }
-
 .blurred
 {
 	width: 100%;
 	height: 100%;
 	display: block;
-	background-image: url(https://dl.dropboxusercontent.com/s/5tfz7qlojgsnpzk/DSC07699.JPG?dl=0);
+	background-image: url(https://dl.dropboxusercontent.com/s/6ynqz8f32panht6/bg-img.jpg?dl=0);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-attachment: fixed;
@@ -72,6 +49,42 @@
     position: relative;
     overflow: hidden;
 }
+
+
+.quote
+{
+	position:absolute;
+	top:0;
+	height: 350px;
+	width:100%;
+	border-top: 1px solid rgba(50, 50, 50, 0.75);
+/*box top shadow*/
+	-webkit-box-shadow: 0px -4px 35px 5px rgba(0,0,0,0.85);
+	-moz-box-shadow: 0px -4px 35px 5px rgba(0,0,0,0.85);
+	box-shadow: 0px -4px 35px 5px rgba(0,0,0,0.85);
+	z-index:99;
+}
+
+.blockquote {
+    display: block;
+    border-left: 0px;
+	margin-top: 10%;
+	text-align: center;
+}
+i.fa-quote-left
+{
+	position: relative;
+    top: -26px;
+    left: 0;
+}
+
+.blog{
+	position: relative;
+	width: 100%;
+	height: 630px;
+	background-color:#ccc;
+}
+
 
 .front{
 	position: absolute;

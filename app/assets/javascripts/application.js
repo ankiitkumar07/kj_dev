@@ -17,6 +17,8 @@
 //= require_tree .
 
 
+	
+
 //Facebook Like and share Integration
     $(document).ready(function(){
       window.fbAsyncInit = function() {
@@ -72,34 +74,33 @@
 		            });
 			    });
 			});
-	
+
+
 
 
 // animation for quote box 1
 
 $(function() {
 	$(window).on('scroll', function() {
-		var hT = $('#q1_left').offset().top,
+		var hT = $('#q1').offset().top,
 		    // hH = $('.left').outerHeight(),
 		    wH = $(window).height(),
 		    wS = $(this).scrollTop();
 		    console.log((hT-wH) , wS);
    			if (wS > (hT-wH)){
-		$('#q1_left').addClass('animated slideInLeft');
-		$('#q1_right').addClass('animated slideInRight');}
+		$('#q1').addClass('animated slideInLeft');}
 	});
 });
 
 $(function() {
 	$(window).on('scroll', function() {
-		var hT = $('#q2_left').offset().top,
+		var hT = $('#q2').offset().top,
 		    // hH = $('.left').outerHeight(),
 		    wH = $(window).height(),
 		    wS = $(this).scrollTop();
 		    console.log((hT-wH) , wS);
    			if (wS > (hT-wH)){
-		$('#q2_left').addClass('animated slideInLeft');
-		$('#q2_right').addClass('animated slideInRight');}
+		$('#q2').addClass('animated slideInRight');}
 	});
 });
 

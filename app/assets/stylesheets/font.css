@@ -6,9 +6,8 @@
 
 .blockquote
 {
-	font-family: 'Shrikhand', sans-serif;
-	font-weight: 500;
-	font-size: 400%;
+	font-weight: 100;
+	font-size: 300%;
 	line-height: 1.1em;
 	/*text-shadow:1px 2px #cdcdcd;*/
 }
@@ -21,26 +20,10 @@ cite
 	font-style: normal;
 	font-family: Arial;
 	text-shadow:none;
+	text-align: right;
 }
 
-.fa-plane,.fa-heart
-{
-	color: #ffffff;
-	padding-top: 80px;
-	font-size: 400px;
-	-webkit-transition: -webkit-transform .8s ease-in-out;
-          transition:         transform .8s ease-in-out;
-}
-.fa-plane:hover,.fa-heart:hover
-{
-	-webkit-transform: rotate(-360deg);
-          transform: rotate(-360deg);
-}
 
-#quote2
-{
-	text-align: left;
-}
 
 .intro-box p
 {
