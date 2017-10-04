@@ -27,30 +27,37 @@
 <!-- blog section -->
 		<section id="blog">
 			<div class="blog">
-				<div class="front">
 					<div class="container">
 						<div class="row">
-							<div class="post-cont">
-								<div  id="post-1" style="background-image:url(<%= Post.last.cover %>);">
-									<%= link_to Post.last do %>
-										<h1><%= Post.last.title %></h1>
-									<%end%> 
-								</div>
-								<div  id="post-2" style="background-image:url(<%= Post.third.cover %>);">
-									<%= link_to Post.third do %>
-										<h4><%= Post.third.title %></h4>
-									<%end%> 
-								</div>
-								<div  id="post-3" style="background-image:url(<%= Post.second.cover %>);">
-									<%= link_to Post.second do %>
-										<h4><%= Post.second.title %></h4>
-									<%end%> 
-								</div>
-								<div  id="post-4" style="background-image:url(<%= Post.first.cover %>);">
-									<%= link_to Post.first do %>
-										<h4><%= Post.first.title %></h4>
-									<%end%>  
-								</div>
+							<div class="post">
+								<% @top_five_posts.each_slice(1) do |post| %>
+									<% post.each do |post| %>
+										<div class="post-box">
+											<%= link_to '', posts_path %>
+											<div class="photo" style="background-image: url(<%= post.cover %>)">
+												<div class="category">
+													<p><%= post.tag_list.first=="Destination" ? "Destination" : "Exploring Cities" %></p>
+												</div>
+											</div>
+											<div class="heading-and-excerpt">
+												<div class="heading">
+													<h2><%= post.title %></h2>
+												</div>
+												<div class="excerpt">
+													<p><%= excerpt(post.body, ' ', radius: 100).html_safe %></p>
+												</div>
+											</div>
+											<div class="date-and-user">
+												<div>
+													<p><%= post.created_at.strftime('%d %B, %y') %></p>
+												</div>
+												<div>
+													<p><%= post.user.name %></p>
+												</div>
+											</div>		
+										</div>
+									<%end%>
+								<%end%>
 							</div>
 						</div>
 
@@ -60,7 +67,6 @@
 							</div>
 						</div>
 					</div>
-				</div>
 			</div>
 		</section>
 
@@ -104,15 +110,15 @@
 					</div>
 				</div>
 					<div class="masonry">
-						<div id="block-1" style="background-image:url(https://dl.dropboxusercontent.com/s/28a978tyndarl4d/DSC07713.JPG?dl=0);"></div>
-						<div id="block-2" style="background-image:url(https://dl.dropboxusercontent.com/s/8t51tjnnhsc9qvl/img-2.JPG?dl=0);"></div>
-						<div id="block-3" style="background-image:url(https://www.dropbox.com/s/12bjcvrhowgepbw/DSC05167.JPG?dl=0);"></div>
-						<div id="block-4" style="background-image:url(https://dl.dropboxusercontent.com/s/k5casgf6m1jmxkn/DSC07652.JPG?dl=0	);"></div>
-						<div id="block-5" style="background-image:url(https://dl.dropboxusercontent.com/s/bqpfvk0b0woma3y/DSC07707.JPG?dl=0);"></div>
-						<div id="block-6" style="background-image:url(https://dl.dropboxusercontent.com/s/rh4pnyxa88euhwk/haveli.jpg?dl=0);"></div>
-						<div id="block-7" style="background-image:url(https://dl.dropboxusercontent.com/s/qjrfebj27jp3df1/DSC07637.JPG?dl=0);"></div>
-						<div id="block-8" style="background-image:url(https://dl.dropboxusercontent.com/s/qjrfebj27jp3df1/DSC07637.JPG?dl=0);"></div>
-						<div id="block-9" style="background-image:url(https://dl.dropboxusercontent.com/s/zqoktz2hmu2s8zd/img-1.JPG?dl=0);"></div>
+						<div id="block-1"></div>
+						<div id="block-2"></div>
+						<div id="block-3"></div>
+						<div id="block-4"></div>
+						<div id="block-5"></div>
+						<div id="block-6"></div>
+						<div id="block-7"></div>
+						<div id="block-8"></div>
+						<div id="block-9"></div>
 					</div>
 			</div>
 		</section>

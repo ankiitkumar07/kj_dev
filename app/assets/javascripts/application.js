@@ -152,82 +152,94 @@ $(function() {
 });
 
 
-			$(document).ready(function() {
-				$(window).on('scroll', function() {
-					var scrolled = $(window).scrollTop();
+$(document).ready(function() {
+	$(window).on('scroll', function() {
+		var scrolled = $(window).scrollTop();
 
-					$('.site-brand').css('top', (280+(scrolled*.50))+'px');
-				});
-			});
+		$('.site-brand').css('top', (280+(scrolled*.50))+'px');
+	});
+});
 
-			$(document).ready(function(){
-			  // Add smooth scrolling to all links
-			  $("a.scrollers").on('click', function(event) {
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a.scrollers").on('click', function(event) {
 
-			    // Make sure this.hash has a value before overriding default behavior
-			    if (this.hash !== "") {
-			      // Prevent default anchor click behavior
-			      event.preventDefault();
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
 
-			      // Store hash
-			      var hash = this.hash;
+      // Store hash
+      var hash = this.hash;
 
-			      // Using jQuery's animate() method to add smooth page scroll
-			      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-			      $('html, body').animate({
-			        scrollTop: $(hash).offset().top
-			      }, 1800, function(){
-			   
-			        // Add hash (#) to URL when done scrolling (default click behavior)
-			        window.location.hash = hash;
-			      });
-			    } // End if
-			  });
-			});
-
-
-			$(document).ready(function(){
-				$(window).on('scroll', function(){
-					var sc = $(window).scrollTop();
-					if(sc <= 40)
-					{
-						$('.fa-angle-down').css({"visibility":"visible"});
-					}
-					else{
-						$('.fa-angle-down').css({"visibility":"hidden","transition":"300ms"});
-					}
-				});
-			});
-
-			$(document).ready(function(){
-				$(window).on('scroll', function(){
-					var hT = $('.masonry div').offset().top,
-				    // hH = $('.left').outerHeight(),
-				    wH = $(window).height(),
-				    wS = $(this).scrollTop();
-				    console.log((hT-wH) , wS);
-		   			if (wS > (hT-wH)){
-				$('.masonry div').addClass('animated bounceIn');}
-				});
-			});
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
 
 
+$(document).ready(function(){
+	$(window).on('scroll', function(){
+		var sc = $(window).scrollTop();
+		if(sc <= 40)
+		{
+			$('.fa-angle-down').css({"visibility":"visible"});
+		}
+		else{
+			$('.fa-angle-down').css({"visibility":"hidden","transition":"300ms"});
+		}
+	});
+});
+$(document).ready(function() {
+	$(".post-box").mouseover(function() {
+		$(this).find(".heading-and-excerpt").stop().animate({height:183},300);
+		$(this).find(".excerpt>p").stop().animate({opacity:1},300);
+	})
+})
+$(document).ready(function() {
+	$(".post-box").mouseout(function() {
+		$(this).find(".heading-and-excerpt").stop().animate({height:113},300);
+		$(this).find(".excerpt>p").stop().animate({opacity:0},300);
+	})
+})
 
-			$(document).ready(function(){
-				$('.myColsForm button').on('click',function(){
-					var name = document.getElementById('name').value.toUpperCase();
-					if(name=="" || document.getElementById('message').value == "")
-					{
-						alert("Please Enter All values");
-					}
-					else
-					{
-						if(alert('Thanks ' + name + ' for your support'))
-						{}
-						else    
-							window.location.reload();
-					}
-					
+$(document).ready(function(){
+	$(window).on('scroll', function(){
+		var hT = $('.masonry div').offset().top,
+	    // hH = $('.left').outerHeight(),
+	    wH = $(window).height(),
+	    wS = $(this).scrollTop();
+	    console.log((hT-wH) , wS);
+			if (wS > (hT-wH)){
+	$('.masonry div').addClass('animated bounceIn');}
+	});
+});
 
-				})
-			})
+
+
+$(document).ready(function(){
+	$('.myColsForm button').on('click',function(){
+		var name = document.getElementById('name').value.toUpperCase();
+		if(name=="" || document.getElementById('message').value == "")
+		{
+			alert("Please Enter All values");
+		}
+		else
+		{
+			if(alert('Thanks ' + name + ' for your support'))
+			{}
+			else    
+				window.location.reload();
+		}
+		
+
+	})
+})

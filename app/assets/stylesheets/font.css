@@ -16,12 +16,11 @@ cite
 {
 	font-size: 15px;
 	font-weight: bold;
-	line-height: 1em;
+	line-height: 6em;
 	font-style: normal;
 	font-family: Arial;
 	text-shadow:none;
-	text-align: right;
-}
+	float: right;}
 
 
 

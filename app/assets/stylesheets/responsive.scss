@@ -42,6 +42,12 @@
 	{
 		display:none;
 	}
+	.post{
+		grid-template-columns: repeat(2,1fr); 
+	}
+	#block-1,#block-7,#block-8{
+		background-size:cover;
+	}
 }
 
 
@@ -66,9 +72,7 @@
 	#q1_right,#q2_left {
 		display:none;
 	}
-	.blog{
-		height:490px;
-	}
+
 	.post-cont
 	{
 		grid-auto-rows:minmax(100px,auto);
@@ -140,6 +144,13 @@
 	.photos{
 		height:500px;
 	}
+	.post{
+		grid-template-columns: 1fr; 
+	}
+	.date-and-user{
+		z-index:20;
+		background-color:#fff;
+	}
 }
 
 @media only screen and (max-width:320px)
@@ -161,5 +172,16 @@
 		font-weight: 100;
 		font-size: 200%;
 	}
+	.heading>h2{
+		font-size:110%;
+	}
+	.post{
+		grid-auto-rows:320px;
+	}
+	.photo{
+		background-size: 150% 100%;
+    	background-position-x: 40%;
+	}
+
 }
 
