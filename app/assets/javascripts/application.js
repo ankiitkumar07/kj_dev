@@ -18,7 +18,7 @@
 
 
 	
-
+//*****************************************************
 //Facebook Like and share Integration
     $(document).ready(function(){
       window.fbAsyncInit = function() {
@@ -40,45 +40,56 @@
     }(document, 'script', 'facebook-jssdk'));
 
 //Facebook Like and share Integration
-
-
-			$(document).ready(function(){
-			    $(".fb-show").hover(function(){
-			    	 var toggleHeight = $(".fb-div").hasClass('expanded') ? "0" : "70px";
-			         $('.fb-div').stop().animate({ height: toggleHeight }, function(){
-		                $(this).toggleClass('expanded');
-		            });
-			    });
-			});
-			$(document).ready(function(){
-			    $(".twitter-show").hover(function(){
-			    	 var toggleHeight = $(".twitter-div").hasClass('expanded') ? "0" : "50px";
-			         $('.twitter-div').stop().animate({ height: toggleHeight }, function(){
-		                $(this).toggleClass('expanded');
-		            });
-			    });
-			});
-			$(document).ready(function(){
-			    $(".gplus-show").hover(function(){
-			    	 var toggleHeight = $(".gplus-div").hasClass('expanded') ? "0" : "50px";
-			         $('.gplus-div').stop().animate({ height: toggleHeight }, function(){
-		                $(this).toggleClass('expanded');
-		            });
-			    });
-			});
-			$(document).ready(function(){
-			    $(".fb-share").hover(function(){
-			    	 var toggleHeight = $(".fb-share-div").hasClass('expanded') ? "0" : "70px";
-			         $('.fb-share-div').stop().animate({ height: toggleHeight }, function(){
-		                $(this).toggleClass('expanded');
-		            });
-			    });
-			});
+//_______________________________________________________
 
 
 
 
-// animation for quote box 1
+
+
+//*****************************************************
+//*****************************************************
+//Social integration div extender
+$(document).ready(function(){
+    $(".fb-show").hover(function(){
+    	 var toggleHeight = $(".fb-div").hasClass('expanded') ? "0" : "70px";
+         $('.fb-div').stop().animate({ height: toggleHeight }, function(){
+            $(this).toggleClass('expanded');
+        });
+    });
+});
+$(document).ready(function(){
+    $(".twitter-show").hover(function(){
+    	 var toggleHeight = $(".twitter-div").hasClass('expanded') ? "0" : "50px";
+         $('.twitter-div').stop().animate({ height: toggleHeight }, function(){
+            $(this).toggleClass('expanded');
+        });
+    });
+});
+$(document).ready(function(){
+    $(".gplus-show").hover(function(){
+    	 var toggleHeight = $(".gplus-div").hasClass('expanded') ? "0" : "50px";
+         $('.gplus-div').stop().animate({ height: toggleHeight }, function(){
+            $(this).toggleClass('expanded');
+        });
+    });
+});
+$(document).ready(function(){
+    $(".fb-share").hover(function(){
+    	 var toggleHeight = $(".fb-share-div").hasClass('expanded') ? "0" : "70px";
+         $('.fb-share-div').stop().animate({ height: toggleHeight }, function(){
+            $(this).toggleClass('expanded');
+        });
+    });
+});
+//_______________________________________________________
+
+
+
+
+//*****************************************************
+//*****************************************************
+// All animations for home section
 
 $(function() {
 	$(window).on('scroll', function() {
@@ -123,10 +134,26 @@ $(function() {
 		$('.intro-box p').addClass('animated bounceInUp');}
 	});
 });
+$(document).ready(function(){
+	$(window).on('scroll', function(){
+		var hT = $('.masonry div').offset().top,
+	    // hH = $('.left').outerHeight(),
+	    wH = $(window).height(),
+	    wS = $(this).scrollTop();
+	    console.log((hT-wH) , wS);
+			if (wS > (hT-wH)){
+	$('.masonry div').addClass('animated bounceIn');}
+	});
+});
+//_______________________________________________________
 
 
 
 
+//*****************************************************
+//*****************************************************
+//*****************************************************
+//*****************************************************
 // scrolling jQuery section
 
 $(function() {
@@ -184,8 +211,15 @@ $(document).ready(function(){
     } // End if
   });
 });
+//_______________________________________________________
 
 
+
+
+//*****************************************************
+//*****************************************************
+//*****************************************************
+//angle Down
 $(document).ready(function(){
 	$(window).on('scroll', function(){
 		var sc = $(window).scrollTop();
@@ -198,6 +232,12 @@ $(document).ready(function(){
 		}
 	});
 });
+//_______________________________________________________
+
+
+//*****************************************************
+//*****************************************************
+//Post Box animations
 $(document).ready(function() {
 	$(".post-box").mouseover(function() {
 		$(this).find(".heading-and-excerpt").stop().animate({height:183},300);
@@ -210,21 +250,12 @@ $(document).ready(function() {
 		$(this).find(".excerpt>p").stop().animate({opacity:0},300);
 	})
 })
+//_______________________________________________________
 
-$(document).ready(function(){
-	$(window).on('scroll', function(){
-		var hT = $('.masonry div').offset().top,
-	    // hH = $('.left').outerHeight(),
-	    wH = $(window).height(),
-	    wS = $(this).scrollTop();
-	    console.log((hT-wH) , wS);
-			if (wS > (hT-wH)){
-	$('.masonry div').addClass('animated bounceIn');}
-	});
-});
-
-
-
+//*****************************************************
+//*****************************************************
+//*****************************************************
+//Form
 $(document).ready(function(){
 	$('.myColsForm button').on('click',function(){
 		var name = document.getElementById('name').value.toUpperCase();
@@ -243,3 +274,23 @@ $(document).ready(function(){
 
 	})
 })
+//_______________________________________________________
+
+
+//*****************************************************
+//*****************************************************
+//*****************************************************
+//function for Modal
+function openModal(){
+	var modalBox = document.getElementById('modal');
+	modalBox.style.display = "block";
+	modalBox.style.opacity = 1;
+	document.body.style.overflow = "hidden";
+}
+function closeModal(){
+	var modalBox = document.getElementById('modal');
+	modalBox.style.display = "none";
+	modalBox.style.opacity = 0;
+	document.body.style.overflow = "auto";
+}
+//_______________________________________________________

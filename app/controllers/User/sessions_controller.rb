@@ -8,6 +8,7 @@ class User::SessionsController < Devise::SessionsController
   def new
     super do |resource|
       @page_title = "Log In"
+      @firstLetter = ActsAsTaggableOn::Tag.all.order("name").group_by{|letter| letter.name[0]}
       @tags = ActsAsTaggableOn::Tagging.includes(:tag).where(context: 'tags').map { |tagging| tagging.tag.name  }.uniq
     end
   end
@@ -15,6 +16,7 @@ class User::SessionsController < Devise::SessionsController
   def show 
     @user = current_user
     @page_title = "Welcome " + @user.name
+    @firstLetter = ActsAsTaggableOn::Tag.all.order("name").group_by{|letter| letter.name[0]}
     @tags = ActsAsTaggableOn::Tagging.includes(:tag).where(context: 'tags').map { |tagging| tagging.tag.name  }.uniq
   end
 

@@ -33,7 +33,7 @@
 							<% @top_five_posts.each_slice(1) do |post| %>
 								<% post.each do |post| %>
 									<div class="post-box">
-										<%= link_to '', posts_path %>
+										<%= link_to '', post %>
 										<div class="photo" style="background-image: url(<%= post.cover %>)">
 											<div class="category">
 												<p><%= post.tag_list.first=="Destination" ? "Destination" : "Exploring Cities" %></p>

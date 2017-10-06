@@ -57,7 +57,12 @@
 		        	<li class="item"><%= link_to 'Home', root_path %></li>
 			        <li class="item"><%= link_to 'Blog', root_path(anchor: 'blog') %></li>
 			        <li class="item"><%= link_to 'Photos', root_path(anchor: 'photos') %></li>
-			        <li class="item"><%= link_to 'Intro', root_path(anchor: 'intro') %></li>
+			        <li class="item" id="drop">Categories
+						<ul>
+							<li><%= link_to 'Exlore', tag_path("Explore") %></li>
+							<li><%= link_to 'Destination Travel', tag_path("Destination") %></li>
+						</ul>
+			        </li>
 			      </ul>
 			    </div>
 			</div>

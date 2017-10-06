@@ -228,6 +228,30 @@ label:hover:before {
   width: 100%;
   margin: auto;
   padding: 10px;
+  display:grid;
+  grid-template-columns:1fr;
+}
+@media only screen and (max-width:768px)
+{
+  .social-integration{
+    grid-template-columns:repeat(4, 1fr);
+  }
+  .wrapper-for-social-button
+  {
+    width:0px;
+    margin:0;
+  }
+  .extender {
+    left: -20px;
+    padding-left: 0px;
+  }
+}
+@media only screen and (max-width:425px)
+{
+  .extender {
+    left: -20px;
+    padding-left: 0px;
+  }
 }
 
 .fb-show,.twitter-show,.gplus-show,.fb-share
@@ -268,17 +292,10 @@ label:hover:before {
   transform: rotate(360deg);
 }
 
-@media only screen and (max-width:425px)
-{
-  .extender{
-    padding-left:63px;
-  }
-}
-
 .follow{
   position:fixed;
-  right:-190px;
-  width:200px;
+  right:-175px;
+  width:185px;
   overflow-y:auto;
   margin:20px 0;
   padding-left:10px;

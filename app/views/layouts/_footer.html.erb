@@ -23,7 +23,7 @@
                                 <li><%= link_to tag, tag_path(tag)  %></li>
                             <%end%>
                         <%end%>
-                        <li><%= link_to 'More...', root_path %></li>
+                        <li id="tag" onclick="openModal()">More...</li>
                     </ul>
                 </div>
                 <div class="col-sm-6 col-md-5 myCols">
@@ -47,3 +47,25 @@
             <p>Designed with <i class="fa fa-heart fa-1x"></i> and lots of <i class="fa fa-code fa-1x"></i> by Ankit Kumar</p>
         </div>
     </footer>
+
+
+    <div class="myModal" id="modal">
+        <div class="modalHeader">
+            <h3>View Post by Tags</h3>
+            <button onclick="closeModal()">
+                <i class="fa fa-times"></i>
+            </button>
+        </div>
+        <div class="modalBody">
+            <% @firstLetter.each do |letter, items| %>
+                <h4><%= letter %></h4>
+                <ul>
+                    <% items.each do |item| %>
+                        <li><%= link_to item, tag_path(item.name)  %></li>
+                    <% end %>
+                </ul>
+            <% end %>
+        </div>
+    </div>
+
+

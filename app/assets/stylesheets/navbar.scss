@@ -68,9 +68,46 @@
 	cursor: pointer;
 	transition:all ease-in-out 300ms;
 }
-
-
 .fa-angle-down:hover
 {
 	transform:scale(1.5);
+}
+
+#drop{
+	color:#9d9d9d;
+	position: relative;
+    padding: 6% 0;
+    margin-right: 12px;
+    cursor:pointer;
+}
+#drop:hover{
+	color:#fff;
+}
+#drop:hover ul{
+	display:block;
+}
+
+#drop>ul{
+	list-style-type:none;
+    padding-left: 0;
+    position: absolute;
+    top: 35px;
+    right: -12px;
+    /* margin-top: 30px; */
+    width: max-content;
+    background-color: #222222;
+    padding: 10px;
+    display:none;
+}
+#drop>ul>li{
+	margin: 10px 0;
+}
+#drop>ul>li>a{
+	text-decoration:none;
+	display: block;
+    color: #ccc;
+}
+#drop>ul>li>a:hover
+{
+	color:#fff;
 }

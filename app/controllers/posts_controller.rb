@@ -9,9 +9,11 @@ class PostsController < ApplicationController
     @page_title = "Posts"
       if params[:tag]
         @posts = Post.order(created_at: :desc).tagged_with(params[:tag]).paginate(:page => params[:page], :per_page => 3)
+    @firstLetter = ActsAsTaggableOn::Tag.all.order("name").group_by{|letter| letter.name[0]}
         @tags = ActsAsTaggableOn::Tagging.limit(8).includes(:tag).where(context: 'tags').map { |tagging| tagging.tag.name  }.uniq
       else
         @posts = Post.order(created_at: :desc).paginate(:page => params[:page], :per_page => 3)
+    @firstLetter = ActsAsTaggableOn::Tag.all.order("name").group_by{|letter| letter.name[0]}
         @tags = ActsAsTaggableOn::Tagging.limit(8).includes(:tag).where(context: 'tags').map { |tagging| tagging.tag.name  }.uniq
       end
   end
@@ -22,11 +24,13 @@ class PostsController < ApplicationController
     @post = Post.friendly.find(params[:id])
     @page_title = @post.title
     @sidebar_posts = Post.where.not(id: @post.id).order("Random()").limit(4)
+    @firstLetter = ActsAsTaggableOn::Tag.all.order("name").group_by{|letter| letter.name[0]}
     @tags = ActsAsTaggableOn::Tagging.limit(8).includes(:tag).where(context: 'tags').map { |tagging| tagging.tag.name  }.uniq
   end
 
   # GET /posts/new
   def new
+    @firstLetter = ActsAsTaggableOn::Tag.all.order("name").group_by{|letter| letter.name[0]}
     @tags = ActsAsTaggableOn::Tagging.limit(8).includes(:tag).where(context: 'tags').map { |tagging| tagging.tag.name  }.uniq
     @post = current_user.posts.build
     @page_title = "Create A New Post"
@@ -34,6 +38,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    @firstLetter = ActsAsTaggableOn::Tag.all.order("name").group_by{|letter| letter.name[0]}
     @tags = ActsAsTaggableOn::Tagging.limit(8).includes(:tag).where(context: 'tags').map { |tagging| tagging.tag.name  }.uniq
     @page_title = "Edit Post"
   end
