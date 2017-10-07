@@ -36,7 +36,7 @@
 										<%= link_to '', post %>
 										<div class="photo" style="background-image: url(<%= post.cover %>)">
 											<div class="category">
-												<p><%= post.tag_list.first=="Destination" ? "Destination" : "Exploring Cities" %></p>
+												<p><%= post.tag_list.find{|e| /Destination/ =~e }=="Destination" ? "Destination" : "Exploring Cities" %></p>
 											</div>
 										</div>
 										<div class="heading-and-excerpt">
