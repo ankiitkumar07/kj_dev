@@ -9,7 +9,7 @@ class User::SessionsController < Devise::SessionsController
     super do |resource|
       @page_title = "Log In"
       @firstLetter = ActsAsTaggableOn::Tag.all.order("name").group_by{|letter| letter.name[0]}
-      @tags = ActsAsTaggableOn::Tagging.includes(:tag).where(context: 'tags').map { |tagging| tagging.tag.name  }.uniq
+      @tags = ActsAsTaggableOn::Tagging.limit(8).includes(:tag).where(context: 'tags').map { |tagging| tagging.tag.name  }.uniq
     end
   end
 
@@ -17,7 +17,7 @@ class User::SessionsController < Devise::SessionsController
     @user = current_user
     @page_title = "Welcome " + @user.name
     @firstLetter = ActsAsTaggableOn::Tag.all.order("name").group_by{|letter| letter.name[0]}
-    @tags = ActsAsTaggableOn::Tagging.includes(:tag).where(context: 'tags').map { |tagging| tagging.tag.name  }.uniq
+    @tags = ActsAsTaggableOn::Tagging.limit(8).includes(:tag).where(context: 'tags').map { |tagging| tagging.tag.name  }.uniq
   end
 
   # POST /resource/sign_in

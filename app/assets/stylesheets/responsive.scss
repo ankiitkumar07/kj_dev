@@ -1,3 +1,19 @@
+@media only screen and (min-width:1920px)
+{
+	.myHeader{
+		height:900px;
+	}
+	.site-brand{
+		top:400px;
+	}
+	.photos{
+		height:900px;
+	}
+	.masonry{
+		grid-auto-rows:minmax(300px,atuo)
+	}
+}
+
 @media only screen and (min-width:768px)
 {
 	.mobile-banner-ad
