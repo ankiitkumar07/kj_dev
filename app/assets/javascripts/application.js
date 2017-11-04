@@ -91,60 +91,7 @@ $(document).ready(function(){
 //*****************************************************
 // All animations for home section
 
-$(function() {
-	$(window).on('scroll', function() {
-		var hT = $('#q1').offset().top,
-		    // hH = $('.left').outerHeight(),
-		    wH = $(window).height(),
-		    wS = $(this).scrollTop();
-		    console.log((hT-wH) , wS);
-   			if (wS > (hT-wH)){
-		$('#q1').addClass('animated slideInLeft');}
-	});
-});
 
-$(function() {
-	$(window).on('scroll', function() {
-		var hT = $('#q2').offset().top,
-		    // hH = $('.left').outerHeight(),
-		    wH = $(window).height(),
-		    wS = $(this).scrollTop();
-		    console.log((hT-wH) , wS);
-   			if (wS > (hT-wH)){
-		$('#q2').addClass('animated slideInRight');}
-	});
-});
-
-$(function() {
-	$(window).on('load', function() {
-		$('a.navbar-brand').addClass('animated bounceInDown');
-	});
-});
-
-$(function() {
-	$(window).on('scroll', function() {
-		var hT = $('.intro-box img').offset().top,
-		    // hH = $('.left').outerHeight(),
-		    wH = $(window).height(),
-		    wS = $(this).scrollTop();
-		    console.log((hT-wH) , wS);
-   			if (wS > (hT-wH)){
-		$('.intro-box img').addClass('animated bounceIn');
-		$('.intro-box h1').addClass('animated bounceInDown');
-		$('.intro-box p').addClass('animated bounceInUp');}
-	});
-});
-$(document).ready(function(){
-	$(window).on('scroll', function(){
-		var hT = $('.masonry div').offset().top,
-	    // hH = $('.left').outerHeight(),
-	    wH = $(window).height(),
-	    wS = $(this).scrollTop();
-	    console.log((hT-wH) , wS);
-			if (wS > (hT-wH)){
-	$('.masonry div').addClass('animated bounceIn');}
-	});
-});
 //_______________________________________________________
 
 

@@ -22,26 +22,8 @@
 		<div class="row">
 			<div class="col-md-10 col-sm-12">
 				<div class="col-md-12">
-					<div class="content-container">
-							<div class="leaderboard-ad">
-								<!-- Ads_for_in_article -->
-								<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4529726492389837" data-ad-slot="2070973961"></ins>
-								<script>
-								(adsbygoogle = window.adsbygoogle || []).push({});
-								</script>
-							</div>
-							<div class="mobile-banner-ad">
-								<!-- mobile ad unit -->
-								<ins class="adsbygoogle"
-								     style="display:inline-block;width:320px;height:100px"
-								     data-ad-client="ca-pub-4529726492389837"
-								     data-ad-slot="1346965527"></ins>
-								<script>
-								(adsbygoogle = window.adsbygoogle || []).push({});
-								</script>
-							</div>
-							
-						<%= simple_format(@post.body) %>
+					<div class="content-container">							
+						<%= simple_format(@post.body,{}, sanitize: false) %>
 					</div> <!-- content-container -->
 				</div>
 			</div> <!-- col-md-8 -->
