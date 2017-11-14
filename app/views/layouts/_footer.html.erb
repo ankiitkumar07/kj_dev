@@ -6,6 +6,7 @@
                     <ul>
                         <li><%= link_to 'Home', root_path %></li>
                         <li><%= link_to 'Blog', posts_path %></li>
+                        <%= link_to 'Gallery', gallery_path %>
                         <li><%= link_to 'Who I Am', about_me_index_path %></li>
                         <% if user_signed_in? %>
                             <li><%= link_to 'New Post', new_post_path %></li>
@@ -23,7 +24,9 @@
                                 <li><%= link_to tag, tag_path(tag)  %></li>
                             <%end%>
                         <%end%>
-                        <li id="tag" onclick="openModal()">More...</li>
+                        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#openModal">
+                          More...
+                        </button>
                     </ul>
                 </div>
                 <div class="col-sm-6 col-md-5 myCols">
@@ -47,17 +50,18 @@
             <p>Designed with <i class="fa fa-heart fa-1x"></i> and lots of <i class="fa fa-code fa-1x"></i> by Ankit Kumar</p>
         </div>
     </footer>
-
-
-    <div class="myModal" id="modal">
-        <div class="modalHeader">
-            <h3>View Post by Tags</h3>
-            <button onclick="closeModal()">
-                <i class="fa fa-times"></i>
-            </button>
-        </div>
-        <div class="modalBody">
-            <% @firstLetter.each do |letter, items| %>
+<!-- Modal -->
+<div class="modal fade bd-example-modal-lg" id="openModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Explore By Tags</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <% @firstLetter.each do |letter, items| %>
                 <h4><%= letter %></h4>
                 <ul>
                     <% items.each do |item| %>
@@ -65,7 +69,12 @@
                     <% end %>
                 </ul>
             <% end %>
-        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
     </div>
+  </div>
+</div>
 
 

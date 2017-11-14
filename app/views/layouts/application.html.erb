@@ -1,46 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= @page_title%> | Kumar's Journal</title>
-    <% get_site_meta %>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:url"           content="http://www.kumarsjournal.com<%= request.fullpath %>" />
-    <meta property="og:type"          content="Travel Blog" />
-    <meta property="og:title"         content="<%= @title %> | Kumar's Journal" />
-    <meta property="og:description"   content="<%= @page_tite %>" />
-    <meta property="og:image"   content="<%= @image %>" />
-    <meta name="keywords" content="Travel, blog, himachal, punjab, India, Indian cities, <%= @tags %>" />
-    <meta name="description" content="<%= @desc %>" />
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-  </head>
-
-  <body class="animate-bottom">
-    
-    <div id="fb-root"></div>
-
-<!-- naviagtion bar -->
-
-	<%= render :partial => "layouts/navbar" %>
-
-<!-- navigation bar ends here -->
-
-
-
-     
-    <%= yield %>
-
-
- <!-- footer section starts here  -->
-
-
-
-
-<%= render :partial => "layouts/footer" %>
-
-<!-- footer section ends here  -->
-  </body>
+    <head>
+        <title><%= @page_title%> | Kumar's Journal</title>
+        <% get_site_meta %>
+        <% get_site_vars %>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:url"           content="http://www.kumarsjournal.com<%= request.fullpath %>" />
+        <meta property="og:type"          content="Travel Blog" />
+        <meta property="og:title"         content="<%= @title %> | Kumar's Journal" />
+        <meta property="og:description"   content="<%= @page_tite %>" />
+        <meta property="og:image"   content="<%= @image %>" />
+        <meta name="keywords" content="Travel, blog, himachal, punjab, India, Indian cities, <%= @tags %>" />
+        <meta name="description" content="<%= @desc %>" />
+        <%= csrf_meta_tags %>
+        <%= stylesheet_link_tag    'application', media: 'all' %>
+        <%= javascript_include_tag 'application' %>
+    </head>
+    <body class="animate-bottom"> 
+        <div id="fb-root"></div>
+    <!-- naviagtion bar -->
+    	<%= render :partial => "layouts/navbar" %>
+    <!-- navigation bar ends here -->
+        <%= yield %>
+     <!-- footer section starts here  -->
+        <%= render :partial => "layouts/footer" %>
+    <!-- footer section ends here  -->
+    </body>
 </html>

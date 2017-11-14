@@ -10,29 +10,30 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *=require color.css
- *=require font.css
- *=require animate.css
- *= require_tree .
- *= require_self
  */
 
 /*// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"*/
-@import "bootstrap-sprockets";
 @import "bootstrap";
+@import "home";
+@import "posts";
+@import "navbar";
+@import "footer";
+@import "color";
+@import "font";
+@import "animate";
+@import "responsive";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import url('//fonts.googleapis.com/css?family=Poiret+One|Shrikhand');
 
 
-html,body{
-    display: flex;
-    display: -webkit-flex;
-    flex-direction: column;
-    -webkit-flex-direction: column;
-    marign:0;
-    padding:0;
-    font-family: 'Poiret One', cursive;
+html{
+  position: relative;
+  min-height: 100%;
+}
+body{
+  padding-top: 83px;
+  font-family: 'Poiret One', cursive;
 }
 
 .animate-bottom {
@@ -224,17 +225,25 @@ label:hover:before {
 
 .social-integration
 {
-  position: relative;
-  width: 100%;
+  position: fixed;
+  top: 8rem;
+  right: 1rem;
   margin: auto;
   padding: 10px;
   display:grid;
   grid-template-columns:1fr;
+  transition:all linear 300ms;
+
 }
 @media only screen and (max-width:768px)
 {
   .social-integration{
     grid-template-columns:repeat(4, 1fr);
+    width: 100%;
+    left: 0;
+    bottom: .3rem;
+    top: auto;
+    height: 80px;
   }
   .wrapper-for-social-button
   {
@@ -244,6 +253,9 @@ label:hover:before {
   .extender {
     left: -20px;
     padding-left: 0px;
+    width: 100%;
+    top: -7rem;
+    position: relative;
   }
 }
 @media only screen and (max-width:425px)
@@ -256,7 +268,7 @@ label:hover:before {
 
 .fb-show,.twitter-show,.gplus-show,.fb-share
 {
-  height: 40px;
+    height: 40px;
     width: 40px;
     margin: 10px auto; 
     border-radius: 100%;
@@ -264,9 +276,9 @@ label:hover:before {
     text-align: center;
     color: #fff;
     font-weight: 700;
-    font-size: 2.3em;
+    font-size: 1.7rem;
     cursor: pointer;
-  transition:all ease-in-out 400ms;
+    transition:all ease-in-out 400ms;
 }
 .twitter-show
 {
@@ -279,8 +291,7 @@ label:hover:before {
 
 .extender
 {
-  height: 0;
-    width: 200px;
+    height: 0;
     margin: auto;
     background-color: transparent;
     position: relative;
@@ -300,43 +311,32 @@ label:hover:before {
   margin:20px 0;
   padding-left:10px;
   transition:all ease-in-out 300ms;
+  height: 30px;
+  display: flex;
+  align-items:center;
+  justify-content:center;
 }
 .follow-fb
 {
-  top:50px;
+  top:4.5rem;
   border-left:10px solid #4267b2;
 }
 .follow-twitter
 {
-  top:81px;
+  top:6.47rem;
   border-left:10px solid #1b95e0;
 }
 .follow-gplus
 {
-  top:118px;
+  top:8.46rem;
   border-left:10px solid #db4437;
 }
 .follow-youtube
 {
-  top:150px;
+  top:10.46rem;
   border-left:10px solid #f00;
 }
 .follow:hover
 {
   right:0;
-}
-
-div.sidebar-ad
-{
-  position:relative;
-  width:min-content;
-  height:min-content;
-  top: 200px;
-}
-@media only screen and(max-width:425px)
-{
-  div.sidebar-ad
-  {
-    display:none;
-  }
 }

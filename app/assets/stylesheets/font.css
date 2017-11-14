@@ -3,13 +3,16 @@
 	src: local('AR BLANCA'), url('ARBLANCA.woff') format('woff');
 }
 
+p::selection,span::selection,h1::selection,h2::selection,h3::selection,h4::selection,h5::selection,h6::selection,a::selection{
+	color: white;
+	background-color: #578e5e;
+}
 
 .blockquote
 {
 	font-weight: 100;
 	font-size: 300%;
 	line-height: 1.1em;
-	/*text-shadow:1px 2px #cdcdcd;*/
 }
 
 cite
@@ -26,15 +29,12 @@ cite
 
 .intro-box p
 {
-	/*display: inline-block;*/
-	font-size: 140%;
-	/*transform: scale(.8, 1.5);*/
+	font-size: 1.1rem;
 	font-family: 'Poiret One', cursive;
-	line-height: 1.1em;
-	/*font-weight: 1000;*/
+	line-height: 1.6rem;
 	text-align: justify;
 	font-weight: 100;
-	letter-spacing: 0.3em;
+	letter-spacing: 0.2rem;
 
 }
 
@@ -46,4 +46,15 @@ cite
 .intro-head
 {
 	font-weight: 900;
+}
+
+
+.btn-link{
+	color: #eaebec;
+	text-decoration: none;
+	cursor: pointer;
+	&:hover{
+		text-decoration: none;
+		color:#f6f7f9;
+	}
 }

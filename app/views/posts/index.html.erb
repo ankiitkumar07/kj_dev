@@ -37,29 +37,11 @@
 		</div>
 	<%end%>
 </div>
-
-<div class="leaderboard-ad">
-	<!-- Ads_for_in_article -->
-	<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4529726492389837" data-ad-slot="2070973961"></ins>
-	<script>
-	(adsbygoogle = window.adsbygoogle || []).push({});
-	</script>
-</div>
-<div class="mobile-banner-ad">
-	<!-- mobile ad unit -->
-	<ins class="adsbygoogle"
-	     style="display:inline-block;width:320px;height:100px"
-	     data-ad-client="ca-pub-4529726492389837"
-	     data-ad-slot="1346965527"></ins>
-	<script>
-	(adsbygoogle = window.adsbygoogle || []).push({});
-	</script>
-</div>
   
-    <div class="container">
-    	<div class="row">
-		    <div class="col-md-10 col-sm-10 text-right">
-		    	<%= will_paginate @posts,:previous_label => 'Newer Posts', :next_label => 'Older Posts', :container => false, renderer: BootstrapPagination::Rails %>
-		    </div>
-		 </div>
-    </div>
+<div class="container">
+	<div class="row">
+	    <div class="col-md-10 col-sm-10 text-right">
+	    	<%= will_paginate @posts,:previous_label => 'Newer Posts', :next_label => 'Older Posts', :container => false, renderer: BootstrapPagination::Rails %>
+	    </div>
+	 </div>
+</div>

@@ -1,71 +1,102 @@
-		
+ <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+ 	<%= link_to root_path, class: 'navbar-brand' do %>
+		<img src="https://dl.dropboxusercontent.com/s/mk1q5ugcbe4zdr1/Logo.png?dl=0" alt="Brnad Logo" height="63" width="65" class="d-inline-block align-top"> Kumar's Journal <span class="brand-sub">Travel. Explore. Adventure.</span>
+ 	<% end %>
+ 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#search-bar" aria-expanded="false" aria-label="Toggle Search" id="nav-search-toggler">
+ 		 <i class="fa fa-search"></i>
+ 	</button>
+ 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarUL" aria-expanded="false" aria-label="Toggle navigation">
+ 		 <span class="navbar-toggler-icon"></span>
+ 	</button>
+
+ 	<div class="collapse navbar-collapse" id="navbarUL">
+	    <ul class="navbar-nav mr-auto">
+	      <li class="<%= params[:controller] == 'home' && params[:action] == 'index' ? 'nav-item active' : 'nav-item' %>">
+	        <%= link_to 'Home', root_path, class: 'nav-link' %>
+	      </li>
+	      <li class="<%= params[:controller] == 'posts' ? 'nav-item active' : 'nav-item' %>">
+	        <%= link_to 'Blog', posts_path, class: 'nav-link' %>
+	      </li>
+	      <li class="<%= params[:controller] == 'about_me' && params[:action] == 'gallery' ? 'nav-item active' : 'nav-item' %>">
+	        <%= link_to 'Gallery', gallery_path, class: 'nav-link' %>
+	      </li>
+	      <li class="<%= params[:controller] == 'about_me' && params[:action] == 'index' ? 'nav-item active' : 'nav-item' %>">
+	        <%= link_to 'Know Me', about_me_index_path, class: 'nav-link' %>
+	      </li>
+	      <li class="nav-item dropdown">
+	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	          Categories
+	        </a>
+	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	          <%= link_to 'Destination Travel', tag_path("Destination"), class: 'dropdown-item' %>
+	          <%= link_to 'Religious Travel', tag_path("Destination"), class: 'dropdown-item' %>
+	          <%= link_to 'On Road Travel', tag_path("Explore"), class: 'dropdown-item' %>
+	        </div>
+	      </li>
+	    </ul>
+	  </div>
+	  <div class="collapse navbar-collapse" id="search-bar">
+	    <ul class="navbar-nav ml-auto nav-search">
+	    	<form class="form-inline my-2 my-lg-0 nav-search-form">
+		      <input class="form-control mr-sm-2" type="search" placeholder="Search Posts" popover="" aria-label="Search" disabled>
+		      <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+		    </form>
+	    </ul>
+	  </div>
+ </nav>
  <% if params[:controller] == 'home' && params[:action] == 'index'  %>
-		<div class="container-fluid myHeader">
-			<nav class="navbar navbar-inverse navbar-fixed-top">
-				<div class="container-fluid">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-					        <span class="sr-only">Toggle navigation</span>
-					        <span class="icon-bar"></span>
-					        <span class="icon-bar"></span>
-					        <span class="icon-bar"></span>
-						 </button>
-						 <%= link_to root_path, class: 'navbar-brand' do %>
-						 	<img src="https://dl.dropboxusercontent.com/s/mk1q5ugcbe4zdr1/Logo.png?dl=0" alt="Brand" height="50" width="50" style="display: inline;"> Kumar's Journal
-						 <%end%>
+<!-- photo section start here -->
+	<section id="photos">
+		<div class="container-fluid photos">
+			<div class="masonry">
+				<div id="block-1">
+					<div class="loading">
+						<div class="spinner"></div>
 					</div>
-					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				      <ul class="nav navbar-nav navbar-right">
-				        <li class="active item"><%= link_to 'Home', root_path, class: "scrollers" %></li>
-				        <li class="item"><a href="#blog" class="scrollers">Blog</a></li>
-				        <li class="item"><a href="#photos" class="scrollers">Photo</a></li>
-				        <li class="item"><a href="#intro" class="scrollers">Intro</a></li>
-				      </ul>
-				    </div>
 				</div>
-			</nav>
-			<div class="site-brand">
-				<div class="brand-container">
-					<h1>KUMAR<span style="font-size:0.7em; font-weight:300">'s</span> JOURNAL</h1>
-					<p>Travel. Explore. Adventure.</p>
+				<div id="block-2">
+					<div class="loading">
+						<div class="spinner"></div>
+					</div>
 				</div>
-			</div>
-			<div class="scroller">
-				<a href="#quote" class="scrollers"><i class="fa fa-angle-down fa-5x" aria-hidden="true"></i></a>
+				<div id="block-3">
+					<div class="loading">
+						<div class="spinner"></div>
+					</div>
+				</div>
+				<div id="block-4">
+					<div class="loading">
+						<div class="spinner"></div>
+					</div>
+				</div>
+				<div id="block-5">
+					<div class="loading">
+						<div class="spinner"></div>
+					</div>
+				</div>
+				<div id="block-6">
+					<div class="loading">
+						<div class="spinner"></div>
+					</div>
+				</div>
+				<div id="block-7">
+					<div class="loading">
+						<div class="spinner"></div>
+					</div>
+				</div>
+				<div id="block-8">
+					<div class="loading">
+						<div class="spinner"></div>
+					</div>
+				</div>
+				<div id="block-9">
+					<div class="loading">
+						<div class="spinner"></div>
+					</div>
+				</div>
 			</div>
 		</div>
-
-
-<% else %>
-
-
-		<nav class="navbar navbar-inverse navbar-fixed-top">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-				        <span class="sr-only">Toggle navigation</span>
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-					 </button>
-					 <%= link_to root_path, class: 'navbar-brand' do %>
-						 	<img src="https://dl.dropboxusercontent.com/s/mk1q5ugcbe4zdr1/Logo.png?dl=0" alt="Brand" height="50" width="50" style="display: inline;"> Kumar's Journal
-						 <%end%>
-				</div>
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			      <ul class="nav navbar-nav navbar-right">
-		        	<li class="item"><%= link_to 'Home', root_path %></li>
-			        <li class="item"><%= link_to 'Blog', root_path(anchor: 'blog') %></li>
-			        <li class="item"><%= link_to 'Photos', root_path(anchor: 'photos') %></li>
-			        <li class="item" id="drop">Categories
-						<ul>
-							<li><%= link_to 'Exlore', tag_path("Explore") %></li>
-							<li><%= link_to 'Destination Travel', tag_path("Destination") %></li>
-						</ul>
-			        </li>
-			      </ul>
-			    </div>
-			</div>
-		</nav>
-
+	</section>
+<!-- photo section end here -->
 <%end%>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>

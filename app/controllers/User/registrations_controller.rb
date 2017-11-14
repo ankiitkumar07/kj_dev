@@ -9,8 +9,6 @@ class User::RegistrationsController < Devise::RegistrationsController
   def new 
     super do |resource|
       @page_title = "Create A New Account"
-      @tags = ActsAsTaggableOn::Tagging.includes(:tag).where(context: 'tags').map { |tagging| tagging.tag.name  }.uniq
-      @firstLetter = ActsAsTaggableOn::Tag.all.order("name").group_by{|letter| letter.name[0]}
     end
   end
 

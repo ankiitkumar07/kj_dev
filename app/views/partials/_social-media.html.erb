@@ -29,6 +29,8 @@
 		</div>
 	</div>
 	</div>
+
+	<p id="text"></p>
 </div>
 
 
@@ -50,5 +52,28 @@
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
-		  
-
+<script>
+$(document).ready(function(){
+	$(window).on('scroll', function(){
+		var si = $('.social-integration');
+		var sc = $(window).scrollTop();
+		var th = $('#this-head').offset().top;
+		var h = si.height();
+		var winWidth = $(window).width();
+		// $('#text').text(sc +' '+ th);
+		if(winWidth > 768){
+			if(sc> (th-h-10)){
+				si.css({'right':'-6rem'});
+			}else{
+				si.css({'right':'1rem'});
+			}
+		}else{
+			if(sc> (th-600)){
+				si.css({'position':'absolute', 'bottom':'-4rem'});
+			}else{
+				si.css({'position':'fixed', 'bottom': '0.3rem', 'left':'20px'});
+			}
+		}
+	})
+})
+</script>

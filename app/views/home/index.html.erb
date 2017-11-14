@@ -98,32 +98,7 @@
 <!-- randomquote section 2 -->
 
 
-<!-- photo section start here -->
 
-		<section id="photos">
-			<div class="container-fluid photos">
-				<div class="row">
-					<div class="col-md-12 col-sm-12">
-						<h1 class="text-center" style="padding:36px;">Photo Gallery</h1>
-
-						<hr class="soften">
-					</div>
-				</div>
-					<div class="masonry">
-						<div id="block-1"></div>
-						<div id="block-2"></div>
-						<div id="block-3"></div>
-						<div id="block-4"></div>
-						<div id="block-5"></div>
-						<div id="block-6"></div>
-						<div id="block-7"></div>
-						<div id="block-8"></div>
-						<div id="block-9"></div>
-					</div>
-			</div>
-		</section>
-
-<!-- photo section end here -->
 
 
 
@@ -161,7 +136,6 @@
 		    // hH = $('.left').outerHeight(),
 		    wH = $(window).height(),
 		    wS = $(this).scrollTop();
-		    console.log((hT-wH) , wS);
    			if (wS > (hT-wH)){
 		$('#q1').addClass('animated slideInLeft');}
 	});
@@ -173,7 +147,6 @@ $(function() {
 		    // hH = $('.left').outerHeight(),
 		    wH = $(window).height(),
 		    wS = $(this).scrollTop();
-		    console.log((hT-wH) , wS);
    			if (wS > (hT-wH)){
 		$('#q2').addClass('animated slideInRight');}
 	});
@@ -191,7 +164,6 @@ $(function() {
 		    // hH = $('.left').outerHeight(),
 		    wH = $(window).height(),
 		    wS = $(this).scrollTop();
-		    console.log((hT-wH) , wS);
    			if (wS > (hT-wH)){
 		$('.intro-box img').addClass('animated bounceIn');
 		$('.intro-box h1').addClass('animated bounceInDown');
@@ -199,14 +171,68 @@ $(function() {
 	});
 });
 $(document).ready(function(){
-	$(window).on('scroll', function(){
-		var hT = $('.masonry div').offset().top,
-	    // hH = $('.left').outerHeight(),
-	    wH = $(window).height(),
-	    wS = $(this).scrollTop();
-	    console.log((hT-wH) , wS);
-			if (wS > (hT-wH)){
-	$('.masonry div').addClass('animated bounceIn');}
-	});
+	$('#block-1').imagesLoaded({background: true}).done(function(){
+		$('#block-1>.loading').fadeOut();
+	})
+	$('#block-1').imagesLoaded({background: true}).fail(function(){
+		$('#block-1>.loading').addClass('failed');
+	})
+
+	$('#block-2').imagesLoaded({background: true}).done(function(){
+		$('#block-2>.loading').fadeOut();
+	})
+	$('#block-2').imagesLoaded({background: true}).fail(function(){
+		$('#block-2>.loading').addClass('failed');
+	})
+
+	$('#block-3').imagesLoaded({background: true}).done(function(){
+		$('#block-3>.loading').fadeOut();
+	})
+	$('#block-3').imagesLoaded({background: true}).fail(function(){
+		$('#block-3>.loading').addClass('failed');
+	})
+
+	$('#block-4').imagesLoaded({background: true}).done(function(){
+		$('#block-4>.loading').fadeOut();
+	})
+	$('#block-4').imagesLoaded({background: true}).fail(function(){
+		$('#block-4>.loading').addClass('failed');
+	})
+
+	$('#block-5').imagesLoaded({background: true}).done(function(){
+		$('#block-5>.loading').fadeOut();
+	})
+	$('#block-5').imagesLoaded({background: true}).fail(function(){
+		$('#block-5>.loading').addClass('failed');
+	})
+
+	$('#block-6').imagesLoaded({background: true}).done(function(){
+		$('#block-6>.loading').fadeOut();
+	})
+	$('#block-6').imagesLoaded({background: true}).fail(function(){
+		$('#block-6>.loading').addClass('failed');
+	})
+
+	$('#block-7').imagesLoaded({background: true}).done(function(){
+		$('#block-7>.loading').fadeOut();
+	})
+	$('#block-7').imagesLoaded({background: true}).fail(function(){
+		$('#block-7>.loading').addClass('failed');
+	})
+
+	$('#block-8').imagesLoaded({background: true}).done(function(){
+		$('#block-8>.loading').fadeOut();
+	})
+	$('#block-8').imagesLoaded({background: true}).fail(function(){
+		$('#block-8>.loading').addClass('failed');
+	})
+
+	$('#block-9').imagesLoaded({background: true}).done(function(){
+		$('#block-9>.loading').fadeOut();
+	})
+	$('#block-9').imagesLoaded({background: true}).fail(function(){
+		$('#block-9>.loading').addClass('failed');
+	})
 });
+
 </script>
