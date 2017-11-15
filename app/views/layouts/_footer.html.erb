@@ -12,7 +12,7 @@
                             <li><%= link_to 'New Post', new_post_path %></li>
                             <li><%= link_to 'Profile', username_path(current_user) %></li>
                         <%else%>
-                            <li><%= link_to 'Login', new_user_session_path %></li>
+                            <li><%= link_to 'Admin', admin_path %></li>
                         <%end%>
                     </ul>
                 </div>

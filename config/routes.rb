@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  get 'about_me/index'
+  get 'about', to: 'about_me#index', as: :about_me_index
 
   devise_for :users, :controllers => {:registrations => "user/registrations", :sessions => 'user/sessions', :passwords => 'user/passwords'}
   as :user do
-  	get 'users/:username', to: 'user/sessions#show', as: :username
+  	get 'admin/:username', to: 'user/sessions#show', as: :username
+    get 'admin', to: 'user/sessions#new'
+    post '/admin', to: 'devise/sessions#create'
   end 
   resources :posts
   # get 'home/index'

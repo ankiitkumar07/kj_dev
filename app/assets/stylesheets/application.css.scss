@@ -21,6 +21,7 @@
 @import "color";
 @import "font";
 @import "animate";
+@import "userProfile";
 @import "responsive";
 @import "font-awesome-sprockets";
 @import "font-awesome";
@@ -74,9 +75,8 @@ body{
     width: 350px;
     height: 380px;
     margin: auto;
-    margin-top: 100px;
     margin-bottom: 60px;
-    top:0;bottom: 0;left: 0; right: 0;
+    top:2rem;bottom: 0;left: 0; right: 0;
     border: 1px solid #BF360C;
     background-color:#fff;
 

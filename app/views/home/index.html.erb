@@ -36,7 +36,7 @@
 										<%= link_to '', post %>
 										<div class="photo" style="background-image: url(<%= post.cover %>)">
 											<div class="category">
-												<p><%= post.tag_list.find{|e| /Destination/ =~e }=="Destination" ? "Destination" : "Exploring Cities" %></p>
+												<p><%= post.tag_list.find{|e| /Destination/ =~e }=="Destination" ? "Destination" : (post.tag_list.find{|e| /Explore/ =~e }=="Explore" ? "On The Streets" : (post.tag_list.find{|e| /Going Religious/ =~e }=="Going Religious" ? "Going Religious" : (post.tag_list.find{|e| /Travel Tips/ =~e }=="Travel Tips" ? "Travel Tips" : "Miscellaneous"))) %></p>
 											</div>
 										</div>
 										<div class="heading-and-excerpt">
@@ -119,7 +119,7 @@
 								<p>My name is Ankit Kumar. I am a Computer Science Engineer. </p>
 								<p>I developed the avidity to travel since I was a kid. Meeting new people, understanding their culture, has always amused in some or other way. By profession I’m a web designer, but travel has always helped me to reflect myself better in my work.</p>
 								<p>Here I’ll be telling you all my small and big experiences about my journeys.</p>
-								<a href="https://instagram.com/ankiitkumar" class="btn">Know me better by following this link.</a>
+								<%= link_to 'Know More', about_me_index_path, class: 'btn btn-link' %>
 							</div>
 						</div>
 					</div>
@@ -131,108 +131,108 @@
 
 <script>
 	$(function() {
-	$(window).on('scroll', function() {
-		var hT = $('#q1').offset().top,
-		    // hH = $('.left').outerHeight(),
-		    wH = $(window).height(),
-		    wS = $(this).scrollTop();
-   			if (wS > (hT-wH)){
-		$('#q1').addClass('animated slideInLeft');}
+		$(window).on('scroll', function() {
+			var hT = $('#q1').offset().top,
+			    // hH = $('.left').outerHeight(),
+			    wH = $(window).height(),
+			    wS = $(this).scrollTop();
+	   			if (wS > (hT-wH)){
+			$('#q1').addClass('animated slideInLeft');}
+		});
 	});
-});
 
-$(function() {
-	$(window).on('scroll', function() {
-		var hT = $('#q2').offset().top,
-		    // hH = $('.left').outerHeight(),
-		    wH = $(window).height(),
-		    wS = $(this).scrollTop();
-   			if (wS > (hT-wH)){
-		$('#q2').addClass('animated slideInRight');}
+	$(function() {
+		$(window).on('scroll', function() {
+			var hT = $('#q2').offset().top,
+			    // hH = $('.left').outerHeight(),
+			    wH = $(window).height(),
+			    wS = $(this).scrollTop();
+	   			if (wS > (hT-wH)){
+			$('#q2').addClass('animated slideInRight');}
+		});
 	});
-});
 
-$(function() {
-	$(window).on('load', function() {
-		$('a.navbar-brand').addClass('animated bounceInDown');
+	$(function() {
+		$(window).on('load', function() {
+			$('a.navbar-brand').addClass('animated bounceInDown');
+		});
 	});
-});
 
-$(function() {
-	$(window).on('scroll', function() {
-		var hT = $('.intro-box img').offset().top,
-		    // hH = $('.left').outerHeight(),
-		    wH = $(window).height(),
-		    wS = $(this).scrollTop();
-   			if (wS > (hT-wH)){
-		$('.intro-box img').addClass('animated bounceIn');
-		$('.intro-box h1').addClass('animated bounceInDown');
-		$('.intro-box p').addClass('animated bounceInUp');}
+	$(function() {
+		$(window).on('scroll', function() {
+			var hT = $('.intro-box img').offset().top,
+			    // hH = $('.left').outerHeight(),
+			    wH = $(window).height(),
+			    wS = $(this).scrollTop();
+	   			if (wS > (hT-wH)){
+			$('.intro-box img').addClass('animated bounceIn');
+			$('.intro-box h1').addClass('animated bounceInDown');
+			$('.intro-box p').addClass('animated bounceInUp');}
+		});
 	});
-});
-$(document).ready(function(){
-	$('#block-1').imagesLoaded({background: true}).done(function(){
-		$('#block-1>.loading').fadeOut();
-	})
-	$('#block-1').imagesLoaded({background: true}).fail(function(){
-		$('#block-1>.loading').addClass('failed');
-	})
+	$(document).ready(function(){
+		$('#block-1').imagesLoaded({background: true}).done(function(){
+			$('#block-1>.loading').fadeOut();
+		})
+		$('#block-1').imagesLoaded({background: true}).fail(function(){
+			$('#block-1>.loading').addClass('failed');
+		})
 
-	$('#block-2').imagesLoaded({background: true}).done(function(){
-		$('#block-2>.loading').fadeOut();
-	})
-	$('#block-2').imagesLoaded({background: true}).fail(function(){
-		$('#block-2>.loading').addClass('failed');
-	})
+		$('#block-2').imagesLoaded({background: true}).done(function(){
+			$('#block-2>.loading').fadeOut();
+		})
+		$('#block-2').imagesLoaded({background: true}).fail(function(){
+			$('#block-2>.loading').addClass('failed');
+		})
 
-	$('#block-3').imagesLoaded({background: true}).done(function(){
-		$('#block-3>.loading').fadeOut();
-	})
-	$('#block-3').imagesLoaded({background: true}).fail(function(){
-		$('#block-3>.loading').addClass('failed');
-	})
+		$('#block-3').imagesLoaded({background: true}).done(function(){
+			$('#block-3>.loading').fadeOut();
+		})
+		$('#block-3').imagesLoaded({background: true}).fail(function(){
+			$('#block-3>.loading').addClass('failed');
+		})
 
-	$('#block-4').imagesLoaded({background: true}).done(function(){
-		$('#block-4>.loading').fadeOut();
-	})
-	$('#block-4').imagesLoaded({background: true}).fail(function(){
-		$('#block-4>.loading').addClass('failed');
-	})
+		$('#block-4').imagesLoaded({background: true}).done(function(){
+			$('#block-4>.loading').fadeOut();
+		})
+		$('#block-4').imagesLoaded({background: true}).fail(function(){
+			$('#block-4>.loading').addClass('failed');
+		})
 
-	$('#block-5').imagesLoaded({background: true}).done(function(){
-		$('#block-5>.loading').fadeOut();
-	})
-	$('#block-5').imagesLoaded({background: true}).fail(function(){
-		$('#block-5>.loading').addClass('failed');
-	})
+		$('#block-5').imagesLoaded({background: true}).done(function(){
+			$('#block-5>.loading').fadeOut();
+		})
+		$('#block-5').imagesLoaded({background: true}).fail(function(){
+			$('#block-5>.loading').addClass('failed');
+		})
 
-	$('#block-6').imagesLoaded({background: true}).done(function(){
-		$('#block-6>.loading').fadeOut();
-	})
-	$('#block-6').imagesLoaded({background: true}).fail(function(){
-		$('#block-6>.loading').addClass('failed');
-	})
+		$('#block-6').imagesLoaded({background: true}).done(function(){
+			$('#block-6>.loading').fadeOut();
+		})
+		$('#block-6').imagesLoaded({background: true}).fail(function(){
+			$('#block-6>.loading').addClass('failed');
+		})
 
-	$('#block-7').imagesLoaded({background: true}).done(function(){
-		$('#block-7>.loading').fadeOut();
-	})
-	$('#block-7').imagesLoaded({background: true}).fail(function(){
-		$('#block-7>.loading').addClass('failed');
-	})
+		$('#block-7').imagesLoaded({background: true}).done(function(){
+			$('#block-7>.loading').fadeOut();
+		})
+		$('#block-7').imagesLoaded({background: true}).fail(function(){
+			$('#block-7>.loading').addClass('failed');
+		})
 
-	$('#block-8').imagesLoaded({background: true}).done(function(){
-		$('#block-8>.loading').fadeOut();
-	})
-	$('#block-8').imagesLoaded({background: true}).fail(function(){
-		$('#block-8>.loading').addClass('failed');
-	})
+		$('#block-8').imagesLoaded({background: true}).done(function(){
+			$('#block-8>.loading').fadeOut();
+		})
+		$('#block-8').imagesLoaded({background: true}).fail(function(){
+			$('#block-8>.loading').addClass('failed');
+		})
 
-	$('#block-9').imagesLoaded({background: true}).done(function(){
-		$('#block-9>.loading').fadeOut();
-	})
-	$('#block-9').imagesLoaded({background: true}).fail(function(){
-		$('#block-9>.loading').addClass('failed');
-	})
-});
+		$('#block-9').imagesLoaded({background: true}).done(function(){
+			$('#block-9>.loading').fadeOut();
+		})
+		$('#block-9').imagesLoaded({background: true}).fail(function(){
+			$('#block-9>.loading').addClass('failed');
+		})
+	});
 
 </script>

@@ -97,20 +97,25 @@ i.fa-quote-left
 	position: relative;
 	cursor: pointer;
 	transition: all 300ms;
-}
-.post-box:hover{
-	box-shadow:1px 4px 20px 7px #808080;
-}
-.post-box>a
-{
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	display: block;
-	width: 100%;
-	z-index: 2;
+	color: white;
+
+	&:hover{
+		box-shadow:1px 4px 20px 7px #808080;
+	}
+	&:hover .heading>h2{
+		font-size: 1.6rem;
+	}
+
+	&>a{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: block;
+		width: 100%;
+		z-index: 2;
+	}
 }
 
 .photo{
@@ -133,7 +138,6 @@ i.fa-quote-left
 	top: 0;
 	left: 0;
 	padding: 10px 5px;
-	width: min-content;
 	background-color: orange;
 	-webkit-transition: all 200ms;
 	-o-transition: all 200ms;
@@ -148,7 +152,7 @@ i.fa-quote-left
 {
 	position: absolute;
 	bottom: 8%;
-	background-color: #fff;
+	background-color: #b72725;
 	height: 113px;
 	padding: 10px 13px;
 	width: 100%;
@@ -173,6 +177,7 @@ i.fa-quote-left
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	border-top: 1px solid #e5e5e7;
+	background-color: #d0312f;
 }
 .date-and-user>div
 {

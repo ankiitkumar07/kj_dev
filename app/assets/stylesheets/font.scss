@@ -58,3 +58,22 @@ cite
 		color:#f6f7f9;
 	}
 }
+.heading>h2{
+	font-size: 1.9rem;
+	font-weight: 500;
+	transition: all linear 300ms;
+}
+.masonry>div{
+	&>p{
+	color:white;
+	z-index: 4;
+	font-size: 0.90rem;
+	visibility: hidden;
+	transition: all linear 250ms;
+	margin-bottom: 0;
+	}
+	&:hover>p{
+		font-size: 0.87rem;
+		visibility: visible;
+	}
+}

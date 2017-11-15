@@ -152,7 +152,7 @@
 		margin:20px 20%;
 	}
 	.intro-box p{
-		font-size:100%;
+		font-size:0.8rem;
 	}
 	#myFooter [type="submit"]
 	{
@@ -209,6 +209,14 @@
 	.date-and-user{
 		z-index:20;
 		background-color:#fff;
+	}
+	.masonry>div{
+		&>p{
+			font-size: 0.5rem;
+		}
+		&:hover >p{
+			font-size: 0.45rem;
+		}
 	}
 }
 

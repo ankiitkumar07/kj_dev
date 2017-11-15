@@ -7,7 +7,7 @@ class User::SessionsController < Devise::SessionsController
   # end
   def new
     super do |resource|
-      @page_title = "Log In"
+      @page_title = "Admin Log In"
     end
   end
 
