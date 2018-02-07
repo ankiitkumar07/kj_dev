@@ -10,6 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require instafeed
 //= require jquery3
 //= require popper
 //= require bootstrap

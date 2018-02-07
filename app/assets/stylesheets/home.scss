@@ -2,25 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
- .header
-{
-	height: 560px;
-	background: url(https://dl.dropboxusercontent.com/s/ieyyzqotdrw0p77/DSC07627.JPG?dl=0);
-	margin-top:10px;
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.header h1
-{
-	font-size:80px;
-	font-weight:800;
-	color:#fff;
-	text-shadow:2px;
-}
 .back{
 	position:relative;
 	height:350px;
@@ -74,116 +55,114 @@ i.fa-quote-left
     left: 0;
 }
 
-.blog{
-	position: relative;
-	width: 100%;
-	height: min-content;
-	//background-color:#ccc;
-	padding: 30px 0;
-}
-
-.post{
-	width: 100%;
-	display: grid;
-	grid-template-columns: repeat(3,1fr);
-	grid-auto-rows: 420px;
-	grid-gap: 60px;
-	//background-color: #e7e5e5;
-	padding: 50px 76px;
-}
-.post-box{
-	grid-column: span 1;
-	background-color: #fff;
-	position: relative;
-	cursor: pointer;
-	transition: all 300ms;
-	color: white;
-
-	&:hover{
-		box-shadow:1px 4px 20px 7px #808080;
-	}
-	&:hover .heading>h2{
-		font-size: 1.6rem;
-	}
-
-	&>a{
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		display: block;
-		width: 100%;
-		z-index: 2;
-	}
-}
 
 .photo{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 65%;
-	background-size: 500px 300px;
-	background-color: #888;
+	position: relative;
+	height: 25rem;
+	background-size: cover;
 	transition: all 200ms;
-}
-.post-box:hover .photo{
-	background-size: 530px 330px;
-	background-blend-mode: multiply;
+	&::after{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #000;
+		content: '';
+		display: block;
+		opacity: 0.1;
+		transition:all 300ms;
+		z-index: 0;
+	}
+
+	&:hover::after{
+		opacity: 0.7;
+	}
+	&:hover .category{
+		opacity: 1;
+	}	
+	&:hover .excerpt{
+		bottom: 1.1rem;
+		opacity: 1;
+	}
 }
 
 .category{
 	position: absolute;
-	top: 0;
-	left: 0;
-	padding: 10px 5px;
-	background-color: orange;
+	padding: 0.8rem 1rem;
+	background-color: #e9b11e;
 	-webkit-transition: all 200ms;
 	-o-transition: all 200ms;
 	transition: all 200ms;
 	z-index: 1;
-}
-.category>p,.date-and-user>div>p
-{
-	margin: 0;
-}
-.heading-and-excerpt
-{
-	position: absolute;
-	bottom: 8%;
-	background-color: #b72725;
-	height: 113px;
-	padding: 10px 13px;
-	width: 100%;
-}
-
-.excerpt>p
-{
-	margin-top: 20px;
 	opacity: 0;
+	&>p{
+		margin: 0;
+	}
+}
+.excerpt {
+    position: absolute;
+    width: 100%;
+    bottom: 1rem;
+    color: white;
+    font-weight: 500;
+    opacity: 0;
+    transition: all 300ms;
+    z-index: 1;
 }
 .heading>h2{
 	margin: 0;
-	font-weight: 700;
 }
 .date-and-user
 {
-	position: absolute;
-	left: 0;
-	bottom: 0;
+	position: relative;
 	width: 100%;
 	padding: 4px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	border-top: 1px solid #e5e5e7;
-	background-color: #d0312f;
+	border-bottom: 1px solid #e5e5e7;
+	font-weight: 600;
+	&>p{
+		margin:0;
+	}
 }
 .date-and-user>div
 {
 	grid-column: span 1;
 	text-align: center;
 	padding: 3px 0;
+}
+
+
+#instafeed img{
+	margin: 1rem;
+	position: relative;
+	width: 11rem;
+	&::after{
+		content: '';
+		opacity: 0.1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		transition:all 300ms;
+		background-color: #000;
+		display: block;
+	}
+	&:hover::after{
+		opacity: 0.7;
+	}
+}
+.post-section {
+    border-right: 1px solid #ccc;
+}
+.fb_iframe_widget {
+    margin-left: 0.8rem;
+}
+h4.display-5.py-4.text-center {
+    background-color: #ccc;
+    border-radius: 5px;
 }
 
 .intro-box
@@ -208,6 +187,5 @@ i.fa-quote-left
 	font-size:100%;
 	color:#fff;
 }
-
 
 
