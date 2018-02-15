@@ -6,7 +6,7 @@
                     <ul>
                         <li><%= link_to 'Home', root_path %></li>
                         <li><%= link_to 'Blog', posts_path %></li>
-                        <%= link_to 'Gallery', gallery_path %>
+                        <li><%= link_to 'Gallery', gallery_path %></li>
                         <li><%= link_to 'Who I Am', about_me_index_path %></li>
                         <% if user_signed_in? %>
                             <li><%= link_to 'New Post', new_post_path %></li>
@@ -14,6 +14,12 @@
                         <%else%>
                             <li><%= link_to 'Admin', admin_path %></li>
                         <%end%>
+                    </ul>
+                    <h5>Legal</h5>
+                    <ul>
+                        <li><%= link_to 'Terms', legal_terms_path %></li>
+                        <li><%= link_to 'Privacy Policy', legal_privacy_path %></li>
+                        <li><%= link_to 'License', legal_license_path %></li>
                     </ul>
                 </div>
                 <div class="col-sm-3 myCols">
@@ -40,10 +46,10 @@
             </div>
         </div>
         <div class="social-networks">
-            <a target="_blank" href="https://www.twitter.com/meankitkumar" class="twitter"><i class="fa fa-twitter"></i></a>
-            <a target="_blank" href="https://www.facebook.com/ankiitkumar07" class="facebook"><i class="fa fa-facebook-official"></i></a>
-            <a target="_blank" href="https://plus.google.com/102488716494488744951" class="google"><i class="fa fa-google-plus"></i></a>
-            <a target="_blank" href="https://www.instagram.com/ankiitkumar" class="instagram"><i class="fa fa-instagram"></i></a>
+            <a target="_blank" href="https://www.twitter.com/meankitkumar" class="twitter"><i class="fab fa-twitter"></i></a>
+            <a target="_blank" href="https://www.facebook.com/ankiitkumar07" class="facebook"><i class="fab fa-facebook"></i></a>
+            <a target="_blank" href="https://plus.google.com/102488716494488744951" class="google"><i class="fab fa-google-plus"></i></a>
+            <a target="_blank" href="https://www.instagram.com/ankiitkumar" class="instagram"><i class="fab fa-instagram"></i></a>
         </div>
         <div class="footer-copyright">
             <p> <i class="fa fa-copyright"></i> 2018 - Kumar's Journal </p>

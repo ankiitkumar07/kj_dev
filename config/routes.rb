@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'legal/terms'
+
+  get 'legal/privacy'
+
+  get 'legal/license'
+
   get 'about', to: 'about_me#index', as: :about_me_index
 
   devise_for :users, :controllers => {:registrations => "user/registrations", :sessions => 'user/sessions', :passwords => 'user/passwords'}

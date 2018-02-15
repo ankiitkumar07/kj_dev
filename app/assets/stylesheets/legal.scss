@@ -1,0 +1,80 @@
+// Place all the styles related to the Legal controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.__nunito{
+	font-family: 'Nunito', sans-serif;
+}
+.__hl{
+    font-family: fa5-proxima-nova,Helvetica Neue,Helvetica,Arial,sans-serif;
+
+}
+.__fw-500{
+	font-weight: 500;
+}
+
+.__fw900{
+	font-weight: 900;
+}
+
+.__db{
+	display: block;
+}
+
+.__gray{
+	color: #495057;
+}
+
+.__gray2{
+	color: #565353;
+}
+
+.__lgray{
+	color: #b9b9b9;
+}
+.__lh15{
+	line-height: 1.5;
+}
+.__tac{
+	text-align: center;
+}
+.__bb{
+	border-bottom: 0.25rem solid #f1f3f5;
+}
+
+.__bl{
+	border-left: 1px solid #f1f3f5;
+}
+ol.__nunito.__gray.__fw500{
+	list-style-type: none;
+	& li:before{
+		content: counter(step-counter);
+    	position: absolute;
+	    top: .25rem;
+	    left: 0;
+	    width: 2rem;
+	    height: 100%;
+	    opacity: .15;
+	    padding-right: 1em;
+	    border-right: 1px solid;
+	    text-align: right;
+	    font-weight: 600;
+	    line-height: 1.1;
+	}
+	& li{
+		position: relative;
+		counter-increment: step-counter;
+	}
+}
+
+span.mt-3.__nunito.__gray.__fw900.__tac.__db{
+    font-size: 3.05176rem;
+}
+
+p.__tac.__fw100.__gray2.__nunito.__lh15.mx-3.my-4 {
+    font-size: 1.2625rem;
+}
+
+h3.__nunito.__bb.pb-3.__fw500{
+	font-size: 1.5625rem;
+}

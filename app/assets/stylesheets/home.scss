@@ -85,6 +85,14 @@ i.fa-quote-left
 		bottom: 1.1rem;
 		opacity: 1;
 	}
+	& a{
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		z-index: 3;
+	}
 }
 
 .category{
@@ -163,6 +171,16 @@ i.fa-quote-left
 h4.display-5.py-4.text-center {
     background-color: #ccc;
     border-radius: 5px;
+    & .fa-facebook{
+    	color:#4867aa;
+    }
+
+    & .fa-twitter{
+    	color: #1da1f2;
+    }
+    & .fa-instagram{
+    	color: #d03f6b;
+    }
 }
 
 .intro-box

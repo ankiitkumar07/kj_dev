@@ -33,16 +33,16 @@
 							<% post.each do |post| %>
 								<div class="row mt-4">
 									<div class="col text-center px-md-5">
-										<%= link_to '', post %>
 										<div class="photo" style="background-image: url(<%= post.cover %>)">
+										<%= link_to '', post %>
 											<div class="category">
 												<p><%= post.tag_list.find{|e| /Destination/ =~e }=="Destination" ? "Destination" : (post.tag_list.find{|e| /Explore/ =~e }=="Explore" ? "On The Streets" : (post.tag_list.find{|e| /Going Religious/ =~e }=="Going Religious" ? "Going Religious" : (post.tag_list.find{|e| /Travel Tips/ =~e }=="Travel Tips" ? "Travel Tips" : "Miscellaneous"))) %></p>
 											</div>
 											<div class="excerpt px-3">
-												<p><%= excerpt(post.body, ' ', radius: 100).html_safe %>Read More...</p>
+												<p><%= excerpt(post.body, ' ', radius: 170).html_safe %>.</p>
 											</div>
 										</div>
-										<div class="heading">
+										<div class="heading mt-3">
 											<h2><%= post.title %></h2>
 										</div>
 										<div class="date-and-user">
@@ -59,18 +59,18 @@
 						<%end%>
 						<div class="row">
 							<div class="col-md-12 text-center">
-								<%= link_to 'See All My Posts', posts_path, class: 'btn btn-primary btn-lg' %>
+								<%= link_to 'More Stories <i class="fa fa-arrow-right"></i>'.html_safe, posts_path, class: 'btn btn-primary btn-lg' %>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-4">
-						<h4 class="display-5 py-4 text-center mt-5">What's on my Social Deck!</h4>
+						<h4 class="display-5 py-4 text-center mt-5"> <i class="fab fa-facebook"></i> What's on my Social Deck!</h4>
 						<div class="fb-page" data-width="360" data-href="https://www.facebook.com/kumarsjournal" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/kumarsjournal" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/kumarsjournal">Kumar&#039;s Journal</a></blockquote></div>
 
-						<h4 class="display-5 py-4 text-center mt-5">Instagram Feed!</h4>
+						<h4 class="display-5 py-4 text-center mt-5"><i class="fab fa-instagram"></i> Instagram Feed!</h4>
 						<div id="instafeed"></div>
 
-						<h4 class="display-5 py-4 text-center mt-5">Find me on Twitter!</h4>
+						<h4 class="display-5 py-4 text-center mt-5"><i class="fab fa-twitter"></i> Find me on Twitter!</h4>
 						<a class="twitter-timeline" data-width="470" data-height="700" href="https://twitter.com/meAnkitKumar?ref_src=twsrc%5Etfw">Tweets by meAnkitKumar</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 					</div>
 				</div>

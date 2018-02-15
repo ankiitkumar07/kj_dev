@@ -14,6 +14,8 @@
 
 /*// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"*/
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 @import "home";
 @import "posts";
 @import "navbar";
@@ -22,10 +24,9 @@
 @import "font";
 @import "animate";
 @import "userProfile";
+@import "legal";
 @import "responsive";
-@import "font-awesome-sprockets";
-@import "font-awesome";
-@import url('//fonts.googleapis.com/css?family=Poiret+One|Shrikhand');
+@import url('//fonts.googleapis.com/css?family=Poiret+One|Shrikhand|Nunito');
 
 
 html{
@@ -340,3 +341,4 @@ label:hover:before {
 {
   right:0;
 }
+
