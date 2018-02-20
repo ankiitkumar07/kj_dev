@@ -36,14 +36,14 @@
 	<div class="fb-like align-self-start" data-href="http://www.kumarsjournal.com<%= request.fullpath %>" data-width="120" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="false"></div>
 
 	<div class="sharer align-self-end">
-		<div class="fb share d-md-flex d-inline justify-content-center">
+		<div class="fb share d-lg-flex d-inline justify-content-center">
 			
 			<a href="https://www.facebook.com/share.php?title=<%= @post.title %>&u=http://www.kumarsjournal.com<%= request.fullpath %>" onclick="window.open('https://www.facebook.com/share.php?title=<%= @post.title %>&u=http://www.kumarsjournal.com<%= request.fullpath %>','newwindow', 'width=400,height=350'); return false;""><i class="fab fa-facebook-f"></i></a>
 		</div>
-		<div class="tw share d-md-flex d-inline justify-content-center">
+		<div class="tw share d-lg-flex d-inline justify-content-center">
 			<a href="https://twitter.com/share?lang=en&text=<%= @post.title %>&url=http://www.kumarsjournal.com<%= request.fullpath %>" onclick="window.open('https://twitter.com/share?lang=en&text=<%= @post.title %>&url=http://www.kumarsjournal.com<%= request.fullpath %>', 'newwindow', 'width=400, height=350'); return false;"><i class="fab fa-twitter"></i></a>
 		</div>
-		<div class="gp share d-md-flex d-inline justify-content-center">
+		<div class="gp share d-lg-flex d-inline justify-content-center">
 			<a href="https://plus.google.com/share?hl=en-us&url=http://www.kumarsjournal.com<%= request.fullpath %>" onclick="window.open('https://plus.google.com/share?hl=en-us&url=http://www.kumarsjournal.com<%= request.fullpath %>', 'newwindow', 'width=400, height=350'); return false;"><i class="fab fa-google-plus-g"></i></a>
 		</div>
 	</div>
@@ -77,16 +77,16 @@ $(document).ready(function(){
 		var winWidth = $(window).width();
 		// $('#text').text(sc +' '+ th);
 		if(winWidth > 768){
-			if(sc> (th-h-10)){
-				si.css({'right':'-6rem'});
+			if(sc> (th-h-500)){
+				si.css({'opacity':0, 'right': '5rem'});
 			}else{
-				si.css({'right':'6rem'});
+				si.css({'opacity':1, 'right': '6rem'});
 			}
 		}else{
 			if(sc> (th-600)){
-				si.css({'position':'absolute', 'bottom':'-4rem'});
+				si.css({'opacity':0});
 			}else{
-				// si.css({'position':'fixed', 'bottom': '0.3rem', 'left':'20px'});
+				si.css({'opacity':1});
 			}
 		}
 	})

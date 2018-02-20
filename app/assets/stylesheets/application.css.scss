@@ -242,10 +242,10 @@ label:hover:before {
   top: auto;
   & a{
       position: relative;
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       color: #a7a7a7;
       text-decoration: none;
-      border: 1px solid black;
+      border: 0.1rem solid #293137;;
       padding: 0.3rem 0.67rem;
       border-radius: 100%;
       margin: 0.4rem 0;
@@ -257,7 +257,7 @@ label:hover:before {
 .fa-facebook-f {
     padding: 0 0.5rem;
 }
-i.fab.fa-twitter {
+.fab.fa-twitter {
     padding: 0.23rem;
 }
 .fb.share a:hover{
@@ -277,25 +277,38 @@ i.fab.fa-twitter {
 {
   .social-box{
     width: 100%;
-    height: 3rem;
-    background-color: red;
+    height: auto;
+    background-color: #db7037;
     position: fixed;
     bottom: 0;
     right: 0;
     left: 0;
     top: auto;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    padding: 0.5rem 0;
   }
   .sharer {
       position: relative;
       height: 100%;
-      width: auto;
+      width: 50%;
       padding: 0.2rem 0.8rem;
+
+      & a{
+        font-size: 0.8rem;
+        padding: 0.4rem;
+      color: white;
+      }
   }
 }
 @media only screen and (max-width:425px)
 {
-  
+  .fa-facebook-f {
+      padding: 0 0.3rem;
+  }
+  .sharer .fab.fa-twitter {
+      padding: 0 0.1rem;
+  }
 }
 
 .follow{
