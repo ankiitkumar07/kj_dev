@@ -1,4 +1,4 @@
-<div class="social-integration">
+<!-- <div class="social-integration">
 	<div class="wrapper-for-social-button">
 		<div class="fb-show" title="Like On Facebook"><i class="fa fa-thumbs-up"></i></div>
 			<div class="extender fb-div">
@@ -29,10 +29,25 @@
 		</div>
 	</div>
 	</div>
-
-	<p id="text"></p>
 </div>
+ -->
 
+<div class="social-box d-flex">
+	<div class="fb-like align-self-start" data-href="http://www.kumarsjournal.com<%= request.fullpath %>" data-width="120" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="false"></div>
+
+	<div class="sharer align-self-end">
+		<div class="fb share">
+			
+			<a href="https://www.facebook.com/share.php?title=<%= @post.title %>&u=http://www.kumarsjournal.com<%= request.fullpath %>" target="_blank"><i class="fab fa-facebook"></i></a>
+		</div>
+		<div class="tw share">
+			<a href=""></a>
+		</div>
+		<div class="gp share">
+			<a href=""></a>
+		</div>
+	</div>
+</div>
 
 <div class="follow follow-fb">
 	<div class="fb-follow" data-href="https://www.facebook.com/ankiitkumar07" data-layout="button_count" data-size="large" data-show-faces="true"></div>
@@ -55,7 +70,7 @@
 <script>
 $(document).ready(function(){
 	$(window).on('scroll', function(){
-		var si = $('.social-integration');
+		var si = $('.social-box');
 		var sc = $(window).scrollTop();
 		var th = $('#this-head').offset().top;
 		var h = si.height();
@@ -65,7 +80,7 @@ $(document).ready(function(){
 			if(sc> (th-h-10)){
 				si.css({'right':'-6rem'});
 			}else{
-				si.css({'right':'1rem'});
+				si.css({'right':'6rem'});
 			}
 		}else{
 			if(sc> (th-600)){

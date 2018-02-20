@@ -5,7 +5,7 @@ module ApplicationHelper
 			@image = @post.cover
 			@title = @post.title
 			@tags = @post.tag_list
-			@desc = raw(excerpt(@post.body, '', radius: 100))
+			@desc = excerpt(@post.body, '', radius: 300).html_safe
 		end
 	end
 

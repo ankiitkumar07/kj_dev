@@ -223,85 +223,26 @@ label:hover:before {
 }
 
 /*social sharing section*/
-
-.social-integration
-{
+.social-box{
   position: fixed;
-  top: 8rem;
-  right: 1rem;
-  margin: auto;
-  padding: 10px;
-  display:grid;
-  grid-template-columns:1fr;
-  transition:all linear 300ms;
-
+  width: 5rem;
+  height: 13rem;
+  background-color: red;
+  top: 20rem;
+  right: 6rem;
+  transition: all 300ms;
 }
+.fb-like.fb_iframe_widget{
+  margin: 0;
+}
+
 @media only screen and (max-width:768px)
 {
-  .social-integration{
-    grid-template-columns:repeat(4, 1fr);
-    width: 100%;
-    left: 0;
-    bottom: .3rem;
-    top: auto;
-    height: 80px;
-  }
-  .wrapper-for-social-button
-  {
-    width:0px;
-    margin:0;
-  }
-  .extender {
-    left: -20px;
-    padding-left: 0px;
-    width: 100%;
-    top: -7rem;
-    position: relative;
-  }
+
 }
 @media only screen and (max-width:425px)
 {
-  .extender {
-    left: -20px;
-    padding-left: 0px;
-  }
-}
-
-.fb-show,.twitter-show,.gplus-show,.fb-share
-{
-    height: 40px;
-    width: 40px;
-    margin: 10px auto; 
-    border-radius: 100%;
-    background-color: #22507e;
-    text-align: center;
-    color: #fff;
-    font-weight: 700;
-    font-size: 1.7rem;
-    cursor: pointer;
-    transition:all ease-in-out 400ms;
-}
-.twitter-show
-{
-  background-color: #1b95e0;
-}
-.gplus-show
-{
-  background-color: #db4437;
-}
-
-.extender
-{
-    height: 0;
-    margin: auto;
-    background-color: transparent;
-    position: relative;
-    overflow-y:auto;
-    padding-left:10px;
-}
-.fb-show:hover,.twitter-show:hover,.gplus-show:hover,.fb-share:hover
-{
-  transform: rotate(360deg);
+  
 }
 
 .follow{
