@@ -1,37 +1,3 @@
-<!-- <div class="social-integration">
-	<div class="wrapper-for-social-button">
-		<div class="fb-show" title="Like On Facebook"><i class="fa fa-thumbs-up"></i></div>
-			<div class="extender fb-div">
-				<div class="fb-like" data-href="http://www.kumarsjournal.com<%= request.fullpath %>" data-width="150" data-layout="box_count" data-action="like" data-size="large" data-show-faces="true" data-share="false"></div>
-			</div>
-	</div>
-	<div class="wrapper-for-social-button">
-	<div class="fb-share"><i class="fab fa-facebook"></i></div>
-		<div class="extender fb-share-div">	
-				<div class="fb-share-button" data-href="http://www.kumarsjournal.com<%= request.fullpath %>" data-layout="box_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.kumarsjournal.com<%=request.fullpath%>&amp;src=sdkpreparse">Share</a></div>
-		</div>
-	</div>
-	<div class="wrapper-for-social-button">
-	<div class="twitter-show" title="Tweet">
-		<i class="fab fa-twitter"></i>
-	</div>
-	<div class="extender twitter-div">
-		<a href="http://twitter.com/share" class="twitter-share-button" data-size="large" data-url="<%= post_url(@post) %>" data-text=" <%= @post.title %> " data-count="horizontal" data-via="Kumar's Journal">Tweet</a>
-	</div>
-	</div>
-	<div class="wrapper-for-social-button">
-	<div class="gplus-show" title="Share On Google+">
-		<i class="fab fa-google-plus"></i>
-	</div>
-	<div class="extender gplus-div">
-		<div id="gplus">
-			<div class="g-plus" data-action="share" data-annotation="bubble" data-height="24" ></div>
-		</div>
-	</div>
-	</div>
-</div>
- -->
-
 <div class="social-box d-flex">
 	<div class="fb-like align-self-start" data-href="http://www.kumarsjournal.com<%= request.fullpath %>" data-width="120" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="false"></div>
 
@@ -45,6 +11,9 @@
 		</div>
 		<div class="gp share d-lg-flex d-inline justify-content-center">
 			<a href="https://plus.google.com/share?hl=en-us&url=http://www.kumarsjournal.com<%= request.fullpath %>" onclick="window.open('https://plus.google.com/share?hl=en-us&url=http://www.kumarsjournal.com<%= request.fullpath %>', 'newwindow', 'width=400, height=350'); return false;"><i class="fab fa-google-plus-g"></i></a>
+		</div>
+		<div class="wa share d-lg-flex d-inline justify-content-center">
+			<a href="whatsapp://send?text=<%= @post.title %>http://www.kumarsjournal.com<%= request.fullpath %>"><i class="fab fa-whatsapp"></i></a>
 		</div>
 	</div>
 </div>

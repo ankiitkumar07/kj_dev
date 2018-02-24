@@ -226,7 +226,7 @@ label:hover:before {
 .social-box{
   position: fixed;
   width: 5rem;
-  height: 15rem;
+  height: 18rem;
   top: 20rem;
   right: 6rem;
   transition: all 300ms;
@@ -250,7 +250,7 @@ label:hover:before {
       border-radius: 100%;
       margin: 0.4rem 0;
       transform: scale(0.87);
-      text-shadow: 2px 1px 0px #0b0b0b;
+      text-shadow: 2px 1px 0px #0b0b0b59;
       transition: all 300ms;
   }
 }
@@ -260,17 +260,36 @@ label:hover:before {
 .fab.fa-twitter {
     padding: 0.23rem;
 }
-.fb.share a:hover{
-  color:white;
-  background-color: #4267b2;
+.fab.fa-whatsapp{
+  padding: 0.23rem;
 }
-.tw.share a:hover{
-  color:white;
-  background-color: #1b95e0;
+.fb.share a{
+  color: #4267b2;
+  &:hover{
+    color:white;
+    background-color: #4267b2;
+  }
 }
-.gp.share a:hover{
-  color:white;
-  background-color: #db4437;
+.tw.share a{
+  color: #1da1f2;
+  &:hover{
+    color:white;
+    background-color: #1b95e0;
+  }
+}
+.gp.share a{
+  color: #db4437;
+  &:hover{
+    color:white;
+    background-color: #db4437;
+  }
+}
+.wa.share a{
+  color: #23ce42;
+  &:hover{
+    color: white;
+    background-color: #23ce42;
+  }
 }
 
 @media only screen and (max-width:768px)
