@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :feedbacks
   get 'legal/terms'
 
   get 'legal/privacy'

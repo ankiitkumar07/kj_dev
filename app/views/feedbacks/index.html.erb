@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Feedbacks</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-2"><h4>Name</h4></div>
+    <div class="col-3">
+      <h3>Email</h3>
+    </div>
+    <div class="col-3">
+      <h3>Message</h3>
+    </div>
+    <div class="col-2"><h4>Time</h4></div>
+    <div class="col-2"><h3>Actions</h3></div>
+  </div>
+
+  <% @feedbacks.each_slice(1) do |c| %>
+    <% c.each do |c| %>
+      <div class="row py-3 mb-3 __s-row <%= c.status == "unread" ? "red" : c.status == "read" ? "blue" : "green" %>">
+        <div class="col-2"><%= c.name %></div>
+        <div class="col-3"><%= c.email %></div>
+        <div class="col-3"><%= excerpt(c.message, '', radius: 100) %></div>
+        <div class="col-2"><%= c.created_at.strftime("%d-%m-%Y") %> <%= c.created_at.strftime("%H:%M") %></div>
+        <div class="col-1"><%= link_to 'Open', c %></div>
+        <div class="col-1"><a href="mailto:<%= c.email %>" target="blank">Reply</a></div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+

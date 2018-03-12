@@ -368,3 +368,20 @@ label:hover:before {
   right:0;
 }
 
+
+
+// =============
+.__s-row{
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  box-shadow: 1px 1px 4px #0a0a0acf;
+  &.blue{
+    border: 1px solid blue;
+  }
+  &.red{
+    border: 1px solid red;
+  }
+  &.green{
+    border: 1px solid green;
+  }
+}
