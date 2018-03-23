@@ -3,7 +3,11 @@
 	src: local('AR BLANCA'), url('ARBLANCA.woff') format('woff');
 }
 
-p::selection,span::selection,h1::selection,h2::selection,h3::selection,h4::selection,h5::selection,h6::selection,a::selection{
+p::selection, span::selection,
+h1::selection, h2::selection,
+h3::selection, h4::selection,
+h5::selection, h6::selection,
+a::selection, strong::selection{
 	color: white;
 	background-color: #578e5e;
 }

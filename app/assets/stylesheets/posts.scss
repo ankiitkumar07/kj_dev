@@ -96,7 +96,7 @@ a.h1:hover
 
 .post-container p
 {
-  font-size:130%;
+  font-size:120%;
   text-align:justify;
   color:#222;
 }
@@ -140,6 +140,14 @@ div.post-header a:hover
   color:#455d7b;
   text-decoration:none;
   transform:scale(1.05);
+}
+
+.post-sub-head{
+    margin-top: 3rem;
+    font-weight: 900;
+    padding: 1rem;
+    border-left: 7px solid gainsboro;
+    font-size: 200%;
 }
 
 
