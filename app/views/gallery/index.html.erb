@@ -1,0 +1,74 @@
+<div class="container-fluid my-4">
+	<% if user_signed_in? %>
+		<div class="row">
+			<div class="col">
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddPhoto" >Upload Photo <%= icon('fa', 'arrow-up') %></button>
+			</div>
+		</div>
+	<% end %>
+	<div class="row">
+		<div class="col-12 text-center">
+			<h1 class="display-4">Welcome to my gallery</h1>
+		</div>
+	</div>
+	<% @photos.each_slice(5) do |photos| %>
+		<div class="row">
+			<% (0..1).each do |i| %>
+				<div class="col-6 p-1">
+					<img src="<%= photos[i].cover_path %>" class="img-thumbnail" alt="<%= photos[i].description %>">
+				</div>
+			<% end %>
+		</div>
+		<div class="row">
+			<% (2..4).each do |i| %>
+					<div class="col-4 p-1">
+						<img src="<%= photos[i].cover_path %>" alt="<%= photos[i].description %>" class="img-thumbnail">
+					</div>
+			<% end %>
+		</div>
+	<% end %>
+</div>
+
+<% if user_signed_in? %>
+<div class="modal fade" id="AddPhoto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLongTitle">Upload Photo</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<%= form_for(@new_photo, :url => new_photo_path, method: "POST") do |f| %>
+								<div class="form-input">
+									<%=f.label :cover_path, class: 'sr-only' %>
+									<%= f.text_field :cover_path, class: 'form-control', placeholder: "Path" %>
+								</div>
+
+								<div class="form-input">
+									<%=f.label :description, class: 'sr-only' %>
+									<%= f.text_field :description, class: 'form-control', placeholder: "Description"  %>
+								</div>
+
+								<div class="form-input">
+									<%=f.label :location, class: 'sr-only' %>
+									<%= f.text_field :location, class: 'form-control' , placeholder: "Location" %>
+								</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			<%= f.submit 'Save', class: 'btn btn-primary' %>
+			</div>
+		</div>
+	</div>
+	<% end %>
+</div>
+<% end %>

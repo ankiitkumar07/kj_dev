@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   #resources :tags, only: [:index, :show]
   get 'tags/:tag', to: 'posts#index', as: :tag
 
-  get '/gallery', to: 'about_me#gallery'
+  get '/gallery', to: 'gallery#index'
+  post '/photo/create', to: 'gallery#create', as: :new_photo
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

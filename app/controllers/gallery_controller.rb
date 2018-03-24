@@ -1,18 +1,21 @@
 class GalleryController < ApplicationController
 	before_action :set_photo, only: [:new, :edit, :update, :destroy]
+	before_action :authenticate_user!, only: [:create, :edit, :update, :destroy]
 
 	def index
-		@photos = Gallery.all
+		@photos = Gallery.order(created_at: :desc).paginate(:page => params[:page], :per_page => 5)
+		@page_title = "Photo Gallery"
+		@new_photo = Gallery.new()
 	end
 
 	def new
 	end
 
 	def create
-		@photo.new(photo_params)
+		@photo = Gallery.new(photo_params)
 		respond_to do |format|
 			if @photo.save!
-				format.html { redirect_to :index, notice: 'Photo was successfully added.'  }
+				format.html { redirect_to gallery_path, notice: 'Photo was successfully added.'  }
 				format.json { render :index, status: :created, location: @photo }
 			else
 				format.html { redirect_to :new }
