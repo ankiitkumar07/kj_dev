@@ -262,9 +262,10 @@ $t-height: "2.8rem";
   position: absolute;
   width: #{$t-width};
   height: #{$t-height};
-  bottom: 2rem;
+  top: 40%;
   right: 2rem;
   cursor: pointer;
+  z-index: 100;
   transform-origin: 50% 50%;
   &.material {
     background-color: #57946d;
@@ -287,7 +288,7 @@ $t-height: "2.8rem";
     height: 2.5rem;
     position: absolute;
     box-shadow: inherit;
-    z-index: -1;
+    z-index: 90;
     left: 2px;
     & > i {
       position: relative;
