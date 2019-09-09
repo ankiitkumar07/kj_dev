@@ -196,3 +196,127 @@ div.fb-comments{
   width: 100%;
   height: 100%;
 }
+//************Styles for 3D-Carousel******************
+.scene {
+  width: 70%;
+  height: 27rem;
+  position: relative;
+  margin: auto;
+  perspective: 1000px;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all linear 1000ms;
+}
+
+.slide {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  top: 1rem;
+  left: 1rem;
+  //border: 1px solid black;
+  box-shadow: 3px 3px 10px black;
+  & img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.controls {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5rem;
+  height: 3rem;
+  top: auto;
+  display: flex;
+  justify-content: center;
+  & button {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 2px 15px;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 100%;
+    border: 1px solid black;
+  }
+}
+//**************Styles for toolkit in Post update and create page**************
+textarea {
+  width: 100%;
+  height: 20rem;
+  margin: 1rem auto;
+  padding: 0.7rem 1rem;
+}
+
+$t-width: "2.8rem";
+$t-height: "2.8rem";
+
+.toolkit {
+  position: absolute;
+  width: #{$t-width};
+  height: #{$t-height};
+  bottom: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  transform-origin: 50% 50%;
+  &.material {
+    background-color: #57946d;
+    background-origin: shadow;
+    box-shadow: 2px 2px 6px black;
+  }
+  & > i {
+    position: relative;
+    top: 25%;
+    left: 25%;
+    color: white;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 3px black;
+    transition: all ease-out 200ms;
+  }
+  & > .option {
+    background-color: red;
+    transition: all ease-out 200ms;
+    width: 2.5rem;
+    height: 2.5rem;
+    position: absolute;
+    box-shadow: inherit;
+    z-index: -1;
+    left: 2px;
+    & > i {
+      position: relative;
+      top: 25%;
+      left: 25%;
+      color: white;
+      font-size: 1.2rem;
+    }
+  }
+}
+$options: (
+  2 -12rem,
+  3 -8rem,
+  4 -4rem
+);
+
+@each $val in $options {
+  .option:nth-child(#{nth($val, 1)}) {
+    top: #{nth($val, 2)};
+  }
+}
+.rotated {
+  transform: rotateZ(405deg);
+}
+.stacked {
+  top: 2px !important;
+  box-shadow: none !important;
+}
+.round {
+  border-radius: 100%;
+}
+
