@@ -34,7 +34,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'font-awesome-sass'
 gem 'sprockets-rails', '~> 3.2'
-gem 'devise', '~> 4.3'
+gem 'devise', '~> 4.6'
 gem 'friendly_id', '~> 5.1.0'
 gem 'will_paginate', '~> 3.1.0'
 # gem 'ckeditor', github: 'galetahub/ckeditor'
