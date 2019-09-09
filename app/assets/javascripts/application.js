@@ -148,3 +148,32 @@ $(document).ready(function(){
 })
 })
 //_______________________________________________________
+
+//*****************************************************
+//function for 3d carousel
+$(document).ready(function(){
+	var child = $('.slider .slide').length;
+	var base_angle = 360/child;
+	var angle=0;
+	var slide_width = $('.slide').width();
+	var radius = Math.round( ( slide_width / 2 ) /  Math.tan( Math.PI / child ) );
+	var rotate_angle = 0;
+	
+	$('.slider').css({transform: "rotateY(0deg) translateZ(-" + (radius+100) + "px)"});
+		
+	$('.slide:nth-child(n)').each(function(){
+	    $(this).css({transform: "rotateY(" + angle + "deg) translateZ(" + (radius+50) + "px)"});
+	    angle = angle + base_angle;
+	 })
+	
+	$('button[name="prev"]').click(function() {
+	  rotate_angle = rotate_angle + base_angle;
+	  $(".slider").css({transform: 'translateZ(-'+(radius+50)+'px) rotateY('+rotate_angle+'deg)'})
+	});
+
+	$('button[name="next"]').click(function() {
+	  rotate_angle = rotate_angle - base_angle;
+	  $(".slider").css({transform: 'translateZ(-'+(radius+50)+'px) rotateY('+rotate_angle+'deg)'})
+	});
+})
+//_______________________________________________________
