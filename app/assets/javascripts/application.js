@@ -119,3 +119,30 @@ function closeModal(){
 	document.body.style.overflow = "auto";
 }
 //_______________________________________________________
+
+//*****************************************************
+//*****************************************************
+//*****************************************************
+//function for toolkit
+
+$("#toolkit-button").click(function(){
+  $("#toolkit-button > i").toggleClass("rotated");
+  $(".option").toggleClass("stacked");
+})
+
+var add_link = '<div class="w-70 my-5 mx-auto d-flex"><div class="left w-30 overflow-hidden"><img src="" alt=""></div><div class="right w-70 overflow-hidden"><a href="#" class="expanded"><h1 class="heading-3 mt-3 fw-3">This is post title <span>This is post description.</span></h1></a><div id="exploder"></div></div></div>';
+var add_photo = '<div class="photo-container"><figure class="figure"><img src="..." class="figure-img img-fluid rounded" alt="..."><figcaption class="figure-caption">...</figcaption></figure></div>';
+var add_carousel = '<div class="scene"><div class="slider" id="scene"><div class="slide"><img src="..." alt="..."></div></div><div class="controls"><button name="prev"><i class="fas fa-angle-left"></i></button><button name="next"><i class="fas fa-angle-right"></i></button></div></div>';
+
+$("#add_link").click(function(){
+  $("textarea[name='text']").val($("textarea[name='body']").val() + add_link);
+})
+
+$("#add_photo").click(function(){
+  $("textarea[name='text']").val($("textarea[name='body']").val() + add_photo);
+})
+
+$("#add_carousel").click(function(){
+  $("textarea[name='text']").val($("textarea[name='body']").val() + add_carousel);
+})
+//_______________________________________________________
