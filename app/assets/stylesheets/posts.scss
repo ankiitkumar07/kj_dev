@@ -196,6 +196,18 @@ div.fb-comments{
   width: 100%;
   height: 100%;
 }
+// Post blockquote
+.post-blockquote{
+    width: 70%;
+    margin: 3rem auto;
+    font-size: 1.5rem;
+	& cite{
+		color: black;
+		font-size: 13px;
+    		font-weight: 500;
+    		line-height: 4em;
+	}
+}
 //************Styles for 3D-Carousel******************
 .scene {
   width: 70%;
