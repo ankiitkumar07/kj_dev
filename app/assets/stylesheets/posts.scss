@@ -201,6 +201,11 @@ div.fb-comments{
     width: 70%;
     margin: 3rem auto;
     font-size: 1.5rem;
+	& i{
+		position: relative;
+    		top: -26px;
+    		left: -56px;
+	}
 	& cite{
 		color: black;
 		font-size: 13px;
