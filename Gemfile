@@ -7,16 +7,16 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.5'
+gem 'rails', '~> 5.2', '>= 5.2.3'
 
 # Use Puma as the app server
-gem 'puma', '~> 3.0'
+gem 'puma', '~> 4.2', '>= 4.2.1'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 6.0'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier', '~> 4.2'
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2'
+gem 'coffee-rails', '~> 5.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -24,7 +24,7 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
+gem 'jbuilder', '~> 2.9', '>= 2.9.1'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -32,24 +32,24 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'font-awesome-sass'
-gem 'sprockets-rails', '~> 3.2'
-gem 'devise', '~> 4.3'
-gem 'friendly_id', '~> 5.1.0'
-gem 'will_paginate', '~> 3.1.0'
+gem 'font-awesome-sass', '~> 5.11', '>= 5.11.2'
+gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
+gem 'devise', '~> 4.7', '>= 4.7.1'
+gem 'friendly_id', '~> 5.3'
+gem 'will_paginate', '~> 3.2'
 # gem 'ckeditor', github: 'galetahub/ckeditor'
-gem 'bootstrap', '~> 4.0.0.beta2.1'
-gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+gem 'bootstrap', '~> 4.3', '>= 4.3.1'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.5'
 gem 'coffee-script-source', '~> 1.12', '>= 1.12.2'
-gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
-gem 'acts-as-taggable-on', '~> 4.0'
+gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.2'
+gem 'acts-as-taggable-on', '~> 6.0'
 
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
+  gem 'sqlite3', '~> 1.4', '>= 1.4.1'
 end
 
 group :development do
@@ -58,7 +58,7 @@ group :development do
 end
 
 group :production do
-	gem 'pg', '~> 0.18'
+	gem 'pg', '~> 1.1', '>= 1.1.4'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
