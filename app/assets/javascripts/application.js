@@ -124,7 +124,7 @@ function closeModal(){
 //*****************************************************
 //*****************************************************
 //function for toolkit
-var target = document.getElementById("text");
+var target = document.getElementById("post_body");
 var text;
 
 function addHead() {
