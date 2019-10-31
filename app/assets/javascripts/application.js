@@ -124,29 +124,63 @@ function closeModal(){
 //*****************************************************
 //*****************************************************
 //function for toolkit
+var target = document.getElementById("text");
+var text;
 
-$(document).ready(function(){
-	$("#toolkit-button").click(function(){
-	  $("#toolkit-button > i").toggleClass("rotated");
-	  $(".option").toggleClass("stacked");
-	})
+function addHead() {
+  text = '<h3 class="post-sub-head">Insert Heading Here!</h3>';
+  insertAtCursor(target, text);
+}
 
-	var add_link = '<div class="w-70 my-5 mx-auto d-flex"><div class="left w-30 overflow-hidden"><img src="" alt=""></div><div class="right w-70 overflow-hidden"><a href="#" class="expanded"><h1 class="heading-3 mt-3 fw-3">This is post title <span>This is post description.</span></h1></a><div id="exploder"></div></div></div>';
-	var add_photo = '<div class="photo-container"><figure class="figure"><img src="..." class="figure-img img-fluid rounded" alt="..."><figcaption class="figure-caption">...</figcaption></figure></div>';
-	var add_carousel = '<div class="scene"><div class="slider" id="scene"><div class="slide"><img src="..." alt="..."></div></div><div class="controls"><button name="prev"><i class="fas fa-angle-left"></i></button><button name="next"><i class="fas fa-angle-right"></i></button></div></div>';
+function addSubHead() {
+  var text = "<h3>Insert SubHeading Here!</h3>";
+  insertAtCursor(target, text);
+}
 
-	$("#add_link").click(function(){
-	  $("textarea#post_body").val($("textarea#post_body").val() + add_link);
-	})
+function addPara() {
+  var text = "<p>Insert Paragraph</p>";
+  insertAtCursor(target, text);
+}
 
-	$("#add_photo").click(function(){
-	  $("textarea#post_body").val($("textarea#post_body").val() + add_photo);
-	})
+function addQuote() {
+  var text = '<blockquote class="post-blockquote"><i class="fa fa-quote-left"></i>Insert your Quote<br><cite>Insert Cite</cite></blockquote>';
+  insertAtCursor(target, text);
+}
 
-	$("#add_carousel").click(function(){
-	  $("textarea#post_body").val($("textarea#post_body").val() + add_carousel);
-})
-})
+function addImage() {
+  var text = '<div class="photo-container"><figure class="figure"><img src="..." class="figure-img img-fluid rounded" alt="..."><figcaption class="figure-caption">...</figcaption></figure></div>';
+  insertAtCursor(target, text);
+}
+
+function addCollection() {
+  text = '<div class="scene"><div class="slider" id="scene"><div class="slide"><img src="..." alt="..."></div></div><div class="controls"><button name="prev"><i class="fas fa-angle-left"></i></button><button name="next"><i class="fas fa-angle-right"></i></button></div></div>';
+  insertAtCursor(target, text);
+}
+
+function addLink() {
+  text = '<div class="card mx-auto"><img src="..." alt="..." class="card-img-top"><div class="card-img-overlay"><h5 class="card-title">...</h5><p class="card-text">...</p><p class="card-text"><small>...</small></p></div><a href="#"></a></div>';
+  insertAtCursor(target, text);
+}
+
+function insertAtCursor(target, myValue) {
+  if (document.selection) {
+    target.focus();
+    sel = document.selection.createRange();
+    sel.text = myValue;
+  } else if (target.selectionStart || target.selectionStart == "0") {
+    var startPos = target.selectionStart;
+    var endPos = target.selectionEnd;
+    target.value =
+      target.value.substring(0, startPos) +
+      myValue +
+      target.value.substring(endPos, target.value.length);
+  } else {
+    target.value += myValue;
+  }
+  target.focus();
+}
+
+
 //_______________________________________________________
 
 //*****************************************************
