@@ -265,76 +265,11 @@ div.fb-comments{
   }
 }
 //**************Styles for toolkit in Post update and create page**************
-textarea {
-  width: 100%;
-  height: 20rem;
-  margin: 1rem auto;
-  padding: 0.7rem 1rem;
-}
-
-$t-width: "2.8rem";
-$t-height: "2.8rem";
-
-.toolkit {
-  position: absolute;
-  width: #{$t-width};
-  height: #{$t-height};
-  top: 40%;
-  right: 2rem;
-  cursor: pointer;
-  z-index: 100;
-  transform-origin: 50% 50%;
-  &.material {
-    background-color: #57946d;
-    background-origin: shadow;
-    box-shadow: 2px 2px 6px black;
-  }
-  & > i {
-    position: relative;
-    top: 25%;
-    left: 25%;
-    color: white;
-    font-size: 1.5rem;
-    text-shadow: 1px 1px 3px black;
-    transition: all ease-out 200ms;
-  }
-  & > .option {
-    background-color: red;
-    transition: all ease-out 200ms;
-    width: 2.5rem;
-    height: 2.5rem;
-    position: absolute;
-    box-shadow: inherit;
-    z-index: 90;
-    left: 2px;
-    & > i {
-      position: relative;
-      top: 25%;
-      left: 25%;
-      color: white;
-      font-size: 1.2rem;
-    }
+.toolkit-pane {
+  flex-direction: column;
+  .option {
+    margin: 0.5rem 0rem;
+    font-size: 0.9rem;
+    width: min-content;
   }
 }
-$options: (
-  2 -12rem,
-  3 -8rem,
-  4 -4rem
-);
-
-@each $val in $options {
-  .option:nth-child(#{nth($val, 1)}) {
-    top: #{nth($val, 2)};
-  }
-}
-.rotated {
-  transform: rotateZ(405deg);
-}
-.stacked {
-  top: 2px !important;
-  box-shadow: none !important;
-}
-.round {
-  border-radius: 100%;
-}
-
