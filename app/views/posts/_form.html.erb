@@ -31,11 +31,15 @@
       </div>
 
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-10">
             <%= f.label :body, class: "sr-only" %>
             <%= f.text_area :body, :placeholder => "Enter HTML Code for body and images" %>
         </div>
+          <div class="col-md-2">
+          <%= render partial: "partials/toolkit" %>
+        </div>
       </div>
+    
 
 
       <div class="actions">
