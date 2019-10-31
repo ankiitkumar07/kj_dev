@@ -35,16 +35,23 @@
             <%= f.label :body, class: "sr-only" %>
             <%= f.text_area :body, :placeholder => "Enter HTML Code for body and images" %>
         </div>
-          <div class="col-md-2">
+          <div class="col-md-2 py-4">
           <%= render partial: "partials/toolkit" %>
         </div>
       </div>
     
 
-
-      <div class="actions">
-        <%= f.submit %>
-      </div>
+    <div class="row">
+        <div class="col-sm-6 col-md-6"> 
+            <div class="actions">
+                <%= f.submit %>
+              </div>
+        </div>
+        <div class="col-sm-6 col-md-6">
+            <%= link_to 'Cancel Post <i class="fa fa-ban"></i>'.html_safe, posts_path, class:'btn btn-primary' %>
+        </div>
+    </div>
+      
     <% end %>    
 </div>
 
