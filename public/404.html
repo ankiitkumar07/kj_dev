@@ -4,64 +4,179 @@
   <title>The page you were looking for doesn't exist (404)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-  .rails-default-error-page {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
-  }
+  $green: #14868c;
 
-  .rails-default-error-page div.dialog {
-    width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
-  }
+body {
+  height: 900px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.blur {
+  //background-color: #ccc;
+  //opacity: 0.5;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  filter: blur(5px);
+}
 
-  .rails-default-error-page div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+.container {
+  align-self: center;
+}
+.col-md-10{
+  background-color: rgba(255,255,255,0.3);
+  margin-top: 20%;
+  padding: 4% 0;
+  box-shadow: 0px 0px 5px #ccc;
+  border-radius: 13px;
+}
+.error-404 {
+  padding: 2% 0;
+  //padding-top: 20px;
+  text-align: center;
+  & .clip {
+    display: inline-block;
+    transform: skew(-45deg);
   }
+  & .clip .shadow {
+    height: inherit;
+    display: inline-block;
+    overflow: hidden;
+  }
+  & .clip:nth-of-type(2) .shadow {
+    width: 130px;
+    position: relative;
+    box-shadow: inset 20px 0px 20px 15px rgba(150, 150, 150, 0.8),
+      20px 0px 20px -15px rgba(150, 150, 150, 0.8);
+  }
+  & .clip:nth-of-type(1) .shadow,
+  & .clip:nth-of-type(3) .shadow {
+    width: 250px;
+    //overflow: hidden;
+  }
+  & .digit {
+    width: 150px;
+    height: 150px;
+    line-height: 130px;
+    font-size: 120px;
+    font-weight: bold;
+    position: relative;
+    top: 8%;
+    color: white;
+    background: #14868c;
+    border-radius: 50%;
+    display: inline-block;
+    transform: skew(45deg);
+  }
+  & .clip:nth-of-type(3) .shadow:after,
+  & .clip:nth-of-type(1) .shadow:after {
+    content: "";
+    position: absolute;
+    right: -8px;
+    bottom: 0px;
+    z-index: 9999;
+    height: 100%;
+    width: 10px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(173, 173, 173, 0.8),
+      transparent
+    );
+    border-radius: 50%;
+  }
+  & .clip:nth-of-type(3) .shadow:after {
+    left: -8px;
+  }
+  & .clip .digit {
+    transition: all linear 1000ms;
+  }
+  & .clip:nth-of-type(2) .digit {
+    left: -10%;
+    transform: skew(45deg) translateY(-200px);
+  }
+  & .clip:nth-of-type(1) .digit {
+    right: -20%;
+    transform: skew(45deg) translateY(200px);
+  }
+  & .clip:nth-of-type(3) .digit {
+    left: -20%;
+    transform: skew(45deg) translateY(200px);
+  }
+  & .h1{
+    margin: 10% 0;
+    font-size: 150%;
+    font-weight: 400;
+  }
+  & .link{
+    text-decoration: none;
+    color: white;
+    font-family: "Mukta", sans-serif;
+    padding: 2% 3%;
+    font-size: 150%;
+    background-color: #14868c;
+    border-radius: 40px;
+  }
+}
 
-  .rails-default-error-page h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
+.shadow {
+  box-shadow: none !important;
+}
 
-  .rails-default-error-page div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
   </style>
 </head>
 
 <body class="rails-default-error-page">
   <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
+  <div class="blur"></div>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="error-404">
+        <div class="clip">
+          <div class="shadow">
+            <span class="digit thirdDigit">4</span>
+          </div>
+        </div>
+        <div class="clip">
+          <div class="shadow">
+            <span class="digit secondDigit">0</span>
+          </div>
+        </div>
+        <div class="clip">
+          <div class="shadow">
+            <span class="digit firstDigit">4</span>
+          </div>
+        </div>
+        <h2 class="h1">Sorry! The page you looking for does not exist.</h2>
+        <a href="#" class="link">Go To Homepage</a>
+      </div>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
   </div>
+</div>
+<script type="text/javascript">
+  var digit = $('.error-404 .clip .digit');
+  var url = new Array();
+  url[0] = 'https://devilonwheels.com/wp-content/uploads/2019/05/Zanskar-Changthang-432-1078x516.jpg';
+  url[1] = 'https://s3.ap-south-1.amazonaws.com/townscript-production/images/6a052005-4b2f-4737-8d20-1184dae258dc.jpg';
+  url[2] = 'https://dailytimes.com.pk/assets/uploads/2019/06/The-bleak-scenario-of-Thar-Desert.jpg';
+  url[3] = 'https://www.keralatourism.org/images/destination/large/munnar20180720141650_202_1.jpg';
+  url[4] = 'https://www.holidify.com/images/bgImages/ALLEPPEY.jpg';
+
+  $(document).ready(function(){
+    $('.error-404 .clip .digit').css({transform: 'skew(45deg) translateY(0px)'});
+
+    var x = Math.floor((Math.random()*4));
+    $('body').css({backgroundImage: 'url('+ url[x]+')'});
+    $('.blur').css({backgroundImage: 'url('+ url[x]+')'});
+  })  
+</script>
 </body>
 </html>
