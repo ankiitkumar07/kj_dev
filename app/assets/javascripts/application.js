@@ -129,37 +129,31 @@ var text;
 
 function addHead() {
   text = '<h3 class="post-sub-head">Insert Heading Here!</h3>';
-  insertAtCursor(target, text);
+  insertAtCursor(document.getElementById("post_body"), text);
 }
 
 function addSubHead() {
-  var text = "<h3>Insert SubHeading Here!</h3>";
-  insertAtCursor(target, text);
+  insertAtCursor(document.getElementById("post_body"), "<h3>Insert SubHeading Here!</h3>");
 }
 
 function addPara() {
-  var text = "<p>Insert Paragraph</p>";
-  insertAtCursor(target, text);
+  insertAtCursor(document.getElementById("post_body"), "<p>Insert Paragraph</p>");
 }
 
 function addQuote() {
-  var text = '<blockquote class="post-blockquote"><i class="fa fa-quote-left"></i>Insert your Quote<br><cite>Insert Cite</cite></blockquote>';
-  insertAtCursor(target, text);
+  insertAtCursor(document.getElementById("post_body"), '<blockquote class="post-blockquote"><i class="fa fa-quote-left"></i>Insert your Quote<br><cite>Insert Cite</cite></blockquote>');
 }
 
 function addImage() {
-  var text = '<div class="photo-container"><figure class="figure"><img src="..." class="figure-img img-fluid rounded" alt="..."><figcaption class="figure-caption">...</figcaption></figure></div>';
-  insertAtCursor(target, text);
+  insertAtCursor(document.getElementById("post_body"), '<div class="photo-container"><figure class="figure"><img src="..." class="figure-img img-fluid rounded" alt="..."><figcaption class="figure-caption">...</figcaption></figure></div>');
 }
 
 function addCollection() {
-  text = '<div class="scene"><div class="slider" id="scene"><div class="slide"><img src="..." alt="..."></div></div><div class="controls"><button name="prev"><i class="fas fa-angle-left"></i></button><button name="next"><i class="fas fa-angle-right"></i></button></div></div>';
-  insertAtCursor(target, text);
+  insertAtCursor(document.getElementById("post_body"), '<div class="scene"><div class="slider" id="scene"><div class="slide"><img src="..." alt="..."></div></div><div class="controls"><button name="prev"><i class="fas fa-angle-left"></i></button><button name="next"><i class="fas fa-angle-right"></i></button></div></div>');
 }
 
 function addLink() {
-  text = '<div class="card mx-auto"><img src="..." alt="..." class="card-img-top"><div class="card-img-overlay"><h5 class="card-title">...</h5><p class="card-text">...</p><p class="card-text"><small>...</small></p></div><a href="#"></a></div>';
-  insertAtCursor(target, text);
+  insertAtCursor(document.getElementById("post_body"), '<div class="card mx-auto"><img src="..." alt="..." class="card-img-top"><div class="card-img-overlay"><h5 class="card-title">...</h5><p class="card-text">...</p><p class="card-text"><small>...</small></p></div><a href="#"></a></div>');
 }
 
 function insertAtCursor(target, myValue) {
