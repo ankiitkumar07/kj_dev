@@ -14,10 +14,12 @@
 	  <div class="row justify-content-center mt-2">
 	    <div class="col-10">
 		<div class="grid"> 
-			<% @photos.each_slice(1) do |photo| %>
-				<div class="grid-item">
-					<img src="<%= photo.cover_path %>" alt="<%= photo.desciption %>">
-				</div>
+			<% @photos.each_slice(1) do |photos| %>
+				< photos.each do |photo| >
+					<div class="grid-item">
+						<img src="<%= photo.cover_path %>" alt="<%= photo.desciption %>">
+					</div>
+				<% end %>
 			<% end %>
 		</div>
 	  </div>
