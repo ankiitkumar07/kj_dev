@@ -3,7 +3,7 @@ class GalleryController < ApplicationController
 	before_action :authenticate_user!, only: [:create, :edit, :update, :destroy]
 
 	def index
-		@photos = Gallery.order(created_at: :desc).paginate(:page => params[:page], :per_page => 5)
+		@photos = Gallery.order(created_at: :desc).paginate(:page => params[:page], :per_page => 25)
 		@page_title = "Photo Gallery"
 		@new_photo = Gallery.new()
 	end
