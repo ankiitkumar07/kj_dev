@@ -6,27 +6,22 @@
 			</div>
 		</div>
 	<% end %>
-	<div class="row">
-		<div class="col-12 text-center">
-			<h1 class="display-4">Welcome to my gallery</h1>
-		</div>
-	</div>
-	<% @photos.each_slice(5) do |photos| %>
-		<div class="row">
-			<% (0..1).each do |i| %>
-				<div class="col-6 p-1">
-					<img src="<%= photos[i].cover_path %>" class="img-thumbnail" alt="<%= photos[i].description %>">
+  	<div class="row justify-content-center">
+	    <div class="col-6 text-center my-3">
+	      <h3 class="display-4">Welcome To My Gallery</h3>
+	    </div>
+	  </div>
+	  <div class="row justify-content-center mt-2">
+	    <div class="col-10">
+		<div class="grid"> 
+			<% @photos.each_slice(1) do |photo| %>
+				<div class="grid-item">
+					<img src="<%= photo.cover_path %>" alt="<%= photo.desciption %>">
 				</div>
 			<% end %>
 		</div>
-		<div class="row">
-			<% (2..4).each do |i| %>
-					<div class="col-4 p-1">
-						<img src="<%= photos[i].cover_path %>" alt="<%= photos[i].description %>" class="img-thumbnail">
-					</div>
-			<% end %>
-		</div>
-	<% end %>
+	  </div>
+	</div>
 </div>
 
 <% if user_signed_in? %>
