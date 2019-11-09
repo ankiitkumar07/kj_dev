@@ -18,7 +18,7 @@
 				<% photos.each do |photo| %>
 					<div class="grid-item">
 						<img src="<%= photo.cover_path %>" alt="<%= photo.description %>">
-						<h3 class="display-3"><% photo.description %><span><%= @photo.location %></span></h3>
+						<h3 class="display-3"><% photo.description %><span><%= photo.location %></span></h3>
 					</div>
 				<% end %>
 			<% end %>
