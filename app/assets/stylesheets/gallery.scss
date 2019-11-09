@@ -1,3 +1,17 @@
 // Place all the styles related to the Gallery controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+		.grid{
+			width: 100%;
+			columns: 4;
+			column-gap: 12px;
+		}
+
+		.grid .grid-item{
+			width: 100%;
+			margin: 0 0 1rem 0;
+		}
+
+		.grid .grid-item img{
+			max-width: 100%;
+		}
