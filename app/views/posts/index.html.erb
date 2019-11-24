@@ -1,47 +1,185 @@
-
 <div class="container-fluid">
-	<% @posts.each_slice(1) do |post| %>
-		<div class="post-container">
-			<div class="container">
-				<div class="row">
-					<% post.each do |post| %>
-						<div class="col-md-6 col-sm-6">
-							<div class="col-md-12">
-								<div class="post-cover" style="background-image:url(<%= post.cover %>)" ></div>
-							</div>
-						</div>
-						<div class="col-md-6 col-sm-6">
-							<div class="post-desc">
-								<div class="col-md-12">
-									<%=  link_to post.title, post, class: 'h1' %>
-									<hr>
-									<div class="row">
-										<div class="col-md-6 col-sm-6">
-											<p class="h-4 text-center"><%= post.user.name %></p>
-										</div>
-										<div class="col-md-6 col-sm-6">
-											<p class="h-4 text-center"><%= post.created_at.strftime("%d/%m/%y") %></p>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-md-12 col-sm-12 text-right">
-											<%= link_to 'Travel Here <i class="fa fa-chevron-right" aria-hidden="true"></i>'.html_safe, post, class:'btn btn-primary' %>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					<% end %>
-				</div>
-			</div>
-		</div>
-	<%end%>
-</div>
+  <div class="row justify-content-around">
+    <div class="col-8 border-bottom border-dark pt-1">
+      <h3 class="small-5 mt-3"> Recent Posts <i class="fas fa-arrow-right"></i> </h3>
+    </div>
+    <div class="col-3 border-bottom border-dark pt-1">
+      <h3 class="small-5 mt-3"> My Travel Videos <i class="fas fa-arrow-right"></i> </h3>
+    </div>
+  </div>
+  <div class="row justify-content-around">
+    <div class="col-8 my-4">
+      <div class="grid-layout-3 h-700">
+        <%= render :partial => 'posts/recent_posts' %>
+      </div>
+    </div>
+    <div class="col-3 mt-1">
+      <div class="col my-3">
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/L9TJ_6SkLMI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="col my-3">
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/xQXow0awUNk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="col my-3">
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/-QZTsRSikjk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 my-4">
+      <div class="quote bg-gradient py-4">
+        <blockquote>
+          Work hard. Travel harder.
+        </blockquote>
+      </div>
+    </div>
+  </div>
+  <div class="row row justify-content-around">
+    <div class="col-7 border-bottom border-dark pt-1">
+      <h3 class="small-5 mt-3"> Categories <i class="fas fa-arrow-right"></i> </h3>
+    </div>
+    <div class="col-4 border-bottom border-dark pt-1">
+      <h3 class="small-5 mt-3"> About the Author <i class="fas fa-arrow-right"></i></h3>
+    </div>
+  </div>
+  <div class="row my-4 justify-content-around">
+    <div class="col-7">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="small-5 mt-3"> Browse by Places <i class="fas fa-arrow-right"></i> </h3>
+        </div>
+        <div class="col-6 my-4 text-center">
+          <div class="card bg-dark text-white">
+            <img src="https://images.pexels.com/photos/1305603/pexels-photo-1305603.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img" alt="Ladkah">
+            <div class="card-img-overlay">
+              <h5 class="card-title">Ladakh</h5>
+            </div>
+          </div>
+      </div>
+        <div class="col-6 my-4 text-center">
+          <div class="card bg-dark text-white">
+              <img src="https://images.pexels.com/photos/1305603/pexels-photo-1305603.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img" alt="...">
+              <div class="card-img-overlay">
+                <h5 class="card-title">Delhi</h5>
+              </div>
+            </div>
+        </div>
+        <div class="col-6 my-4 text-center">
+          <div class="card bg-dark text-white">
+              <img src="https://images.pexels.com/photos/1305603/pexels-photo-1305603.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img" alt="...">
+              <div class="card-img-overlay">
+                <h5 class="card-title">Kerela</h5>
+              </div>
+            </div>
+        </div>
+        <div class="col-6 my-4 text-center">
+        <div class="card bg-dark text-white">
+            <img src="https://images.pexels.com/photos/1305603/pexels-photo-1305603.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img" alt="...">
+            <div class="card-img-overlay">
+              <h5 class="card-title">Pune</h5>
+            </div>
+          </div>
+      </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <h3 class="small-5 mt-3"> Browse by Tags <i class="fas fa-arrow-right"></i> </h3>
+        </div>
+        <div class="col-3 my-4 text-center">
+          <div class="card bg-dark text-white">
+            <img src="https://images.pexels.com/photos/1305603/pexels-photo-1305603.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img" alt="...">
+            <div class="card-img-overlay">
+              <h5 class="card-title">Card title</h5>
+            </div>
+          </div>
+      </div>
+        <div class="col-3 my-4 text-center">
+          <div class="card bg-dark text-white">
+              <img src="https://images.pexels.com/photos/1305603/pexels-photo-1305603.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img" alt="...">
+              <div class="card-img-overlay">
+                <h5 class="card-title">Card title</h5>
+              </div>
+            </div>
+        </div>
+        <div class="col-3 my-4 text-center">
+          <div class="card bg-dark text-white">
+              <img src="https://images.pexels.com/photos/1305603/pexels-photo-1305603.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img" alt="...">
+              <div class="card-img-overlay">
+                <h5 class="card-title">Card title</h5>
+              </div>
+            </div>
+        </div>
+        <div class="col-3 my-4 text-center">
+        <div class="card bg-dark text-white">
+            <img src="https://images.pexels.com/photos/1305603/pexels-photo-1305603.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img" alt="...">
+            <div class="card-img-overlay">
+              <h5 class="card-title">Card title</h5>
+            </div>
+          </div>
+      </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-4 d-flex align-items-center">
+      <div class="card" style="width: 100%;">
+        <img src="https://images.pexels.com/photos/2128807/pexels-photo-2128807.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title small-5">Hi!</h3>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 my-4">
+      <div class="quote bg-gradient py-4">
+        <blockquote>
+          Work hard. Travel harder.
+        </blockquote>
+      </div>
+    </div>
+  </div>
   
-<div class="container">
-	<div class="row justify-content-center">
-	    <div class="col-10 text-right">
-	    	<%= will_paginate @posts,:previous_label => 'Newer Posts', :next_label => 'Older Posts', :container => false, renderer: BootstrapPagination::Rails %>
-	    </div>
-	 </div>
+  <div class="row">
+    <div class="col-12 border-bottom border-dark pt-1">
+      <h3 class="small-5 mt-3"> All Posts <i class="fas fa-arrow-right"></i> </h3>
+    </div>
+  </div>
+  <div class="row justify-content-center my-4">
+    <div class="col-10 justify-content-around" id="allPosts">
+      <% @posts.each_slice(1) do |post| %>
+        <% post.each do |post| %>
+            <div class="col-5 d-inline-block">
+              <div class="grid-item h-400 collapsed one border border-grey">
+                <img src="<%= post.cover %>" alt="">
+                <div class="title">
+                  <h3><%= post.title %></h3>
+                  <p><%= excerpt(post.body, ' ', radius: 100).html_safe %></p>
+                </div>
+                <%= link_to "", post %>
+              </div>
+            </div>
+        <% end %>
+      <%end%>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+      <div class="col-10 text-right">
+        <%= will_paginate @posts, :previous_label => 'Newer Posts', :next_label => 'Older Posts', :container => false, renderer: BootstrapPagination::Rails %>
+      </div>
+   </div>
 </div>
+
+<script>
+  $(document).ready(function(){
+    var grid = $('.grid-item');
+    grid.hover(function(){
+      console.log('working');
+      $(this).removeClass('collapsed')
+    }, function(){
+      $(this).addClass('collapsed');
+    })
+  })
+  $('.pagination a').attr('data-remote', 'true');
+</script>
+
+

@@ -18,4 +18,8 @@ module ApplicationHelper
 		@feedback = Feedback.new
 	end
 
+	def paginate(collection, params= {})
+		will_paginate collection, params.merge(:renderer => WillPaginateHelper::WillPaginateJSLinkRenderer)
+	end
+
 end

@@ -1,0 +1,14 @@
+<% @posts.each_slice(1) do |post| %>
+  <% post.each do |post| %>
+      <div class="col-5 d-inline-block">
+        <div class="grid-item h-400 collapsed one border border-grey">
+          <img src="<%= post.cover %>" alt="">
+          <div class="title">
+            <h3><%= post.title %></h3>
+            <p><%= excerpt(post.body, ' ', radius: 100).html_safe %></p>
+          </div>
+          <%= link_to "", post %>
+        </div>
+      </div>
+  <% end %>
+<%end%>

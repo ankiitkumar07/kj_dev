@@ -1,20 +1,16 @@
-<div class="social-box d-flex">
+<div id="social-media" class="collapsed">
 	<div class="fb-like align-self-start" data-href="http://www.kumarsjournal.com<%= request.fullpath %>" data-width="120" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="false"></div>
-
-	<div class="sharer align-self-end">
-		<div class="fb share d-lg-flex d-inline justify-content-center">
-			
-			<a href="https://www.facebook.com/share.php?title=<%= @post.title %>&u=http://www.kumarsjournal.com<%= request.fullpath %>" onclick="window.open('https://www.facebook.com/share.php?title=<%= @post.title %>&u=http://www.kumarsjournal.com<%= request.fullpath %>','newwindow', 'width=400,height=350'); return false;""><i class="fab fa-facebook-f"></i></a>
-		</div>
-		<div class="tw share d-lg-flex d-inline justify-content-center">
-			<a href="https://twitter.com/share?lang=en&text=<%= @post.title %>&url=http://www.kumarsjournal.com<%= request.fullpath %>" onclick="window.open('https://twitter.com/share?lang=en&text=<%= @post.title %>&url=http://www.kumarsjournal.com<%= request.fullpath %>', 'newwindow', 'width=400, height=350'); return false;"><i class="fab fa-twitter"></i></a>
-		</div>
-		<div class="gp share d-lg-flex d-inline justify-content-center">
-			<a href="https://plus.google.com/share?hl=en-us&url=http://www.kumarsjournal.com<%= request.fullpath %>" onclick="window.open('https://plus.google.com/share?hl=en-us&url=http://www.kumarsjournal.com<%= request.fullpath %>', 'newwindow', 'width=400, height=350'); return false;"><i class="fab fa-google-plus-g"></i></a>
-		</div>
-		<div class="wa share d-lg-flex d-inline justify-content-center">
-			<a href="whatsapp://send?text=<%= @post.title %>http://www.kumarsjournal.com<%= request.fullpath %>"><i class="fab fa-whatsapp"></i></a>
-		</div>
+	<div class="fb share d-lg-flex d-inline justify-content-center">
+		<a href="https://www.facebook.com/share.php?title=<%= @post.title %>&u=http://www.kumarsjournal.com<%= request.fullpath %>" onclick="window.open('https://www.facebook.com/share.php?title=<%= @post.title %>&u=http://www.kumarsjournal.com<%= request.fullpath %>','newwindow', 'width=400,height=350'); return false;""><i class="fab fa-facebook-f"></i></a>
+	</div>
+	<div class="tw share d-lg-flex d-inline justify-content-center">
+		<a href="https://twitter.com/share?lang=en&text=<%= @post.title %>&url=http://www.kumarsjournal.com<%= request.fullpath %>" onclick="window.open('https://twitter.com/share?lang=en&text=<%= @post.title %>&url=http://www.kumarsjournal.com<%= request.fullpath %>', 'newwindow', 'width=400, height=350'); return false;"><i class="fab fa-twitter"></i></a>
+	</div>
+	<div class="gp share d-lg-flex d-inline justify-content-center">
+		<a href="https://plus.google.com/share?hl=en-us&url=http://www.kumarsjournal.com<%= request.fullpath %>" onclick="window.open('https://plus.google.com/share?hl=en-us&url=http://www.kumarsjournal.com<%= request.fullpath %>', 'newwindow', 'width=400, height=350'); return false;"><i class="fab fa-google-plus-g"></i></a>
+	</div>
+	<div class="wa share d-lg-flex d-inline justify-content-center">
+		<a href="whatsapp://send?text=<%= @post.title %>http://www.kumarsjournal.com<%= request.fullpath %>"><i class="fab fa-whatsapp"></i></a>
 	</div>
 </div>
 

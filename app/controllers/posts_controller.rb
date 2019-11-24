@@ -12,14 +12,20 @@ class PostsController < ApplicationController
         @firstLetter = ActsAsTaggableOn::Tag.all.order("name").group_by{|letter| letter.name[0]}
         @tags = ActsAsTaggableOn::Tagging.limit(8).includes(:tag).where(context: 'tags').map { |tagging| tagging.tag.name  }.uniq
       else
-        @posts = Post.order(created_at: :desc).paginate(:page => params[:page], :per_page => 5)
+        @posts = Post.order(created_at: :desc).paginate(:page => params[:page], :per_page => 6)
       end
+    respond_to do |format|
+      format.html {}
+      format.js {}
+    end
   end
+
 
   # GET /posts/1
   # GET /posts/1.json
   def show
     @post = Post.friendly.find(params[:id])
+    @taggedWith = ActsAsTaggableOn::Tagging.includes(:tag).where(context: 'tags').uniq
     @page_title = @post.title
     @sidebar_posts = Post.where.not(id: @post.id).order("Random()").limit(4)
   end

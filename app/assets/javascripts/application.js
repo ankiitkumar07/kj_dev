@@ -205,3 +205,46 @@ $(document).ready(function(){
 	});
 })
 //_______________________________________________________
+
+//*****************************************************
+//Post Show page JS
+$(document).ready(function() {
+  var x;
+  var postCover = $("div.post-cover");
+  var heading = $("div#post-heading h1");
+  var postBody = $("div#post-body");
+  var sidebar = $("div#sidebar");
+  var socialMedia = $('div#social-media');
+  var postEndPoint = $(window).scrollTop() + postBody.innerHeight();
+  $(window).scroll(function() {
+    x = $(this).scrollTop();
+    if (x > 560) {
+      postCover.addClass("collapsed");
+      postBody.addClass("collapsed");
+      (window.innerWidth > 450) ? sidebar.addClass("collapsed") : null ;
+      socialMedia.removeClass("collapsed");
+    } else {
+      postCover.removeClass("collapsed");
+      postBody.removeClass("collapsed");
+      (window.innerWidth > 450) ? sidebar.removeClass("collapsed") : null;
+      socialMedia.addClass("collapsed");
+    }
+    if (x > postEndPoint) {
+      sidebar.removeClass("collapsed");
+     sidebar.addClass('scroll-up');
+    }else{
+     sidebar.removeClass('scroll-up');
+    }
+    $("p#test").text(x);
+  });
+});
+
+var img = $('.card img');
+var link = $('.card a');
+
+$(document).ready(function(){
+  link.hover(function(){
+    img.toggleClass('zoomed');
+  })
+})
+///__________________________________________________________________

@@ -1,49 +1,45 @@
-<p id="notice"><%= notice %></p>
+<p id="notice" style="display: inline;"><%= notice %></p>
 
-<!-- post conatiner -->
 
-<div class="container-fluid post-container">
-	<div class="post-header">
-		<div class="container">
-			<div class="row">
-				<p>Tags: <%= raw @post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
-				<div class="cover-container" style="background-image: url(<%= @post.cover %>);"></div> <!-- cover-conatiner -->
-			</div> <!-- row -->
-			<div class="row">
-				<div class="title-container">
-					<h1 class="display-1"><%= @post.title %></h1>
-				</div> <!-- title-container -->
-			</div> <!-- row -->
-		</div> <!-- container -->
-	</div> <!-- post header ends -->
-
-	<div class="container">
-		<div class="row">
-			<div class="col-md-10 col-sm-12">
-				<div class="col-md-12">
-					<div class="content-container">							
-						<%= simple_format(@post.body,{}, sanitize: false) %>
-					</div> <!-- content-container -->
-				</div>
-			</div> <!-- col-md-8 -->
-			<div class="col-md-2 col-sm-12">
-				<div class="col-md-12">
-					<%= render :partial => 'partials/social-media' %>
-				</div>
-			</div>
-		</div> <!-- row --> 
-	</div> <!-- container -->
-
-</div> <!-- post-container -->
-
-<!-- post container -->
-
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 px-0">
+      <div class="post-cover" style="background-image: url(<%= @post.cover %>">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <div id="tags">
+              <span>Tags:</span> 
+              <ul>
+              	<li><%= raw @post.tag_list.map { |t| link_to t, tag_path(t) }.join('</li><li>') %></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div id="post-heading" class="col-md-12">
+            <h1 class="display-2"><%= @post.title %></h1>
+          </div>
+        </div>
+         <%= render :partial => 'partials/social-media' %>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="container">
+  <div class="row mt-5">
+    <div class="col-sm-12 col-md-8" id="post-body">
+		<%= simple_format(@post.body,{}, sanitize: false) %>
+    </div>
+    	<%= render :partial => 'partials/sidebar' %>
+  </div>
+</div>
+
+<div class="container mt-5">
 	<div class="row">
 		<div class="col-md-12 col-sm-12">
-			<h3 id="this-head">Also Read : </h3>
+			<h3 id="this-head">Related Posts: </h3>
 			<div class="partial-banner">
-				<%= render :partial => 'partials/sidebar' %>
+				<%= render :partial => 'partials/showRelatedPosts' %>
 			</div>
 		</div>
 	</div>

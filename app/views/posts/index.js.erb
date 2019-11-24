@@ -1,0 +1,6 @@
+  $(document).ready(function(){
+    $('#allPosts').html("<%= j render partial: 	'posts/posts', locals: {posts: @posts} %>");
+
+    	$('.pagination').replaceWith('<%= j will_paginate @posts, :previous_label => "Newer Posts", :next_label => "Older Posts", :container => false, renderer: BootstrapPagination::Rails%>');
+
+  })

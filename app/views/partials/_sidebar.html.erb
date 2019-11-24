@@ -1,10 +1,8 @@
-
-	<% @sidebar_posts.each_slice(1) do |post|  %>
-		<% post.each do |post| %>
-			<div style="background-image:url(<%= post.cover %>);">
-				<%= link_to post do %>
-					<h4><%= post.title %></h4>
-				<%end%> 
-			</div>
-		<%end%>
-	<%end%>
+<div class="col-sm-12 col-md-4" id="sidebar">
+  <div class="img rounded">
+	<img src="https://images.pexels.com/photos/3200348/pexels-photo-3200348.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+  </div>
+  <div>
+    <p>Hi! My name is Ankit Kumar. I love travelling. Through this blog I try to express wgat I experience in my travel to all my readers. I hope you liked my blog and if you did, don't forget to like it and share it with your friends. Thank you!</p>
+  </div>
+</div>

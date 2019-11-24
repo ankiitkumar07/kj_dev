@@ -36,8 +36,15 @@
 	}
 }
 
-@media only screen and (max-width:768px)
+@media only screen and (max-width:769px)
 {
+	div#sidebar{
+		width: 50%;
+		right: 0;
+		&.collapsed{
+			right: 0;
+		}
+	}
 	.myHeader{
 		height:550px;
 	}
@@ -109,8 +116,19 @@
 }
 
 
-@media only screen and (max-width:425px)
+@media only screen and (max-width:426px)
 {
+
+	//Post show page css
+	div#sidebar{
+		position: relative;
+		width: 100%;
+		right: 0;
+		& .collapsed{
+			position: relative;
+		}
+	}
+
 	.site-brand{
 		width:100%;
 	}
@@ -192,10 +210,7 @@
 	a.h1:hover{
 		font-size:151%;
 	}
-	.post-cover
-	{
-		height:200px;
-	}
+
 	.masonry{
 		grid-auto-rows:minmax(95px, auto);
 		grid-gap:.4rem;
@@ -222,6 +237,49 @@
 
 @media only screen and (max-width:320px)
 {
+	.post-cover{
+		height: 400px;
+		& div#tags{
+			left: 0.4rem;
+			top: 1rem;
+			& span {
+				letter-spacing: 0;
+				padding: 3px 5px;
+				font-size: 10px;
+			}
+			& ul li{
+				padding: 3px 5px;
+				letter-spacing: 0;
+				font-size: 10px;
+			}
+		}
+
+		& .display-2{
+			font-size: 2.5rem;
+		}
+
+		& div#social-media{
+			left: 5%;
+			right: auto;
+			bottom: 2%;
+
+			& i{
+				font-size: 0.8rem;
+				margin: 0 0.4rem;
+			}
+		}
+
+		&.collapsed{
+			top: -200px;
+			
+			& div#post-heading{
+				margin: 0.3rem 0.2rem;
+			}
+			& .display-2{
+				font-size: 1.7rem !important;
+			}
+		}
+	}
 	.blockquote
 	{
 		font-size:260%;
