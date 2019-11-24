@@ -25,7 +25,7 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-10 text-right">
-          <%= will_paginate @posts, :previous_label => 'Newer Posts', :next_label => 'Older Posts', :container => false, renderer: BootstrapPagination::Rails %>
+          <%= will_paginate @posts_with_tag, :previous_label => 'Newer Posts', :next_label => 'Older Posts', :container => false, renderer: BootstrapPagination::Rails %>
         </div>
      </div>
 
