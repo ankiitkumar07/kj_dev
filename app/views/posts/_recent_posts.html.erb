@@ -8,7 +8,7 @@
     <h3><%= @post_one.title %></h3>
     <p><%= excerpt(@post_one.body, ' ', radius: 100).html_safe %></p>
   </div>
-  <a href=""></a>
+  <%= link_to "", @post_one %>
 </div>
 <div class="grid-item collapsed two border border-grey">
   <img src="<%= @post_two.cover  %>" alt="">
@@ -16,7 +16,7 @@
     <h3><%= @post_two.title %></h3>
     <p><%= excerpt(@post_two.body, ' ', radius: 100).html_safe %></p>
   </div>
-  <a href="#"></a>
+   <%= link_to "", @post_two %>
 </div>
 <div class="grid-item collapsed three border border-grey">
   <img class="rounded" src="<%= @post_three.cover %>" alt="">
@@ -24,5 +24,5 @@
     <h3><%= @post_three.title %></h3>
     <p><%= excerpt(@post_three.body, ' ', radius: 100).html_safe %></p>
   </div>
-  <a href="#"></a>
+   <%= link_to "", @post_three %>
 </div>

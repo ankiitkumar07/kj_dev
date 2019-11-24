@@ -7,13 +7,15 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @page_title = "Posts"
-      if params[:tag]
-        @posts = Post.order(created_at: :desc).tagged_with(params[:tag]).paginate(:page => params[:page], :per_page => 3)
-        @firstLetter = ActsAsTaggableOn::Tag.all.order("name").group_by{|letter| letter.name[0]}
-        @tags = ActsAsTaggableOn::Tagging.limit(8).includes(:tag).where(context: 'tags').map { |tagging| tagging.tag.name  }.uniq
-      else
-        @posts = Post.order(created_at: :desc).paginate(:page => params[:page], :per_page => 6)
-      end
+      # if params[:tag]
+      #   @posts = Post.order(created_at: :desc).tagged_with(params[:tag]).paginate(:page => params[:page], :per_page => 3)
+      #   @firstLetter = ActsAsTaggableOn::Tag.all.order("name").group_by{|letter| letter.name[0]}
+      #   @tags = ActsAsTaggableOn::Tagging.limit(8).includes(:tag).where(context: 'tags').map { |tagging| tagging.tag.name  }.uniq
+      # else
+      #   @posts = Post.order(created_at: :desc).paginate(:page => params[:page], :per_page => 6)
+      # end
+    @posts = Post.order(created_at: :desc).paginate(:page => params[:page], :per_page => 6)
+    @posts_with_tag = Post.order(created_at: :desc).tagged_with(params[:tag]).paginate(:page => params[:page], :per_page => 3)
     respond_to do |format|
       format.html {}
       format.js {}

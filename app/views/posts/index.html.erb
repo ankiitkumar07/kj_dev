@@ -1,4 +1,35 @@
 <div class="container-fluid">
+  <% if params[:tag] %>
+    <div class="row">
+      <div class="col-12 border-bottom border-dark pt-1">
+        <h3 class="small-5 mt-3"> Posts Tagged With <%= params[:tag] %> <i class="fas fa-arrow-right"></i> </h3>
+      </div>
+    </div>
+    <div class="row justify-content-center my-4">
+      <div class="col-10 justify-content-around" id="allPosts">
+        <% @posts_with_tag.each_slice(1) do |post| %>
+          <% post.each do |post| %>
+              <div class="col-5 d-inline-block">
+                <div class="grid-item h-400 collapsed one border border-grey">
+                  <img src="<%= post.cover %>" alt="">
+                  <div class="title">
+                    <h3><%= post.title %></h3>
+                    <p><%= excerpt(post.body, ' ', radius: 100).html_safe %></p>
+                  </div>
+                  <%= link_to "", post %>
+                </div>
+              </div>
+          <% end %>
+        <%end%>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-10 text-right">
+          <%= will_paginate @posts, :previous_label => 'Newer Posts', :next_label => 'Older Posts', :container => false, renderer: BootstrapPagination::Rails %>
+        </div>
+     </div>
+
+  <% end %>
   <div class="row justify-content-around">
     <div class="col-8 border-bottom border-dark pt-1">
       <h3 class="small-5 mt-3"> Recent Posts <i class="fas fa-arrow-right"></i> </h3>
@@ -54,6 +85,7 @@
             <div class="card-img-overlay">
               <h5 class="card-title">Ladakh</h5>
             </div>
+              <a href="/tags/Ladakh" class="cover"></a>
           </div>
       </div>
         <div class="col-6 my-4 text-center">
@@ -62,6 +94,7 @@
               <div class="card-img-overlay">
                 <h5 class="card-title">Delhi</h5>
               </div>
+              <a href="/tags/Delhi" class="cover"></a>
             </div>
         </div>
         <div class="col-6 my-4 text-center">
@@ -70,6 +103,7 @@
               <div class="card-img-overlay">
                 <h5 class="card-title">Kerela</h5>
               </div>
+              <a href="/tags/Kerela" class="cover"></a>
             </div>
         </div>
         <div class="col-6 my-4 text-center">
@@ -78,6 +112,7 @@
             <div class="card-img-overlay">
               <h5 class="card-title">Pune</h5>
             </div>
+            <a href="/tags/Pune" class="cover"></a>
           </div>
       </div>
       </div>
@@ -89,32 +124,37 @@
           <div class="card bg-dark text-white">
             <img src="https://images.pexels.com/photos/1305603/pexels-photo-1305603.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img" alt="...">
             <div class="card-img-overlay">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">Destination</h5>
             </div>
+          <a href="/tags/Destination" class="cover" ></a>
           </div>
       </div>
         <div class="col-3 my-4 text-center">
           <div class="card bg-dark text-white">
               <img src="https://images.pexels.com/photos/1305603/pexels-photo-1305603.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img" alt="...">
               <div class="card-img-overlay">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">Travel Tips</h5>
               </div>
+            <a href="/tags/Travel%20Tips" class="cover" ></a>
             </div>
         </div>
+        <a href="/tags/Destination"></a>
         <div class="col-3 my-4 text-center">
           <div class="card bg-dark text-white">
               <img src="https://images.pexels.com/photos/1305603/pexels-photo-1305603.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img" alt="...">
               <div class="card-img-overlay">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">Religious Places</h5>
               </div>
+            <a href="/tags/Religious%20Places" class="cover" ></a>
             </div>
         </div>
         <div class="col-3 my-4 text-center">
         <div class="card bg-dark text-white">
             <img src="https://images.pexels.com/photos/1305603/pexels-photo-1305603.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img" alt="...">
             <div class="card-img-overlay">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">World Heritage Sites</h5>
             </div>
+          <a href="/tags/World%20Heritage%20Sites" class="cover" ></a>
           </div>
       </div>
       </div>
@@ -167,6 +207,7 @@
         <%= will_paginate @posts, :previous_label => 'Newer Posts', :next_label => 'Older Posts', :container => false, renderer: BootstrapPagination::Rails %>
       </div>
    </div>
+   <%# end %>
 </div>
 
 <script>
