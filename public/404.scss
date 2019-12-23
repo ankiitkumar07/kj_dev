@@ -1,1 +1,122 @@
+body {
+  height: 900px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.blur {
+  //background-color: #ccc;
+  //opacity: 0.5;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  filter: blur(5px);
+}
 
+.container {
+  align-self: center;
+}
+.col-md-10{
+  background-color: rgba(255,255,255,0.3);
+  margin-top: 20%;
+  padding: 4% 0;
+  box-shadow: 0px 0px 5px #ccc;
+  border-radius: 13px;
+}
+.error-404 {
+  padding: 2% 0;
+  //padding-top: 20px;
+  text-align: center;
+  & .clip {
+    display: inline-block;
+    transform: skew(-45deg);
+  }
+  & .clip .shadow {
+    height: inherit;
+    display: inline-block;
+    overflow: hidden;
+  }
+  & .clip:nth-of-type(2) .shadow {
+    width: 130px;
+    position: relative;
+    box-shadow: inset 20px 0px 20px 15px rgba(150, 150, 150, 0.8),
+      20px 0px 20px -15px rgba(150, 150, 150, 0.8);
+  }
+  & .clip:nth-of-type(1) .shadow,
+  & .clip:nth-of-type(3) .shadow {
+    width: 250px;
+    //overflow: hidden;
+  }
+  & .digit {
+    width: 150px;
+    height: 150px;
+    line-height: 130px;
+    font-size: 120px;
+    font-weight: bold;
+    position: relative;
+    top: 8%;
+    color: white;
+    background: #14868c;
+    border-radius: 50%;
+    display: inline-block;
+    transform: skew(45deg);
+  }
+  & .clip:nth-of-type(3) .shadow:after,
+  & .clip:nth-of-type(1) .shadow:after {
+    content: "";
+    position: absolute;
+    right: -8px;
+    bottom: 0px;
+    z-index: 9999;
+    height: 100%;
+    width: 10px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(173, 173, 173, 0.8),
+      transparent
+    );
+    border-radius: 50%;
+  }
+  & .clip:nth-of-type(3) .shadow:after {
+    left: -8px;
+  }
+  & .clip .digit {
+    transition: all linear 1000ms;
+  }
+  & .clip:nth-of-type(2) .digit {
+    left: -10%;
+    transform: skew(45deg) translateY(-200px);
+  }
+  & .clip:nth-of-type(1) .digit {
+    right: -20%;
+    transform: skew(45deg) translateY(200px);
+  }
+  & .clip:nth-of-type(3) .digit {
+    left: -20%;
+    transform: skew(45deg) translateY(200px);
+  }
+  & .h1{
+    margin: 10% 0;
+    font-size: 150%;
+    font-weight: 400;
+  }
+  & .link{
+    text-decoration: none;
+    color: white;
+    font-family: "Mukta", sans-serif;
+    padding: 2% 3%;
+    font-size: 150%;
+    background-color: #14868c;
+    border-radius: 40px;
+  }
+}
+
+.shadow {
+  box-shadow: none !important;
+}
