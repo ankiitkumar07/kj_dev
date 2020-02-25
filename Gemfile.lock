@@ -54,6 +54,7 @@ GEM
       popper_js (>= 1.14.3, < 2)
       sassc-rails (>= 2.0.0)
     builder (3.2.3)
+    byebug (11.1.1)
     coffee-rails (5.0.0)
       coffee-script (>= 2.2.0)
       railties (>= 5.2.0)
@@ -71,6 +72,7 @@ GEM
       warden (~> 1.2.3)
     erubi (1.9.0)
     execjs (2.7.0)
+    ffi (1.11.1)
     ffi (1.11.1-x64-mingw32)
     font-awesome-sass (5.11.2)
       sassc (>= 1.11)
@@ -99,9 +101,12 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.12.2)
     nio4r (2.5.2)
-    nokogiri (1.10.4-x64-mingw32)
+    nokogiri (1.10.8)
+      mini_portile2 (~> 2.4.0)
+    nokogiri (1.10.8-x64-mingw32)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
+    pg (1.1.4)
     pg (1.1.4-x64-mingw32)
     popper_js (1.14.5)
     puma (4.2.1)
@@ -139,6 +144,8 @@ GEM
       railties (>= 5.0)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
+    sassc (2.2.1)
+      ffi (~> 1.9)
     sassc (2.2.1-x64-mingw32)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
@@ -179,6 +186,7 @@ GEM
       will_paginate (>= 3.0.3)
 
 PLATFORMS
+  ruby
   x64-mingw32
 
 DEPENDENCIES
